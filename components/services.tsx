@@ -41,17 +41,17 @@ export function Services() {
 
           {/* Right side - Services list */}
           <div className="md:col-span-8">
-            <div className="space-y-12">
+            <div className="space-y-10">
               {services.map((service, index) => (
                 <div 
                   key={index}
-                  className="group flex gap-6 p-6 bg-[#f5f5f3] hover:bg-secondary/10 transition-colors duration-300"
+                  className="group flex gap-6 pb-10 border-b border-border/50 last:border-b-0 last:pb-0"
                 >
-                  <div className="flex-shrink-0 w-12 h-12 bg-secondary flex items-center justify-center">
-                    <service.icon className="w-6 h-6 text-card" strokeWidth={1.5} />
+                  <div className="flex-shrink-0 w-12 h-12 bg-accent/10 flex items-center justify-center">
+                    <service.icon className="w-6 h-6 text-accent" strokeWidth={1.5} />
                   </div>
                   <div>
-                    <h3 className="font-serif text-xl font-bold text-foreground mb-2">
+                    <h3 className="font-serif text-xl font-bold text-foreground mb-2 group-hover:text-accent transition-colors">
                       {service.title}
                     </h3>
                     <p className="text-muted-foreground leading-relaxed">

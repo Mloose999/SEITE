@@ -93,21 +93,22 @@ export function Workshops() {
               Each workshop is carefully designed with a proven structure that guides you from understanding to lasting change. You will learn, practice, and integrate at your own pace.
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-12 md:gap-6 relative">
-            {/* Connecting line for desktop */}
-            <div className="hidden md:block absolute top-6 left-[16%] right-[16%] h-px bg-accent/30" />
-            
+          <div className="grid md:grid-cols-3 gap-8 md:gap-12">
             {workshopStructure.map((item, index) => (
-              <div key={index} className="relative text-center group">
-                <div className="relative z-10 w-12 h-12 rounded-full bg-accent text-accent-foreground flex items-center justify-center font-serif font-bold text-sm mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                  {item.step}
+              <div key={index} className="relative group">
+                <div className="flex items-start gap-5">
+                  <span className="font-serif text-5xl md:text-6xl font-bold text-accent/20 leading-none">
+                    {item.step}
+                  </span>
+                  <div className="pt-2">
+                    <h4 className="font-serif text-lg md:text-xl font-bold text-foreground mb-2">
+                      {item.title}
+                    </h4>
+                    <p className="text-muted-foreground leading-relaxed text-sm">
+                      {item.description}
+                    </p>
+                  </div>
                 </div>
-                <h4 className="font-serif text-xl font-bold text-foreground mb-3">
-                  {item.title}
-                </h4>
-                <p className="text-muted-foreground leading-relaxed">
-                  {item.description}
-                </p>
               </div>
             ))}
           </div>
@@ -122,7 +123,10 @@ export function Workshops() {
               </h3>
               <p className="text-muted-foreground mt-2">Choose the topics that resonate with you most</p>
             </div>
-            <p className="text-accent font-serif text-2xl font-bold">29 € <span className="text-base font-normal text-muted-foreground">per workshop</span></p>
+            <div className="inline-flex items-center gap-3 bg-accent/10 px-5 py-3 border border-accent/20">
+              <span className="font-serif text-3xl font-bold text-accent">29 €</span>
+              <span className="text-sm text-muted-foreground">per workshop</span>
+            </div>
           </div>
           
           <div className="grid md:grid-cols-2 gap-12">
