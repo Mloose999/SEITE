@@ -201,36 +201,59 @@ export function Workshops() {
           </div>
         </div>
 
-        {/* 1:1 Coaching - Clean Card Design */}
-        <div className="max-w-3xl mx-auto">
-          <div className="bg-[#f5f5f3] p-8 md:p-12 lg:p-16">
-            <p className="text-accent font-semibold tracking-widest uppercase text-sm mb-4">Personal Support</p>
-            <h3 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-6">
+        {/* 1:1 Coaching - Full Width Split Design */}
+        <div className="grid md:grid-cols-2 gap-0">
+          {/* Content Side */}
+          <div className="bg-accent p-8 md:p-12 lg:p-16 flex flex-col justify-center order-2 md:order-1">
+            <p className="text-accent-foreground/70 font-semibold tracking-widest uppercase text-sm mb-4">Personal Support</p>
+            <h3 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-accent-foreground mb-6">
               1:1 Coaching
             </h3>
-            <p className="text-muted-foreground leading-relaxed mb-8">
+            <p className="text-accent-foreground/80 leading-relaxed text-lg mb-8">
               For personalized guidance in urgent or complex situations, I offer individual coaching sessions. 
               Work directly on your specific blockages, fears, or emotional patterns in a safe, private space.
             </p>
             
-            <div className="space-y-4">
-              <p className="text-foreground font-medium">Available formats:</p>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="space-y-5">
+              <p className="text-accent-foreground font-medium text-lg">Available formats:</p>
+              <div className="space-y-4">
                 {[
                   { format: "Live Sessions", desc: "In-person or video call" },
                   { format: "Email Coaching", desc: "Written guidance at your pace" },
                   { format: "Phone / WhatsApp", desc: "Quick support when you need it" }
                 ].map((item, i) => (
-                  <div key={i} className="flex flex-col gap-1">
-                    <div className="flex items-center gap-2">
-                      <div className="w-2 h-2 bg-accent" />
-                      <span className="text-foreground font-medium">{item.format}</span>
+                  <div key={i} className="flex items-start gap-4">
+                    <div className="w-3 h-3 bg-accent-foreground/80 mt-1.5 flex-shrink-0" />
+                    <div>
+                      <span className="text-accent-foreground font-medium text-lg">{item.format}</span>
+                      <p className="text-accent-foreground/70">{item.desc}</p>
                     </div>
-                    <span className="text-muted-foreground text-sm pl-4">{item.desc}</span>
                   </div>
                 ))}
               </div>
             </div>
+
+            <div className="mt-10">
+              <Link href="/contact">
+                <Button 
+                  size="lg"
+                  className="bg-accent-foreground text-accent hover:bg-accent-foreground/90 px-10 py-6 text-base font-medium transition-all duration-300 hover:scale-105 group"
+                >
+                  Book a Session
+                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
+            </div>
+          </div>
+          {/* Image Side */}
+          <div className="relative aspect-square md:aspect-auto min-h-[400px] order-1 md:order-2">
+            <Image
+              src="/images/coaching.jpg"
+              alt="1:1 personal coaching session"
+              fill
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-accent/40 via-transparent to-transparent" />
           </div>
         </div>
       </div>
