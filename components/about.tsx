@@ -60,7 +60,7 @@ export function About() {
               the moment you reconnect with yourself, shift your mindset, and begin to believe that you are 
               allowed to live a life that truly fulfills you.
             </p>
-            <p className="font-serif text-lg text-foreground">
+            <p className="font-serif text-xl text-accent font-semibold">
               My mission is to guide others through this journey — to help them move from survival to self-trust, 
               from fear to clarity, and from limitation to a life they consciously choose and create.
             </p>
