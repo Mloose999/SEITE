@@ -1,8 +1,7 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useCallback } from "react"
 import Link from "next/link"
-import { useRouter } from "next/navigation"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
@@ -12,8 +11,11 @@ import { LanguageToggle } from "@/components/language-toggle"
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const router = useRouter()
   const { t } = useLanguage()
+
+  const navigateToContact = useCallback(() => {
+    window.location.href = "/contact"
+  }, [])
 
   const navLinks = [
     { name: t("nav.about"), href: "#about" },
@@ -96,7 +98,7 @@ export function Header() {
                 ? "bg-primary text-primary-foreground hover:bg-primary/90" 
                 : "bg-card text-foreground hover:bg-card/90"
             }`}
-            onClick={() => router.push("/contact")}
+            onClick={navigateToContact}
           >
             {t("nav.bookNow")}
           </Button>
@@ -132,8 +134,8 @@ export function Header() {
             <Button 
               className="bg-primary text-primary-foreground hover:bg-primary/90 mt-2"
               onClick={() => {
-                router.push("/contact")
                 setIsMobileMenuOpen(false)
+                navigateToContact()
               }}
             >
               {t("nav.bookNow")}
