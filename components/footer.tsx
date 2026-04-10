@@ -35,10 +35,10 @@ export function Footer() {
           {/* Brand */}
           <div className="text-center md:text-left flex flex-col items-center md:items-start gap-4">
             <Image
-              src="/images/logo.jpg"
+              src="/images/logo.svg"
               alt="Change Your Life with Linda"
-              width={140}
-              height={140}
+              width={80}
+              height={80}
               className="object-contain"
             />
             <div>

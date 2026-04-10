@@ -56,10 +56,10 @@ export function Header() {
           className="flex items-center gap-3"
         >
           <Image
-            src="/images/logo.jpg"
+            src="/images/logo.svg"
             alt="Change Your Life with Linda"
-            width={80}
-            height={80}
+            width={50}
+            height={50}
             className="object-contain"
           />
           <div className="hidden sm:flex flex-col">
