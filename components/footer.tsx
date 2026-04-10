@@ -35,11 +35,12 @@ export function Footer() {
           {/* Brand */}
           <div className="text-center md:text-left flex flex-col items-center md:items-start gap-4">
             <Image
-              src="/images/logo.svg"
+              src="/images/logo-original.png"
               alt="Change Your Life with Linda"
               width={80}
               height={80}
               className="object-contain"
+              style={{ filter: "hue-rotate(-30deg) saturate(1.2)" }}
             />
             <div>
               <p className="font-serif text-2xl font-extrabold mb-1 text-accent">{t("header.brand")}</p>

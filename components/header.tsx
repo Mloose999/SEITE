@@ -56,11 +56,12 @@ export function Header() {
           className="flex items-center gap-3"
         >
           <Image
-            src="/images/logo.svg"
+            src="/images/logo-original.png"
             alt="Change Your Life with Linda"
             width={50}
             height={50}
             className="object-contain"
+            style={{ filter: "hue-rotate(-30deg) saturate(1.2)" }}
           />
           <div className="hidden sm:flex flex-col">
             <span className={`font-serif text-lg font-bold transition-colors ${
