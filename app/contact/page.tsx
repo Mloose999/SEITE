@@ -8,6 +8,8 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import { ArrowLeft, Send, CheckCircle } from "lucide-react"
+import { useLanguage } from "@/lib/language-context"
+import { LanguageToggle } from "@/components/language-toggle"
 
 export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -17,6 +19,7 @@ export default function ContactPage() {
     email: "",
     message: ""
   })
+  const { t } = useLanguage()
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -44,15 +47,15 @@ export default function ContactPage() {
             <CheckCircle className="w-10 h-10 text-accent" />
           </div>
           <h1 className="font-serif text-3xl font-bold text-foreground mb-4">
-            Thank You!
+            {t("contact.thankYou")}
           </h1>
           <p className="text-muted-foreground mb-8">
-            Your message has been received. Linda will get back to you as soon as possible.
+            {t("contact.received")}
           </p>
           <Link href="/">
             <Button className="bg-primary text-primary-foreground hover:bg-primary/90 px-8">
               <ArrowLeft className="w-4 h-4 mr-2" />
-              Back to Home
+              {t("contact.backHome")}
             </Button>
           </Link>
         </div>
@@ -67,7 +70,7 @@ export default function ContactPage() {
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-3">
             <Image
-              src="/images/logo.png"
+              src="/images/logo.jpg"
               alt="Change Your Life with Linda"
               width={60}
               height={60}
@@ -77,12 +80,15 @@ export default function ContactPage() {
               Linda Holtkamp
             </span>
           </Link>
-          <Link href="/">
-            <Button variant="ghost" className="text-muted-foreground hover:text-foreground">
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              Back
-            </Button>
-          </Link>
+          <div className="flex items-center gap-2">
+            <LanguageToggle isScrolled={true} />
+            <Link href="/">
+              <Button variant="ghost" className="text-muted-foreground hover:text-foreground">
+                <ArrowLeft className="w-4 h-4 mr-2" />
+                {t("contact.back")}
+              </Button>
+            </Link>
+          </div>
         </div>
       </header>
 
@@ -91,24 +97,23 @@ export default function ContactPage() {
         <div className="max-w-2xl mx-auto px-6">
           <div className="text-center mb-12">
             <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-extrabold text-foreground mb-4">
-              Get in Touch
+              {t("contact.title")}
             </h1>
             <p className="text-muted-foreground text-lg max-w-xl mx-auto">
-              Ready to start your transformation? Fill out the form below and Linda will 
-              reach out to schedule your session.
+              {t("contact.description")}
             </p>
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="space-y-2">
               <Label htmlFor="name" className="text-foreground font-medium">
-                Your Name
+                {t("contact.name")}
               </Label>
               <Input
                 id="name"
                 name="name"
                 type="text"
-                placeholder="Enter your full name"
+                placeholder={t("contact.namePlaceholder")}
                 required
                 value={formData.name}
                 onChange={handleChange}
@@ -118,13 +123,13 @@ export default function ContactPage() {
 
             <div className="space-y-2">
               <Label htmlFor="email" className="text-foreground font-medium">
-                Email Address
+                {t("contact.email")}
               </Label>
               <Input
                 id="email"
                 name="email"
                 type="email"
-                placeholder="your.email@example.com"
+                placeholder={t("contact.emailPlaceholder")}
                 required
                 value={formData.email}
                 onChange={handleChange}
@@ -134,12 +139,12 @@ export default function ContactPage() {
 
             <div className="space-y-2">
               <Label htmlFor="message" className="text-foreground font-medium">
-                What would you like help with?
+                {t("contact.message")}
               </Label>
               <Textarea
                 id="message"
                 name="message"
-                placeholder="Tell Linda about your goals, challenges, or what you're hoping to achieve through coaching..."
+                placeholder={t("contact.messagePlaceholder")}
                 required
                 rows={6}
                 value={formData.message}
@@ -156,19 +161,19 @@ export default function ContactPage() {
               {isSubmitting ? (
                 <span className="flex items-center justify-center gap-2">
                   <span className="w-5 h-5 border-2 border-primary-foreground/30 border-t-primary-foreground rounded-full animate-spin" />
-                  Sending...
+                  {t("contact.sending")}
                 </span>
               ) : (
                 <span className="flex items-center justify-center gap-2">
                   <Send className="w-4 h-4" />
-                  Send Message
+                  {t("contact.send")}
                 </span>
               )}
             </Button>
           </form>
 
           <p className="text-center text-muted-foreground text-sm mt-8">
-            Linda typically responds within 24-48 hours.
+            {t("contact.responseTime")}
           </p>
         </div>
       </section>

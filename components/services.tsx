@@ -1,41 +1,46 @@
-import { Leaf, HeartHandshake, Sun, Compass } from "lucide-react"
+"use client"
 
-const services = [
-  {
-    icon: Leaf,
-    title: "Belief Transformation",
-    description: "Transform unconscious beliefs with personalized guidance inspired by Neville Goddard and Dr. Joe Dispenza"
-  },
-  {
-    icon: HeartHandshake,
-    title: "Emotional Healing",
-    description: "Heal emotional wounds and foster love, health, and spiritual awakening"
-  },
-  {
-    icon: Sun,
-    title: "Manifestation Mastery",
-    description: "Enhance your manifesting abilities through spiritual and mental techniques"
-  },
-  {
-    icon: Compass,
-    title: "Spiritual Expansion",
-    description: "Expand your awareness and elevate your spiritual journey"
-  }
-]
+import { Leaf, HeartHandshake, Sun, Compass } from "lucide-react"
+import { useLanguage } from "@/lib/language-context"
 
 export function Services() {
+  const { t } = useLanguage()
+
+  const services = [
+    {
+      icon: Leaf,
+      title: t("services.belief.title"),
+      description: t("services.belief.description")
+    },
+    {
+      icon: HeartHandshake,
+      title: t("services.emotional.title"),
+      description: t("services.emotional.description")
+    },
+    {
+      icon: Sun,
+      title: t("services.manifestation.title"),
+      description: t("services.manifestation.description")
+    },
+    {
+      icon: Compass,
+      title: t("services.spiritual.title"),
+      description: t("services.spiritual.description")
+    }
+  ]
+
   return (
     <section id="services" className="py-24 md:py-32 bg-background">
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid md:grid-cols-12 gap-12 md:gap-16">
           {/* Left side - Sticky header */}
           <div className="md:col-span-4 md:sticky md:top-32 md:self-start">
-            <p className="text-accent font-semibold tracking-widest uppercase text-sm mb-4">What I Offer</p>
+            <p className="text-accent font-semibold tracking-widest uppercase text-sm mb-4">{t("services.label")}</p>
             <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-extrabold text-foreground mb-6">
-              Services
+              {t("services.title")}
             </h2>
             <p className="text-muted-foreground leading-relaxed">
-              Personalized coaching and guidance to help you transform your mindset and unlock your true potential.
+              {t("services.description")}
             </p>
           </div>
 
