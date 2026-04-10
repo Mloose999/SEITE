@@ -6,18 +6,21 @@ import { useRouter } from "next/navigation"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
-
-const navLinks = [
-  { name: "About", href: "#about" },
-  { name: "Services", href: "#services" },
-  { name: "Workshops", href: "#workshops" },
-  { name: "Booking", href: "#booking" },
-]
+import { useLanguage } from "@/lib/language-context"
+import { LanguageToggle } from "@/components/language-toggle"
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const router = useRouter()
+  const { t } = useLanguage()
+
+  const navLinks = [
+    { name: t("nav.about"), href: "#about" },
+    { name: t("nav.services"), href: "#services" },
+    { name: t("nav.workshops"), href: "#workshops" },
+    { name: t("nav.booking"), href: "#booking" },
+  ]
 
   useEffect(() => {
     const handleScroll = () => {
@@ -51,7 +54,7 @@ export function Header() {
           className="flex items-center gap-3"
         >
           <Image
-            src="/images/logo.png"
+            src="/images/logo.jpg"
             alt="Change Your Life with Linda"
             width={80}
             height={80}
@@ -61,21 +64,21 @@ export function Header() {
             <span className={`font-serif text-lg font-bold transition-colors ${
               isScrolled ? "text-foreground" : "text-card"
             }`}>
-              Linda Holtkamp - Mindset Coaching
+              {t("header.brand")}
             </span>
             <span className={`text-xs font-medium italic transition-colors ${
               isScrolled ? "text-muted-foreground" : "text-card/80"
             }`}>
-              My job is to see you win
+              {t("header.tagline")}
             </span>
           </div>
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-6">
           {navLinks.map((link) => (
             <Link
-              key={link.name}
+              key={link.href}
               href={link.href}
               onClick={(e) => scrollToSection(e, link.href)}
               className={`text-sm font-medium transition-colors hover:opacity-80 ${
@@ -85,6 +88,7 @@ export function Header() {
               {link.name}
             </Link>
           ))}
+          <LanguageToggle isScrolled={isScrolled} />
           <Button 
             size="sm"
             className={`px-6 transition-all ${
@@ -94,18 +98,21 @@ export function Header() {
             }`}
             onClick={() => router.push("/contact")}
           >
-            Book Now
+            {t("nav.bookNow")}
           </Button>
         </nav>
 
         {/* Mobile Menu Button */}
-        <button
-          className={`md:hidden p-2 ${isScrolled ? "text-foreground" : "text-card"}`}
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          aria-label="Toggle menu"
-        >
-          {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-        </button>
+        <div className="md:hidden flex items-center gap-2">
+          <LanguageToggle isScrolled={isScrolled} />
+          <button
+            className={`p-2 ${isScrolled ? "text-foreground" : "text-card"}`}
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu */}
@@ -114,7 +121,7 @@ export function Header() {
           <nav className="flex flex-col p-6 gap-4">
             {navLinks.map((link) => (
               <Link
-                key={link.name}
+                key={link.href}
                 href={link.href}
                 onClick={(e) => scrollToSection(e, link.href)}
                 className="text-foreground font-medium py-2"
@@ -129,7 +136,7 @@ export function Header() {
                 setIsMobileMenuOpen(false)
               }}
             >
-              Book Now
+              {t("nav.bookNow")}
             </Button>
           </nav>
         </div>

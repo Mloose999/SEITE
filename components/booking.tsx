@@ -3,8 +3,11 @@
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
+import { useLanguage } from "@/lib/language-context"
 
 export function Booking() {
+  const { t } = useLanguage()
+
   return (
     <section id="booking" className="py-24 md:py-32 bg-background">
       <div className="max-w-6xl mx-auto px-6">
@@ -27,12 +30,11 @@ export function Booking() {
           <div className="relative w-full lg:w-1/2 lg:-ml-12 z-20">
             <div className="bg-[#f5f5f3] p-8 md:p-12 text-center lg:text-left shadow-lg">
               <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl font-extrabold text-foreground mb-4">
-                Book a Session
+                {t("booking.title")}
               </h2>
               
               <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-8">
-                Start your transformation today. Book a 1:1 coaching session and take the first step 
-                toward a life of clarity, strength, and purpose.
+                {t("booking.description")}
               </p>
               
               <Link href="/contact">
@@ -40,12 +42,12 @@ export function Booking() {
                   size="lg"
                   className="bg-primary text-primary-foreground hover:bg-primary/90 px-10 py-6 text-base font-medium transition-all duration-300 hover:scale-105"
                 >
-                  Book Now
+                  {t("booking.cta")}
                 </Button>
               </Link>
 
               <p className="mt-8 text-muted-foreground text-sm">
-                Fill out the contact form and Linda will get back to you to schedule your session.
+                {t("booking.info")}
               </p>
             </div>
           </div>

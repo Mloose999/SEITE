@@ -4,10 +4,12 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Mail } from "lucide-react"
+import { useLanguage } from "@/lib/language-context"
 
 export function Newsletter() {
   const [email, setEmail] = useState("")
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const { t } = useLanguage()
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
@@ -23,25 +25,24 @@ export function Newsletter() {
         <Mail className="w-14 h-14 text-accent mx-auto mb-8" strokeWidth={1.5} />
         
         <h2 className="font-serif text-3xl md:text-4xl font-extrabold text-foreground mb-4">
-          Stay Connected
+          {t("newsletter.title")}
         </h2>
         
         <p className="text-muted-foreground text-lg leading-relaxed mb-10">
-          Join the newsletter and receive insights, inspiration, and tools to strengthen your mindset 
-          and elevate your life.
+          {t("newsletter.description")}
         </p>
 
         {isSubmitted ? (
           <div className="bg-accent/20 py-4 px-8 inline-block">
             <p className="text-accent font-medium">
-              Thank you for subscribing! Check your inbox for a confirmation.
+              {t("newsletter.success")}
             </p>
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
             <Input
               type="email"
-              placeholder="Enter your email"
+              placeholder={t("newsletter.placeholder")}
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
@@ -51,7 +52,7 @@ export function Newsletter() {
               type="submit"
               className="h-12 px-8 bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300"
             >
-              Subscribe
+              {t("newsletter.cta")}
             </Button>
           </form>
         )}
