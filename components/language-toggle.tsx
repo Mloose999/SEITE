@@ -52,9 +52,9 @@ export function LanguageToggle({ isScrolled = true }: LanguageToggleProps) {
       title={language === "en" ? "Auf Deutsch wechseln" : "Switch to English"}
     >
       {language === "en" ? (
-        <GermanFlag className="w-[44px] h-[28px] shadow" />
+        <GermanFlag className="w-[88px] h-[56px] shadow" />
       ) : (
-        <UKFlag className="w-[44px] h-[28px] shadow" />
+        <UKFlag className="w-[88px] h-[56px] shadow" />
       )}
     </Button>
   )
