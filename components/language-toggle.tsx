@@ -51,7 +51,7 @@ export function LanguageToggle({ isScrolled = true }: LanguageToggleProps) {
       variant="ghost"
       size="sm"
       onClick={toggleLanguage}
-      className={`flex items-center gap-2 px-3 py-1.5 h-auto text-sm font-medium transition-colors ${
+      className={`flex items-center justify-center p-1.5 h-auto transition-colors ${
         isScrolled 
           ? "text-foreground hover:text-primary hover:bg-primary/10" 
           : "text-card hover:text-card/80 hover:bg-card/10"
@@ -59,15 +59,9 @@ export function LanguageToggle({ isScrolled = true }: LanguageToggleProps) {
       title={language === "en" ? "Auf Deutsch wechseln" : "Switch to English"}
     >
       {language === "en" ? (
-        <>
-          <GermanFlag className="w-5 h-4 rounded-sm shadow-sm" />
-          <span>DE</span>
-        </>
+        <GermanFlag className="w-6 h-6 rounded-sm shadow-sm" />
       ) : (
-        <>
-          <UKFlag className="w-5 h-4 rounded-sm shadow-sm" />
-          <span>EN</span>
-        </>
+        <UKFlag className="w-6 h-6 rounded-sm shadow-sm" />
       )}
     </Button>
   )
