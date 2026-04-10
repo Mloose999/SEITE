@@ -7,27 +7,50 @@ interface LanguageToggleProps {
   isScrolled?: boolean
 }
 
-// German flag (black, red, gold) - wide rectangle format
-function GermanFlag({ className }: { className?: string }) {
+// German flag (black, red, gold)
+function GermanFlag() {
   return (
-    <svg viewBox="0 0 5 3" className={className} aria-label="German flag">
-      <rect width="5" height="1" y="0" fill="#000000"/>
-      <rect width="5" height="1" y="1" fill="#DD0000"/>
-      <rect width="5" height="1" y="2" fill="#FFCC00"/>
+    <svg 
+      width="36" 
+      height="24" 
+      viewBox="0 0 36 24" 
+      style={{ display: 'block' }}
+      aria-label="Deutsche Flagge"
+    >
+      <rect x="0" y="0" width="36" height="8" fill="#000000"/>
+      <rect x="0" y="8" width="36" height="8" fill="#DD0000"/>
+      <rect x="0" y="16" width="36" height="8" fill="#FFCC00"/>
     </svg>
   )
 }
 
-// UK flag (Union Jack) - wide rectangle format
-function UKFlag({ className }: { className?: string }) {
+// UK flag (Union Jack)
+function UKFlag() {
   return (
-    <svg viewBox="0 0 60 30" className={className} aria-label="UK flag">
-      <rect width="60" height="30" fill="#012169"/>
-      <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" strokeWidth="6"/>
-      <path d="M0,0 L60,30" stroke="#C8102E" strokeWidth="2"/>
-      <path d="M60,0 L0,30" stroke="#C8102E" strokeWidth="2"/>
-      <path d="M30,0 v30 M0,15 h60" stroke="#fff" strokeWidth="10"/>
-      <path d="M30,0 v30 M0,15 h60" stroke="#C8102E" strokeWidth="6"/>
+    <svg 
+      width="36" 
+      height="24" 
+      viewBox="0 0 36 24" 
+      style={{ display: 'block' }}
+      aria-label="UK Flag"
+    >
+      {/* Blue background */}
+      <rect width="36" height="24" fill="#012169"/>
+      
+      {/* White diagonal stripes */}
+      <path d="M0,0 L36,24 M36,0 L0,24" stroke="#FFFFFF" strokeWidth="4"/>
+      
+      {/* Red diagonal stripes */}
+      <path d="M0,0 L36,24" stroke="#C8102E" strokeWidth="2"/>
+      <path d="M36,0 L0,24" stroke="#C8102E" strokeWidth="2"/>
+      
+      {/* White cross */}
+      <rect x="15" y="0" width="6" height="24" fill="#FFFFFF"/>
+      <rect x="0" y="9" width="36" height="6" fill="#FFFFFF"/>
+      
+      {/* Red cross */}
+      <rect x="16" y="0" width="4" height="24" fill="#C8102E"/>
+      <rect x="0" y="10" width="36" height="4" fill="#C8102E"/>
     </svg>
   )
 }
@@ -44,18 +67,14 @@ export function LanguageToggle({ isScrolled = true }: LanguageToggleProps) {
       variant="ghost"
       size="sm"
       onClick={toggleLanguage}
-      className={`flex items-center justify-center p-1 h-auto transition-colors ${
+      className={`flex items-center justify-center p-1.5 h-auto transition-colors ${
         isScrolled 
           ? "text-foreground hover:text-primary hover:bg-primary/10" 
           : "text-card hover:text-card/80 hover:bg-card/10"
       }`}
       title={language === "en" ? "Auf Deutsch wechseln" : "Switch to English"}
     >
-      {language === "en" ? (
-        <GermanFlag className="w-[88px] h-[56px] shadow" />
-      ) : (
-        <UKFlag className="w-[88px] h-[56px] shadow" />
-      )}
+      {language === "en" ? <GermanFlag /> : <UKFlag />}
     </Button>
   )
 }
