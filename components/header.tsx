@@ -57,11 +57,18 @@ export function Header() {
             height={80}
             className="object-contain"
           />
-          <span className={`font-serif text-lg font-bold transition-colors hidden sm:block ${
-            isScrolled ? "text-foreground" : "text-card"
-          }`}>
-            Linda Holtkamp - Mindset Coaching
-          </span>
+          <div className="hidden sm:flex flex-col">
+            <span className={`font-serif text-lg font-bold transition-colors ${
+              isScrolled ? "text-foreground" : "text-card"
+            }`}>
+              Linda Holtkamp - Mindset Coaching
+            </span>
+            <span className={`text-xs font-medium italic transition-colors ${
+              isScrolled ? "text-muted-foreground" : "text-card/80"
+            }`}>
+              My job is to see you win
+            </span>
+          </div>
         </Link>
 
         {/* Desktop Navigation */}

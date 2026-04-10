@@ -40,7 +40,7 @@ export function Footer() {
             />
             <div>
               <p className="font-serif text-2xl font-extrabold mb-1 text-accent">Linda Holtkamp - Mindset Coaching</p>
-              <p className="text-secondary-foreground/70 text-sm">It starts with you</p>
+              <p className="text-secondary-foreground/70 text-sm italic">My job is to see you win</p>
             </div>
           </div>
 
