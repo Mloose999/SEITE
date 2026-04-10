@@ -10,10 +10,10 @@ interface LanguageToggleProps {
 // German flag (black, red, gold)
 function GermanFlag({ className }: { className?: string }) {
   return (
-    <svg viewBox="0 0 5 3" className={className} aria-label="German flag">
-      <rect width="5" height="1" y="0" fill="#000000"/>
-      <rect width="5" height="1" y="1" fill="#DD0000"/>
-      <rect width="5" height="1" y="2" fill="#FFCC00"/>
+    <svg viewBox="0 0 3 3" className={className} aria-label="German flag">
+      <rect width="3" height="1" y="0" fill="#000000"/>
+      <rect width="3" height="1" y="1" fill="#DD0000"/>
+      <rect width="3" height="1" y="2" fill="#FFCC00"/>
     </svg>
   )
 }
@@ -21,20 +21,13 @@ function GermanFlag({ className }: { className?: string }) {
 // UK flag (Union Jack)
 function UKFlag({ className }: { className?: string }) {
   return (
-    <svg viewBox="0 0 60 30" className={className} aria-label="UK flag">
-      <clipPath id="s">
-        <path d="M0,0 v30 h60 v-30 z"/>
-      </clipPath>
-      <clipPath id="t">
-        <path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/>
-      </clipPath>
-      <g clipPath="url(#s)">
-        <path d="M0,0 v30 h60 v-30 z" fill="#012169"/>
-        <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" strokeWidth="6"/>
-        <path d="M0,0 L60,30 M60,0 L0,30" clipPath="url(#t)" stroke="#C8102E" strokeWidth="4"/>
-        <path d="M30,0 v30 M0,15 h60" stroke="#fff" strokeWidth="10"/>
-        <path d="M30,0 v30 M0,15 h60" stroke="#C8102E" strokeWidth="6"/>
-      </g>
+    <svg viewBox="0 0 30 30" className={className} aria-label="UK flag">
+      <rect width="30" height="30" fill="#012169"/>
+      <path d="M0,0 L30,30 M30,0 L0,30" stroke="#fff" strokeWidth="6"/>
+      <path d="M0,0 L30,30" stroke="#C8102E" strokeWidth="2"/>
+      <path d="M30,0 L0,30" stroke="#C8102E" strokeWidth="2"/>
+      <path d="M15,0 v30 M0,15 h30" stroke="#fff" strokeWidth="10"/>
+      <path d="M15,0 v30 M0,15 h30" stroke="#C8102E" strokeWidth="6"/>
     </svg>
   )
 }
@@ -59,9 +52,9 @@ export function LanguageToggle({ isScrolled = true }: LanguageToggleProps) {
       title={language === "en" ? "Auf Deutsch wechseln" : "Switch to English"}
     >
       {language === "en" ? (
-        <GermanFlag className="w-6 h-6 rounded-sm shadow-sm" />
+        <GermanFlag className="w-8 h-8 rounded shadow-sm" />
       ) : (
-        <UKFlag className="w-6 h-6 rounded-sm shadow-sm" />
+        <UKFlag className="w-8 h-8 rounded shadow-sm" />
       )}
     </Button>
   )
