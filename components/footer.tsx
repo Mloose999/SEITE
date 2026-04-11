@@ -80,23 +80,23 @@ export function Footer() {
         {/* Impressum */}
         <div className="mt-12 pt-8 border-t border-secondary-foreground/10">
           <div className="text-center mb-6">
-            <h3 className="font-serif text-lg font-semibold text-accent mb-4">{t("footer.impressum")}</h3>
-            <div className="text-secondary-foreground/70 text-sm space-y-1">
-              <p className="font-medium text-secondary-foreground">Linda Holtkamp</p>
+            <h3 className="font-serif text-lg font-semibold text-foreground mb-4">{t("footer.impressum")}</h3>
+            <div className="text-foreground/70 text-sm space-y-1">
+              <p className="font-medium text-foreground">Linda Holtkamp</p>
               <p>Reemstückenkamp 22 c, 22523 Hamburg</p>
               <p>
-                <a href="tel:+491715812251" className="hover:text-accent transition-colors">
+                <a href="tel:+491715812251" className="hover:text-foreground transition-colors">
                   +49 171 5812251
                 </a>
               </p>
               <p>
-                <a href="mailto:info@lindaholtkamp.com" className="hover:text-accent transition-colors">
+                <a href="mailto:info@lindaholtkamp.com" className="hover:text-foreground transition-colors">
                   info@lindaholtkamp.com
                 </a>
               </p>
             </div>
           </div>
-          <p className="text-secondary-foreground/60 text-sm text-center">
+          <p className="text-foreground/60 text-sm text-center">
             © {new Date().getFullYear()} Linda Holtkamp - Mindset Coaching. {t("footer.rights")}
           </p>
         </div>
