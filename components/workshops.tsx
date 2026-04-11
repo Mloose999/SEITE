@@ -198,8 +198,6 @@ export function Workshops() {
         </div>
       </div>
 
-      <div className="max-w-6xl mx-auto px-6">
-
       {/* 1:1 Coaching - Full Width Beige Section */}
       <div className="w-full bg-beige-light py-20 md:py-28 mt-28">
         <div className="max-w-6xl mx-auto px-6">
