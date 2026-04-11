@@ -35,12 +35,11 @@ export function Footer() {
           {/* Brand */}
           <div className="text-center md:text-left flex flex-col items-center md:items-start gap-5">
             <Image
-              src="/images/logo-original.png"
+              src="/images/logo-green.jpg"
               alt="Change Your Life with Linda"
               width={70}
               height={70}
               className="object-contain"
-              style={{ filter: "sepia(0.3) saturate(1.2) brightness(0.9) hue-rotate(-10deg)" }}
             />
             <div>
               <p className="font-serif text-2xl font-medium mb-2 text-foreground">{t("header.brand")}</p>

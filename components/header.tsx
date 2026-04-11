@@ -57,12 +57,11 @@ export function Header() {
           className="flex items-center gap-4 group"
         >
           <Image
-            src="/images/logo-original.png"
+            src="/images/logo-green.jpg"
             alt="Change Your Life with Linda"
             width={45}
             height={45}
             className="object-contain transition-transform duration-300 group-hover:scale-105"
-            style={{ filter: "sepia(1) saturate(2) brightness(0.85) hue-rotate(15deg)" }}
           />
           <div className="hidden sm:flex flex-col">
             <span className={`font-serif text-lg font-semibold tracking-wide transition-colors duration-300 ${
