@@ -209,7 +209,7 @@ export function Workshops() {
             <h3 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-2">
               {t("workshops.coaching")}
             </h3>
-            <SignatureUnderline className="mx-auto mb-6" width="wide" />
+            <SignatureUnderline className="mb-6" />
             <p className="text-foreground/70 leading-relaxed mb-10">
               {t("workshops.coachingDescription")}
             </p>
