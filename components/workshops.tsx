@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image"
-import { Brain, Flame, Sparkles, Heart, Check } from "lucide-react"
+import { Brain, Flame, Sparkles, Heart, Check, Video, Mail, Phone } from "lucide-react"
 import { useLanguage } from "@/lib/language-context"
 import { motion } from "framer-motion"
 
@@ -278,13 +278,15 @@ export function Workshops() {
                 <p className="text-foreground font-medium tracking-wide mb-10 text-sm uppercase">{t("workshops.availableFormats")}</p>
                 <div className="space-y-8">
                   {[
-                    { format: t("workshops.liveSessions"), desc: t("workshops.liveSessionsDesc"), num: "01" },
-                    { format: t("workshops.emailCoaching"), desc: t("workshops.emailCoachingDesc"), num: "02" },
-                    { format: t("workshops.phoneWhatsapp"), desc: t("workshops.phoneWhatsappDesc"), num: "03" }
+                    { format: t("workshops.liveSessions"), desc: t("workshops.liveSessionsDesc"), icon: Video },
+                    { format: t("workshops.emailCoaching"), desc: t("workshops.emailCoachingDesc"), icon: Mail },
+                    { format: t("workshops.phoneWhatsapp"), desc: t("workshops.phoneWhatsappDesc"), icon: Phone }
                   ].map((item, i) => (
                     <div key={i} className="flex items-start gap-6 group">
-                      <span className="font-serif text-3xl font-light text-foreground/40 group-hover:text-foreground/70 transition-colors">{item.num}</span>
-                      <div className="pt-1">
+                      <div className="w-12 h-12 rounded-full bg-white/30 backdrop-blur-sm flex items-center justify-center transition-all duration-300 group-hover:bg-white/50 group-hover:scale-110">
+                        <item.icon className="w-5 h-5 text-foreground/70" strokeWidth={1.5} />
+                      </div>
+                      <div className="pt-2">
                         <span className="text-foreground font-medium block mb-1">{item.format}</span>
                         <span className="text-foreground/60 text-sm font-light">{item.desc}</span>
                       </div>
