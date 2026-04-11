@@ -209,11 +209,11 @@ export function Workshops() {
       <div className="w-full bg-beige-light py-20 md:py-28 mt-28">
         <div className="max-w-6xl mx-auto px-6">
           <div className="max-w-3xl mx-auto text-center">
-            <p className="text-accent font-semibold tracking-widest uppercase text-sm mb-4">{t("workshops.personalSupport")}</p>
+            <p className="text-foreground/70 font-semibold tracking-widest uppercase text-sm mb-4">{t("workshops.personalSupport")}</p>
             <h3 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-6">
               {t("workshops.coaching")}
             </h3>
-            <p className="text-muted-foreground leading-relaxed mb-10">
+            <p className="text-foreground/70 leading-relaxed mb-10">
               {t("workshops.coachingDescription")}
             </p>
             
@@ -226,9 +226,9 @@ export function Workshops() {
                   { format: t("workshops.phoneWhatsapp"), desc: t("workshops.phoneWhatsappDesc") }
                 ].map((item, i) => (
                   <div key={i} className="flex flex-col items-center gap-2">
-                    <div className="w-3 h-3 bg-accent rounded-full mb-1" />
+                    <div className="w-3 h-3 bg-foreground/40 rounded-full mb-1" />
                     <span className="text-foreground font-medium">{item.format}</span>
-                    <span className="text-muted-foreground text-sm">{item.desc}</span>
+                    <span className="text-foreground/70 text-sm">{item.desc}</span>
                   </div>
                 ))}
               </div>

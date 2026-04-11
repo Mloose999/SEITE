@@ -34,13 +34,13 @@ export function Services() {
       <div className="max-w-6xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16 md:mb-20">
-          <p className="text-accent font-semibold tracking-widest uppercase text-sm mb-4">
+          <p className="text-foreground/70 font-semibold tracking-widest uppercase text-sm mb-4">
             {t("services.label")}
           </p>
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
             {t("services.title")}
           </h2>
-          <p className="text-muted-foreground leading-relaxed max-w-2xl mx-auto text-lg">
+          <p className="text-foreground/70 leading-relaxed max-w-2xl mx-auto text-lg">
             {t("services.description")}
           </p>
         </div>
@@ -53,13 +53,13 @@ export function Services() {
               className="flex flex-col items-center text-center"
             >
               {/* Icon */}
-              <service.icon className="w-10 h-10 text-muted-foreground/60 mb-5" strokeWidth={1.2} />
+              <service.icon className="w-10 h-10 text-foreground/50 mb-5" strokeWidth={1.2} />
               
               {/* Content */}
               <h3 className="font-serif text-lg md:text-xl font-semibold text-foreground mb-2">
                 {service.title}
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
+              <p className="text-foreground/70 text-sm leading-relaxed">
                 {service.description}
               </p>
             </div>
