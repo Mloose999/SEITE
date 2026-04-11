@@ -2,7 +2,6 @@
 
 import Image from "next/image"
 import { useLanguage } from "@/lib/language-context"
-import { SignatureUnderline } from "./signature-underline"
 
 export function Philosophy() {
   const { t } = useLanguage()
@@ -23,10 +22,9 @@ export function Philosophy() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-20">
           <p className="text-accent font-semibold tracking-widest uppercase text-sm mb-4">{t("philosophy.label")}</p>
-          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-extrabold text-foreground text-balance mb-2">
+          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-extrabold text-foreground text-balance">
             {t("philosophy.title")}
           </h2>
-          <SignatureUnderline className="mx-auto" />
         </div>
 
         {/* Featured Image with Quote */}

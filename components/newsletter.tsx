@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Mail } from "lucide-react"
 import { useLanguage } from "@/lib/language-context"
-import { SignatureUnderline } from "./signature-underline"
 
 export function Newsletter() {
   const [email, setEmail] = useState("")
@@ -25,10 +24,9 @@ export function Newsletter() {
       <div className="max-w-2xl mx-auto px-6 text-center">
         <Mail className="w-14 h-14 text-accent mx-auto mb-8" strokeWidth={1.5} />
         
-        <h2 className="font-serif text-3xl md:text-4xl font-extrabold text-foreground mb-2">
+        <h2 className="font-serif text-3xl md:text-4xl font-extrabold text-foreground mb-4">
           {t("newsletter.title")}
         </h2>
-        <SignatureUnderline className="mx-auto mb-4" />
         
         <p className="text-muted-foreground text-lg leading-relaxed mb-10">
           {t("newsletter.description")}

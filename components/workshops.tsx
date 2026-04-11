@@ -3,7 +3,6 @@
 import Image from "next/image"
 import { Brain, Flame, Sparkles, Heart, Check } from "lucide-react"
 import { useLanguage } from "@/lib/language-context"
-import { SignatureUnderline } from "./signature-underline"
 
 export function Workshops() {
   const { t } = useLanguage()
@@ -59,10 +58,9 @@ export function Workshops() {
         {/* Section Header */}
         <div className="text-center mb-20">
           <p className="text-accent font-semibold tracking-widest uppercase text-sm mb-4">{t("workshops.label")}</p>
-          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-extrabold text-foreground mb-2 text-balance">
+          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-extrabold text-foreground mb-6 text-balance">
             {t("workshops.title")}
           </h2>
-          <SignatureUnderline className="mx-auto mb-6" />
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
             {t("workshops.description")}
           </p>
@@ -206,10 +204,9 @@ export function Workshops() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="max-w-3xl mx-auto text-center">
             <p className="text-foreground/70 font-semibold tracking-widest uppercase text-sm mb-4">{t("workshops.personalSupport")}</p>
-            <h3 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-2">
+            <h3 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-6">
               {t("workshops.coaching")}
             </h3>
-            <SignatureUnderline className="mb-6" />
             <p className="text-foreground/70 leading-relaxed mb-10">
               {t("workshops.coachingDescription")}
             </p>
