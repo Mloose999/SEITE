@@ -29,7 +29,7 @@ export function Footer() {
   }
 
   return (
-    <footer className="bg-foreground text-white py-20">
+    <footer className="bg-beige text-foreground py-20">
       <div className="max-w-7xl mx-auto px-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-12">
           {/* Brand */}
@@ -39,11 +39,12 @@ export function Footer() {
               alt="Change Your Life with Linda"
               width={70}
               height={70}
-              className="object-contain brightness-0 invert opacity-90"
+              className="object-contain"
+              style={{ filter: "sepia(0.3) saturate(1.2) brightness(0.9) hue-rotate(-10deg)" }}
             />
             <div>
-              <p className="font-serif text-2xl font-medium mb-2 text-white">{t("header.brand")}</p>
-              <p className="text-white/50 text-sm font-light tracking-wide">{t("header.tagline")}</p>
+              <p className="font-serif text-2xl font-medium mb-2 text-foreground">{t("header.brand")}</p>
+              <p className="text-foreground/50 text-sm font-light tracking-wide">{t("header.tagline")}</p>
             </div>
           </div>
 
@@ -54,7 +55,7 @@ export function Footer() {
                 key={link.href}
                 href={link.href}
                 onClick={(e) => scrollToSection(e, link.href)}
-                className="text-white/60 hover:text-white transition-colors duration-300 text-sm font-light tracking-wide"
+                className="text-foreground/60 hover:text-foreground transition-colors duration-300 text-sm font-light tracking-wide"
               >
                 {link.name}
               </Link>
@@ -67,35 +68,35 @@ export function Footer() {
               <Link
                 key={social.name}
                 href={social.href}
-                className="w-11 h-11 border border-white/20 flex items-center justify-center hover:border-white/50 hover:bg-white/10 transition-all duration-300"
+                className="w-11 h-11 border border-foreground/20 flex items-center justify-center hover:border-foreground/50 hover:bg-white/30 transition-all duration-300"
                 aria-label={social.name}
               >
-                <social.icon className="w-4 h-4 text-white/80" />
+                <social.icon className="w-4 h-4 text-foreground/70" />
               </Link>
             ))}
           </div>
         </div>
 
         {/* Impressum */}
-        <div className="mt-16 pt-10 border-t border-white/10">
+        <div className="mt-16 pt-10 border-t border-foreground/10">
           <div className="text-center mb-8">
-            <h3 className="font-serif text-lg font-medium text-white mb-5 tracking-wide">{t("footer.impressum")}</h3>
-            <div className="text-white/50 text-sm space-y-2 font-light">
-              <p className="font-medium text-white/80">Linda Holtkamp</p>
+            <h3 className="font-serif text-lg font-medium text-foreground mb-5 tracking-wide">{t("footer.impressum")}</h3>
+            <div className="text-foreground/50 text-sm space-y-2 font-light">
+              <p className="font-medium text-foreground/80">Linda Holtkamp</p>
               <p>Reemstuckenkamp 22 c, 22523 Hamburg</p>
               <p>
-                <a href="tel:+491715812251" className="hover:text-white transition-colors duration-300">
+                <a href="tel:+491715812251" className="hover:text-foreground transition-colors duration-300">
                   +49 171 5812251
                 </a>
               </p>
               <p>
-                <a href="mailto:info@lindaholtkamp.com" className="hover:text-white transition-colors duration-300">
+                <a href="mailto:info@lindaholtkamp.com" className="hover:text-foreground transition-colors duration-300">
                   info@lindaholtkamp.com
                 </a>
               </p>
             </div>
           </div>
-          <p className="text-white/40 text-sm text-center font-light">
+          <p className="text-foreground/40 text-sm text-center font-light">
             © {new Date().getFullYear()} Linda Holtkamp - Mindset Coaching. {t("footer.rights")}
           </p>
         </div>

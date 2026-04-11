@@ -73,29 +73,28 @@ export function Workshops() {
           </p>
         </motion.div>
 
-        {/* Hero Image with Overlay Text */}
+        {/* Hero Image with Overlay Text - Split Layout */}
         <motion.div 
-          initial={{ opacity: 0, scale: 0.98 }}
-          whileInView={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1 }}
-          className="relative mb-28"
+          className="relative mb-28 grid md:grid-cols-5 gap-0"
         >
-          <div className="relative overflow-hidden aspect-[21/9]">
+          {/* Text Side */}
+          <div className="md:col-span-2 bg-gradient-to-br from-accent to-beige p-10 md:p-14 flex items-center order-2 md:order-1">
+            <p className="text-foreground font-serif text-2xl md:text-3xl lg:text-4xl font-medium leading-snug">
+              {t("workshops.heroText")}
+            </p>
+          </div>
+          {/* Image Side */}
+          <div className="md:col-span-3 relative aspect-[4/3] md:aspect-auto md:min-h-[400px] order-1 md:order-2">
             <Image
-              src="/images/workshop.jpg"
+              src="/images/workshop-hero.jpg"
               alt="Personal transformation workshop"
               fill
               className="object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-foreground/80 via-foreground/40 to-transparent" />
-            <div className="absolute inset-0 flex items-center">
-              <div className="px-10 md:px-16 max-w-2xl">
-                <p className="text-white font-serif text-2xl md:text-4xl lg:text-5xl font-medium leading-snug">
-                  {t("workshops.heroText")}
-                </p>
-              </div>
-            </div>
           </div>
         </motion.div>
 
@@ -244,7 +243,7 @@ export function Workshops() {
         </div>
       </motion.div>
 
-      {/* 1:1 Coaching - Dynamic Split Section */}
+      {/* 1:1 Coaching - Elegant Split Section */}
       <div className="w-full bg-beige-light py-28 md:py-36 pb-36 md:pb-48">
         <div className="max-w-7xl mx-auto px-8">
           <motion.div 
@@ -252,15 +251,15 @@ export function Workshops() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="grid md:grid-cols-2 gap-0"
+            className="grid md:grid-cols-2 gap-0 shadow-xl"
           >
-            {/* Left - Dark accent panel */}
-            <div className="bg-foreground p-10 md:p-14 lg:p-16 flex flex-col justify-center">
-              <p className="text-white/50 font-light tracking-[0.3em] uppercase text-xs mb-6">{t("workshops.personalSupport")}</p>
-              <h3 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium text-white mb-6 leading-tight">
+            {/* Left - Warm accent panel */}
+            <div className="bg-gradient-to-br from-accent to-beige p-10 md:p-14 lg:p-16 flex flex-col justify-center">
+              <p className="text-foreground/60 font-light tracking-[0.3em] uppercase text-xs mb-6">{t("workshops.personalSupport")}</p>
+              <h3 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium text-foreground mb-6 leading-tight">
                 {t("workshops.coaching")}
               </h3>
-              <p className="text-white/70 leading-relaxed font-light text-lg">
+              <p className="text-foreground/70 leading-relaxed font-light text-lg">
                 {t("workshops.coachingDescription")}
               </p>
             </div>
@@ -275,7 +274,7 @@ export function Workshops() {
                   { format: t("workshops.phoneWhatsapp"), desc: t("workshops.phoneWhatsappDesc"), num: "03" }
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-6 group">
-                    <span className="font-serif text-3xl font-light text-foreground/15 group-hover:text-foreground/30 transition-colors">{item.num}</span>
+                    <span className="font-serif text-3xl font-light text-accent/50 group-hover:text-accent transition-colors">{item.num}</span>
                     <div className="pt-1">
                       <span className="text-foreground font-medium block mb-1">{item.format}</span>
                       <span className="text-muted-foreground text-sm font-light">{item.desc}</span>

@@ -71,8 +71,8 @@ export function Services() {
                 </span>
                 
                 {/* Icon */}
-                <div className="w-14 h-14 bg-beige-light flex items-center justify-center mb-6 transition-all duration-500 group-hover:bg-foreground">
-                  <service.icon className="w-6 h-6 text-foreground/60 group-hover:text-white transition-colors duration-500" strokeWidth={1.5} />
+                <div className="w-14 h-14 bg-beige flex items-center justify-center mb-6 transition-all duration-500 group-hover:bg-accent">
+                  <service.icon className="w-6 h-6 text-foreground/60 group-hover:text-foreground transition-colors duration-500" strokeWidth={1.5} />
                 </div>
                 
                 {/* Content */}
@@ -84,7 +84,7 @@ export function Services() {
                 </p>
                 
                 {/* Bottom accent line */}
-                <div className="absolute bottom-0 left-0 w-0 h-1 bg-foreground transition-all duration-500 group-hover:w-full" />
+                <div className="absolute bottom-0 left-0 w-0 h-1 bg-accent transition-all duration-500 group-hover:w-full" />
               </div>
             </motion.div>
           ))}

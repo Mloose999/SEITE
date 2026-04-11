@@ -34,28 +34,27 @@ export function Philosophy() {
           </h2>
         </motion.div>
 
-        {/* Featured Image with Quote - Split Layout */}
+        {/* Featured Image with Quote */}
         <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, scale: 0.98 }}
+          whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 1 }}
-          className="relative mb-28 grid md:grid-cols-2 gap-0"
+          className="relative mb-28"
         >
-          {/* Quote Side */}
-          <div className="bg-foreground p-10 md:p-16 flex items-center justify-center order-2 md:order-1">
-            <p className="text-white font-serif text-xl md:text-2xl lg:text-3xl font-light italic leading-relaxed max-w-md text-center md:text-left">
-              {t("philosophy.quote")}
-            </p>
-          </div>
-          {/* Image Side */}
-          <div className="relative aspect-square md:aspect-auto order-1 md:order-2">
+          <div className="relative overflow-hidden aspect-square md:aspect-[16/9]">
             <Image
-              src="/images/transformation-journey.jpg"
-              alt="Transformation journey - peaceful sunrise"
+              src="/images/hourglass.jpg"
+              alt="Transformation takes time - hourglass symbolizing the journey"
               fill
-              className="object-cover"
+              className="object-cover object-center"
             />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+            <div className="absolute bottom-0 left-0 right-0 p-8 md:p-14">
+              <p className="text-white font-serif text-xl md:text-2xl lg:text-3xl font-light italic leading-relaxed max-w-2xl">
+                {t("philosophy.quote")}
+              </p>
+            </div>
           </div>
         </motion.div>
 
