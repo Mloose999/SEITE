@@ -203,31 +203,32 @@ export function Workshops() {
           </div>
         </div>
 
-        {/* 1:1 Coaching - Clean Card Design */}
-        <div className="max-w-3xl mx-auto">
-          <div className="bg-[#f5f5f3] p-8 md:p-12 lg:p-16">
+      </div>
+
+      {/* 1:1 Coaching - Full Width Beige Section */}
+      <div className="w-full bg-beige-light py-20 md:py-28 mt-28">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="max-w-3xl mx-auto text-center">
             <p className="text-accent font-semibold tracking-widest uppercase text-sm mb-4">{t("workshops.personalSupport")}</p>
             <h3 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-6">
               {t("workshops.coaching")}
             </h3>
-            <p className="text-muted-foreground leading-relaxed mb-8">
+            <p className="text-muted-foreground leading-relaxed mb-10">
               {t("workshops.coachingDescription")}
             </p>
             
-            <div className="space-y-4">
+            <div className="space-y-6">
               <p className="text-foreground font-medium">{t("workshops.availableFormats")}</p>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {[
                   { format: t("workshops.liveSessions"), desc: t("workshops.liveSessionsDesc") },
                   { format: t("workshops.emailCoaching"), desc: t("workshops.emailCoachingDesc") },
                   { format: t("workshops.phoneWhatsapp"), desc: t("workshops.phoneWhatsappDesc") }
                 ].map((item, i) => (
-                  <div key={i} className="flex flex-col gap-1">
-                    <div className="flex items-center gap-2">
-                      <div className="w-2 h-2 bg-accent" />
-                      <span className="text-foreground font-medium">{item.format}</span>
-                    </div>
-                    <span className="text-muted-foreground text-sm pl-4">{item.desc}</span>
+                  <div key={i} className="flex flex-col items-center gap-2">
+                    <div className="w-3 h-3 bg-accent rounded-full mb-1" />
+                    <span className="text-foreground font-medium">{item.format}</span>
+                    <span className="text-muted-foreground text-sm">{item.desc}</span>
                   </div>
                 ))}
               </div>
