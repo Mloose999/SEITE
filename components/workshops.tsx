@@ -208,7 +208,7 @@ export function Workshops() {
           fill
           className="object-cover object-[center_30%] md:object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-beige/40 via-beige/30 to-beige/50 md:from-beige/60 md:via-beige/50 md:to-beige/70" />
+        <div className="absolute inset-0 bg-gradient-to-b from-beige/40 via-beige/30 to-background md:from-beige/60 md:via-beige/50 md:to-background" />
         
         <div className="relative z-10">
           {/* Complete Package Section */}
