@@ -40,6 +40,9 @@ export function Footer() {
               width={70}
               height={70}
               className="object-contain"
+              style={{ 
+                filter: "sepia(1) saturate(3) brightness(1.1) hue-rotate(10deg) drop-shadow(0 0 8px rgba(212, 175, 55, 0.8)) drop-shadow(0 0 15px rgba(255, 215, 0, 0.6))" 
+              }}
             />
             <div>
               <p className="font-serif text-2xl font-medium mb-2 text-foreground">{t("header.brand")}</p>
