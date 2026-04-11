@@ -157,71 +157,77 @@ export function Workshops() {
           </div>
         </div>
 
-        {/* Complete Program Package - Clean Design */}
-        <div className="mb-28">
-          <div className="relative">
-            {/* Decorative large number */}
-            <span className="absolute -right-4 -top-20 font-serif text-[200px] md:text-[300px] font-bold text-foreground/5 leading-none select-none pointer-events-none">
-              4
-            </span>
+      </div>
+
+      {/* Complete Program Package - Full Width with Background Image - negative margin to reduce gap */}
+      <div className="-mt-12 md:-mt-16 relative overflow-hidden">
+        {/* Background Image with beige tint */}
+        <Image
+          src="/images/complete-package-bg.jpg"
+          alt=""
+          fill
+          className="object-cover"
+        />
+        {/* Beige overlay to match site color scheme */}
+        <div className="absolute inset-0 bg-beige/40 mix-blend-multiply" />
+        
+        <div className="relative z-10 max-w-6xl mx-auto px-6 py-16 md:py-20 lg:py-24">
+          <p className="text-foreground/70 font-semibold tracking-widest uppercase text-sm mb-4">{t("workshops.completePackage")}</p>
+          <h3 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
+            {t("workshops.fullProgram")}
+          </h3>
+          <p className="text-foreground/70 leading-relaxed text-lg mb-10 max-w-xl">
+            {t("workshops.fullProgramDescription")}
+          </p>
+          
+          <div className="flex flex-col md:flex-row md:items-end gap-8 md:gap-16">
+            {/* Price */}
+            <div>
+              <span className="text-foreground/60 line-through text-lg block mb-1">116 €</span>
+              <span className="font-serif text-6xl md:text-7xl font-bold text-foreground">99 €</span>
+            </div>
             
-            <div className="relative z-10">
-              <p className="text-muted-foreground font-semibold tracking-widest uppercase text-sm mb-4">{t("workshops.completePackage")}</p>
-              <h3 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-                {t("workshops.fullProgram")}
-              </h3>
-              <p className="text-muted-foreground leading-relaxed text-lg mb-10 max-w-xl">
-                {t("workshops.fullProgramDescription")}
-              </p>
-              
-              <div className="flex flex-col md:flex-row md:items-end gap-8 md:gap-16">
-                {/* Price */}
-                <div>
-                  <span className="text-muted-foreground line-through text-lg block mb-1">116 €</span>
-                  <span className="font-serif text-6xl md:text-7xl font-bold text-foreground">99 €</span>
+            {/* Benefits */}
+            <div className="space-y-3 pb-2">
+              {[t("workshops.allWorkshops"), t("workshops.structuredJourney"), t("workshops.saveBundle")].map((item, i) => (
+                <div key={i} className="flex items-center gap-3 text-foreground">
+                  <Check className="w-5 h-5 text-foreground" />
+                  <span>{item}</span>
                 </div>
-                
-                {/* Benefits */}
-                <div className="space-y-3 pb-2">
-                  {[t("workshops.allWorkshops"), t("workshops.structuredJourney"), t("workshops.saveBundle")].map((item, i) => (
-                    <div key={i} className="flex items-center gap-3 text-foreground">
-                      <Check className="w-5 h-5 text-foreground" />
-                      <span>{item}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
-
       </div>
 
       {/* 1:1 Coaching - Full Width Beige Section */}
-      <div className="w-full bg-beige-light py-20 md:py-28 mt-28">
+      <div className="w-full bg-beige-light py-20 md:py-28 pb-32 md:pb-40">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="max-w-3xl mx-auto text-center">
-            <p className="text-foreground/70 font-semibold tracking-widest uppercase text-sm mb-4">{t("workshops.personalSupport")}</p>
-            <h3 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-6">
-              {t("workshops.coaching")}
-            </h3>
-            <p className="text-foreground/70 leading-relaxed mb-10">
-              {t("workshops.coachingDescription")}
-            </p>
-            
-            <div className="space-y-6">
-              <p className="text-foreground font-medium">{t("workshops.availableFormats")}</p>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {[
-                  { format: t("workshops.liveSessions"), desc: t("workshops.liveSessionsDesc") },
-                  { format: t("workshops.emailCoaching"), desc: t("workshops.emailCoachingDesc") },
-                  { format: t("workshops.phoneWhatsapp"), desc: t("workshops.phoneWhatsappDesc") }
-                ].map((item, i) => (
-                  <div key={i} className="flex flex-col items-center gap-2">
-                    <span className="text-foreground font-medium">{item.format}</span>
-                    <span className="text-foreground/70 text-sm">{item.desc}</span>
-                  </div>
-                ))}
+          {/* White box with sharp corners */}
+          <div className="bg-white p-8 md:p-12 lg:p-16 max-w-3xl mx-auto">
+            <div className="text-center">
+              <p className="text-foreground/70 font-semibold tracking-widest uppercase text-sm mb-4">{t("workshops.personalSupport")}</p>
+              <h3 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-6">
+                {t("workshops.coaching")}
+              </h3>
+              <p className="text-foreground/70 leading-relaxed mb-10">
+                {t("workshops.coachingDescription")}
+              </p>
+              
+              <div className="space-y-6">
+                <p className="text-foreground font-medium">{t("workshops.availableFormats")}</p>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                  {[
+                    { format: t("workshops.liveSessions"), desc: t("workshops.liveSessionsDesc") },
+                    { format: t("workshops.emailCoaching"), desc: t("workshops.emailCoachingDesc") },
+                    { format: t("workshops.phoneWhatsapp"), desc: t("workshops.phoneWhatsappDesc") }
+                  ].map((item, i) => (
+                    <div key={i} className="flex flex-col items-center gap-2">
+                      <span className="text-foreground font-medium">{item.format}</span>
+                      <span className="text-foreground/70 text-sm">{item.desc}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
