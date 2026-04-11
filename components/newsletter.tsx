@@ -24,7 +24,7 @@ export function Newsletter() {
   return (
     <section id="newsletter" className="py-28 md:py-40 bg-gradient-to-br from-accent via-beige to-beige-light relative overflow-hidden">
       {/* Top transition gradient from previous section */}
-      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-beige-light via-beige-light/50 to-transparent z-10 pointer-events-none" />
+      <div className="absolute top-0 left-0 right-0 h-48 bg-gradient-to-b from-beige-light via-beige-light/70 to-transparent z-10 pointer-events-none" />
       
       {/* Decorative elements */}
       <div className="absolute top-0 left-0 w-64 h-64 bg-white/30 rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl" />

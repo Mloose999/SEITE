@@ -31,7 +31,7 @@ export function Footer() {
   return (
     <footer className="bg-beige text-foreground py-20 relative">
       {/* Top transition gradient from previous section */}
-      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-beige-light via-beige-light/50 to-transparent pointer-events-none" />
+      <div className="absolute top-0 left-0 right-0 h-40 bg-gradient-to-b from-beige-light via-beige-light/70 to-transparent pointer-events-none z-10" />
       
       <div className="max-w-7xl mx-auto px-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-12">
