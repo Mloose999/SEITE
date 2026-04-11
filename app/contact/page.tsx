@@ -172,7 +172,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="text-sm text-foreground/50 font-medium">E-Mail</p>
-                    <p className="font-medium text-foreground">info@linda-holtkamp.de</p>
+                    <p className="font-medium text-foreground">info@lindaholtkamp.de</p>
                   </div>
                 </motion.div>
 
@@ -214,12 +214,12 @@ export default function ContactPage() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <div className="bg-white/70 backdrop-blur-xl p-8 md:p-10 rounded-3xl shadow-2xl border border-white/60">
+              <div className="p-2 md:p-4">
                 <div className="flex items-center gap-3 mb-8">
-                  <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-accent to-beige flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-accent to-beige flex items-center justify-center shadow-lg">
                     <Send className="w-5 h-5 text-foreground/80" />
                   </div>
-                  <h2 className="font-serif text-2xl font-bold text-foreground">
+                  <h2 className="font-serif text-3xl font-bold text-foreground">
                     Nachricht senden
                   </h2>
                 </div>
@@ -235,7 +235,7 @@ export default function ContactPage() {
                       htmlFor="name" 
                       className={`absolute left-4 transition-all duration-300 pointer-events-none z-10 ${
                         focusedField === 'name' || formData.name 
-                          ? '-top-2.5 text-xs bg-white px-2 text-foreground/70' 
+                          ? '-top-2.5 text-xs bg-beige-light/80 backdrop-blur-sm px-2 text-foreground/70 rounded' 
                           : 'top-4 text-foreground/50'
                       }`}
                     >
@@ -250,7 +250,7 @@ export default function ContactPage() {
                       onChange={handleChange}
                       onFocus={() => setFocusedField('name')}
                       onBlur={() => setFocusedField(null)}
-                      className="bg-white/80 border-2 border-beige/50 focus:border-accent focus:ring-0 rounded-2xl py-6 px-4 transition-all duration-300 hover:border-accent/50"
+                      className="bg-white/40 backdrop-blur-sm border-2 border-accent/30 focus:border-accent focus:ring-0 rounded-2xl py-6 px-4 transition-all duration-300 hover:border-accent/50 hover:bg-white/50"
                     />
                   </motion.div>
 
@@ -264,7 +264,7 @@ export default function ContactPage() {
                       htmlFor="email" 
                       className={`absolute left-4 transition-all duration-300 pointer-events-none z-10 ${
                         focusedField === 'email' || formData.email 
-                          ? '-top-2.5 text-xs bg-white px-2 text-foreground/70' 
+                          ? '-top-2.5 text-xs bg-beige-light/80 backdrop-blur-sm px-2 text-foreground/70 rounded' 
                           : 'top-4 text-foreground/50'
                       }`}
                     >
@@ -279,7 +279,7 @@ export default function ContactPage() {
                       onChange={handleChange}
                       onFocus={() => setFocusedField('email')}
                       onBlur={() => setFocusedField(null)}
-                      className="bg-white/80 border-2 border-beige/50 focus:border-accent focus:ring-0 rounded-2xl py-6 px-4 transition-all duration-300 hover:border-accent/50"
+                      className="bg-white/40 backdrop-blur-sm border-2 border-accent/30 focus:border-accent focus:ring-0 rounded-2xl py-6 px-4 transition-all duration-300 hover:border-accent/50 hover:bg-white/50"
                     />
                   </motion.div>
 
@@ -293,7 +293,7 @@ export default function ContactPage() {
                       htmlFor="message" 
                       className={`absolute left-4 transition-all duration-300 pointer-events-none z-10 ${
                         focusedField === 'message' || formData.message 
-                          ? '-top-2.5 text-xs bg-white px-2 text-foreground/70' 
+                          ? '-top-2.5 text-xs bg-beige-light/80 backdrop-blur-sm px-2 text-foreground/70 rounded' 
                           : 'top-4 text-foreground/50'
                       }`}
                     >
@@ -308,7 +308,7 @@ export default function ContactPage() {
                       onChange={handleChange}
                       onFocus={() => setFocusedField('message')}
                       onBlur={() => setFocusedField(null)}
-                      className="bg-white/80 border-2 border-beige/50 focus:border-accent focus:ring-0 rounded-2xl py-4 px-4 pt-6 resize-none transition-all duration-300 hover:border-accent/50"
+                      className="bg-white/40 backdrop-blur-sm border-2 border-accent/30 focus:border-accent focus:ring-0 rounded-2xl py-4 px-4 pt-6 resize-none transition-all duration-300 hover:border-accent/50 hover:bg-white/50"
                     />
                   </motion.div>
 
@@ -331,8 +331,8 @@ export default function ContactPage() {
                   </Button>
                 </form>
 
-                <div className="flex items-center gap-2 justify-center mt-6 text-foreground/40 text-sm">
-                  <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
+                <div className="flex items-center gap-2 justify-center mt-8 text-foreground/50 text-sm">
+                  <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
                   {t("contact.responseTime")}
                 </div>
               </div>
