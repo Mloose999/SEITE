@@ -160,7 +160,7 @@ export function Workshops() {
       </div>
 
       {/* Complete Program Package - Full Width with Background Image */}
-      <div className="relative overflow-hidden mb-28">
+      <div className="relative overflow-hidden">
         {/* Background Image */}
         <Image
           src="/images/complete-package-bg.jpg"
@@ -199,7 +199,7 @@ export function Workshops() {
       </div>
 
       {/* 1:1 Coaching - Full Width Beige Section */}
-      <div className="w-full bg-beige-light py-20 md:py-28 mt-28">
+      <div className="w-full bg-beige-light py-20 md:py-28">
         <div className="max-w-6xl mx-auto px-6">
           <div className="max-w-3xl mx-auto text-center">
             <p className="text-foreground/70 font-semibold tracking-widest uppercase text-sm mb-4">{t("workshops.personalSupport")}</p>
