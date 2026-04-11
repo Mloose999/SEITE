@@ -40,7 +40,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Services
     "services.label": "What I Offer",
     "services.title": "Services",
-    "services.description": "Personalized coaching and guidance to help you transform your mindset and unlock your true potential.",
+    "services.description": "Personalized coaching and guidance designed to help you master your thoughts, shift your inner state, and unlock your true potential.",
     "services.belief.title": "Belief Transformation",
     "services.belief.description": "Transform unconscious beliefs with personalized guidance inspired by Neville Goddard and Dr. Joe Dispenza",
     "services.emotional.title": "Emotional Healing",
@@ -171,7 +171,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Services
     "services.label": "Mein Angebot",
     "services.title": "Leistungen",
-    "services.description": "Persönliches Coaching und Begleitung, um dein Mindset zu transformieren und dein wahres Potenzial zu entfalten.",
+    "services.description": "Persönliches Coaching und Begleitung, um deine Gedanken zu meistern, deinen inneren Zustand zu verändern und dein wahres Potenzial zu entfalten.",
     "services.belief.title": "Glaubenssatz-Transformation",
     "services.belief.description": "Transformiere unterbewusste Glaubenssätze mit persönlicher Begleitung, inspiriert von Neville Goddard und Dr. Joe Dispenza",
     "services.emotional.title": "Emotionale Heilung",
