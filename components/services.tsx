@@ -52,39 +52,39 @@ export function Services() {
           </p>
         </motion.div>
 
-        {/* Services - Elegant Staggered Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* Services - Elegant Overlapping Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
           {services.map((service, index) => (
             <motion.div 
               key={index}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.15 }}
-              className={`group relative overflow-hidden ${index % 2 === 1 ? 'lg:mt-12' : ''}`}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              className="group relative"
             >
-              {/* Card with hover effect */}
-              <div className="bg-white p-8 md:p-10 h-full transition-all duration-500 group-hover:shadow-xl group-hover:-translate-y-2">
-                {/* Number */}
-                <span className="font-serif text-5xl font-light text-foreground/10 block mb-6">
-                  {String(index + 1).padStart(2, '0')}
-                </span>
+              {/* Card */}
+              <div className="relative bg-white p-10 md:p-12 transition-all duration-500 group-hover:shadow-2xl">
+                {/* Decorative corner accent */}
+                <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-accent/30 to-transparent" />
                 
-                {/* Icon */}
-                <div className="w-14 h-14 bg-beige flex items-center justify-center mb-6 transition-all duration-500 group-hover:bg-accent">
-                  <service.icon className="w-6 h-6 text-foreground/60 group-hover:text-foreground transition-colors duration-500" strokeWidth={1.5} />
+                {/* Icon with circle background */}
+                <div className="relative mb-8">
+                  <div className="w-20 h-20 rounded-full bg-gradient-to-br from-beige to-accent/40 flex items-center justify-center transition-all duration-500 group-hover:scale-110">
+                    <service.icon className="w-8 h-8 text-foreground/70" strokeWidth={1.2} />
+                  </div>
                 </div>
                 
                 {/* Content */}
-                <h3 className="font-serif text-xl font-medium text-foreground mb-4">
+                <h3 className="font-serif text-2xl font-medium text-foreground mb-4">
                   {service.title}
                 </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed font-light">
+                <p className="text-muted-foreground leading-relaxed font-light">
                   {service.description}
                 </p>
                 
-                {/* Bottom accent line */}
-                <div className="absolute bottom-0 left-0 w-0 h-1 bg-accent transition-all duration-500 group-hover:w-full" />
+                {/* Subtle bottom border on hover */}
+                <div className="absolute bottom-0 left-10 right-10 h-px bg-gradient-to-r from-transparent via-accent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </div>
             </motion.div>
           ))}
