@@ -199,11 +199,8 @@ export function Workshops() {
         </motion.div>
       </div>
 
-      {/* Transition gradient from background to complete package */}
-      <div className="h-32 md:h-48 bg-gradient-to-b from-background via-background/50 to-beige/60" />
-
       {/* Complete Program Package + 1:1 Coaching - Single Background Image */}
-      <div className="relative overflow-hidden">
+      <div className="-mt-8 md:-mt-12 relative overflow-hidden">
         {/* Single Background Image covering both sections */}
         <Image
           src="/images/complete-package-bg.jpg"
