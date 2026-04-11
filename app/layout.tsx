@@ -1,16 +1,16 @@
 import type { Metadata } from 'next'
-import { Nunito, Playfair_Display } from 'next/font/google'
+import { Poppins, Lora } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { Providers } from '@/components/providers'
 import './globals.css'
 
-const nunito = Nunito({ 
+const poppins = Poppins({ 
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800"],
+  weight: ["300", "400", "500", "600", "700"],
   variable: "--font-sans"
 });
 
-const playfair = Playfair_Display({ 
+const lora = Lora({ 
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   variable: "--font-serif"
@@ -33,7 +33,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${nunito.variable} ${playfair.variable} font-sans antialiased`}>
+      <body className={`${poppins.variable} ${lora.variable} font-sans antialiased`}>
         <Providers>
           {children}
         </Providers>
