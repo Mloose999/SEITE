@@ -282,11 +282,9 @@ export function Workshops() {
                     { format: t("workshops.emailCoaching"), desc: t("workshops.emailCoachingDesc"), icon: Mail },
                     { format: t("workshops.phoneWhatsapp"), desc: t("workshops.phoneWhatsappDesc"), icon: Phone }
                   ].map((item, i) => (
-                    <div key={i} className="flex items-start gap-6 group">
-                      <div className="w-12 h-12 rounded-full bg-white/30 backdrop-blur-sm flex items-center justify-center transition-all duration-300 group-hover:bg-white/50 group-hover:scale-110">
-                        <item.icon className="w-5 h-5 text-foreground/70" strokeWidth={1.5} />
-                      </div>
-                      <div className="pt-2">
+                    <div key={i} className="flex items-start gap-5 group">
+                      <item.icon className="w-6 h-6 text-foreground/60 mt-0.5 transition-all duration-300 group-hover:text-foreground group-hover:scale-110" strokeWidth={1.5} />
+                      <div>
                         <span className="text-foreground font-medium block mb-1">{item.format}</span>
                         <span className="text-foreground/60 text-sm font-light">{item.desc}</span>
                       </div>
