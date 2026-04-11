@@ -31,7 +31,7 @@ export function Services() {
   ]
 
   return (
-    <section id="services" className="py-28 md:py-40 bg-gradient-to-br from-accent via-beige to-beige-light relative overflow-hidden">
+    <section id="services" className="py-28 md:py-40 bg-gradient-to-b from-beige-light/50 via-accent/80 to-beige relative overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute top-0 left-0 w-64 h-64 bg-white/30 rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl" />
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-white/20 rounded-full translate-x-1/3 translate-y-1/3 blur-3xl" />
