@@ -30,7 +30,7 @@ export function Services() {
   ]
 
   return (
-    <section id="services" className="py-24 md:py-32 bg-card">
+    <section id="services" className="py-24 md:py-32 bg-beige-light">
       <div className="max-w-6xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16 md:mb-20">
