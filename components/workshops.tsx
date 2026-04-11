@@ -206,7 +206,7 @@ export function Workshops() {
           src="/images/complete-package-bg.jpg"
           alt=""
           fill
-          className="object-cover"
+          className="object-cover object-top md:object-center"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-beige/60 via-beige/50 to-beige/70" />
         
