@@ -29,7 +29,7 @@ export function Footer() {
   }
 
   return (
-    <footer className="bg-beige text-foreground py-20">
+    <footer className="bg-background text-foreground py-20">
       <div className="max-w-7xl mx-auto px-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-12">
           {/* Brand */}
