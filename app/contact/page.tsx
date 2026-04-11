@@ -107,7 +107,7 @@ export default function ContactPage() {
           <Link href="/" className="flex items-center gap-3 group">
             <div className="relative overflow-hidden rounded-full shadow-md">
               <Image
-                src="/images/logo-green.jpg"
+                src="/images/logo-original.png"
                 alt="Change Your Life with Linda"
                 width={50}
                 height={50}

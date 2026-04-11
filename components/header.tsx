@@ -57,7 +57,7 @@ export function Header() {
           className="flex items-center gap-4 group"
         >
           <Image
-            src="/images/logo-green.jpg"
+            src="/images/logo-original.png"
             alt="Change Your Life with Linda"
             width={45}
             height={45}

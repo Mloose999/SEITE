@@ -35,7 +35,7 @@ export function Footer() {
           {/* Brand */}
           <div className="text-center md:text-left flex flex-col items-center md:items-start gap-5">
             <Image
-              src="/images/logo-green.jpg"
+              src="/images/logo-original.png"
               alt="Change Your Life with Linda"
               width={70}
               height={70}
