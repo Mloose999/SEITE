@@ -157,41 +157,41 @@ export function Workshops() {
           </div>
         </div>
 
-        {/* Complete Program Package - Modern Split Design */}
+        {/* Complete Program Package - Elegant Card Design */}
         <div className="mb-28">
-          <div className="grid md:grid-cols-2 gap-0">
-            {/* Image Side */}
-            <div className="relative aspect-square md:aspect-auto">
-              <Image
-                src="/images/complete-package.jpg"
-                alt="Complete transformation program"
-                fill
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/20 to-transparent" />
-            </div>
-            {/* Content Side */}
-            <div className="bg-secondary p-8 md:p-12 lg:p-16 flex flex-col justify-center">
-              <p className="text-card/70 font-semibold tracking-widest uppercase text-sm mb-4">{t("workshops.completePackage")}</p>
-              <h3 className="font-serif text-3xl md:text-4xl font-bold text-card mb-6">
-                {t("workshops.fullProgram")}
-              </h3>
-              <p className="text-card/80 leading-relaxed mb-8">
-                {t("workshops.fullProgramDescription")}
-              </p>
-              
-              <div className="flex items-baseline gap-3 mb-8">
-                <span className="text-card/50 line-through text-lg">116 €</span>
-                <span className="font-serif text-5xl font-bold text-card">99 €</span>
-              </div>
-              
-              <div className="space-y-3">
-                {[t("workshops.allWorkshops"), t("workshops.structuredJourney"), t("workshops.saveBundle")].map((item, i) => (
-                  <div key={i} className="flex items-center gap-3 text-card/90">
-                    <Check className="w-5 h-5 text-accent" />
-                    <span>{item}</span>
+          <div className="relative bg-foreground text-card overflow-hidden rounded-sm">
+            {/* Decorative large number */}
+            <span className="absolute -right-8 -top-16 font-serif text-[280px] md:text-[400px] font-bold text-card/5 leading-none select-none pointer-events-none">
+              4
+            </span>
+            
+            <div className="relative z-10 p-10 md:p-16 lg:p-20">
+              <div className="max-w-3xl">
+                <p className="text-card/60 font-semibold tracking-widest uppercase text-sm mb-4">{t("workshops.completePackage")}</p>
+                <h3 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-card mb-6">
+                  {t("workshops.fullProgram")}
+                </h3>
+                <p className="text-card/70 leading-relaxed text-lg mb-10 max-w-xl">
+                  {t("workshops.fullProgramDescription")}
+                </p>
+                
+                <div className="flex flex-col md:flex-row md:items-end gap-8 md:gap-16">
+                  {/* Price */}
+                  <div>
+                    <span className="text-card/40 line-through text-lg block mb-1">116 €</span>
+                    <span className="font-serif text-6xl md:text-7xl font-bold text-card">99 €</span>
                   </div>
-                ))}
+                  
+                  {/* Benefits */}
+                  <div className="space-y-3 pb-2">
+                    {[t("workshops.allWorkshops"), t("workshops.structuredJourney"), t("workshops.saveBundle")].map((item, i) => (
+                      <div key={i} className="flex items-center gap-3 text-card/80">
+                        <Check className="w-5 h-5 text-beige" />
+                        <span>{item}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
           </div>
