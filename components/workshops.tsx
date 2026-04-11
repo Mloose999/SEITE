@@ -206,9 +206,10 @@ export function Workshops() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="max-w-3xl mx-auto text-center">
             <p className="text-foreground/70 font-semibold tracking-widest uppercase text-sm mb-4">{t("workshops.personalSupport")}</p>
-            <h3 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-6">
+            <h3 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-2">
               {t("workshops.coaching")}
             </h3>
+            <SignatureUnderline className="mx-auto text-foreground/40 mb-6" width="wide" />
             <p className="text-foreground/70 leading-relaxed mb-10">
               {t("workshops.coachingDescription")}
             </p>
