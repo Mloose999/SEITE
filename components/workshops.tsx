@@ -161,13 +161,15 @@ export function Workshops() {
 
       {/* Complete Program Package - Full Width with Background Image - negative margin to reduce gap */}
       <div className="-mt-12 md:-mt-16 relative overflow-hidden">
-        {/* Background Image */}
+        {/* Background Image with beige tint */}
         <Image
           src="/images/complete-package-bg.jpg"
           alt=""
           fill
           className="object-cover"
         />
+        {/* Beige overlay to match site color scheme */}
+        <div className="absolute inset-0 bg-beige/40 mix-blend-multiply" />
         
         <div className="relative z-10 max-w-6xl mx-auto px-6 py-16 md:py-20 lg:py-24">
           <p className="text-foreground/70 font-semibold tracking-widest uppercase text-sm mb-4">{t("workshops.completePackage")}</p>
