@@ -109,8 +109,8 @@ export default function ContactPage() {
               <Image
                 src="/images/logo-original.png"
                 alt="Change Your Life with Linda"
-                width={50}
-                height={50}
+                width={65}
+                height={65}
                 className="object-contain transition-transform duration-300 group-hover:scale-110"
                 style={{ 
                   filter: "sepia(1) saturate(3) brightness(1.1) hue-rotate(10deg) drop-shadow(0 0 8px rgba(212, 175, 55, 0.8)) drop-shadow(0 0 15px rgba(255, 215, 0, 0.6))" 

@@ -59,8 +59,8 @@ export function Header() {
           <Image
             src="/images/logo-original.png"
             alt="Change Your Life with Linda"
-            width={45}
-            height={45}
+            width={60}
+            height={60}
             className="object-contain transition-transform duration-300 group-hover:scale-105"
             style={{ 
               filter: "sepia(1) saturate(3) brightness(1.1) hue-rotate(10deg) drop-shadow(0 0 8px rgba(212, 175, 55, 0.8)) drop-shadow(0 0 15px rgba(255, 215, 0, 0.6))" 
