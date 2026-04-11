@@ -67,7 +67,7 @@ export function Workshops() {
         <div className="absolute inset-0 bg-gradient-to-b from-beige via-beige/60 to-background" />
         
         {/* Content over background */}
-        <div className="relative z-10 pt-28 md:pt-40 pb-20 md:pb-28">
+        <div className="relative z-10 pt-40 md:pt-56 pb-28 md:pb-40">
           <div className="max-w-7xl mx-auto px-8">
             {/* Section Header */}
             <motion.div 
