@@ -10,10 +10,7 @@ export function Booking() {
   const { t } = useLanguage()
 
   return (
-    <section id="booking" className="py-28 md:py-40 bg-beige-light relative">
-      {/* Top transition gradient from previous section */}
-      <div className="absolute top-0 left-0 right-0 h-48 bg-gradient-to-b from-background via-background/60 to-transparent pointer-events-none z-10" />
-      
+    <section id="booking" className="py-28 md:py-40 bg-beige-light">
       <div className="max-w-7xl mx-auto px-8">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-0">
           {/* Image with elegant treatment */}

@@ -54,10 +54,7 @@ export function Workshops() {
   ]
 
   return (
-    <section id="workshops" className="bg-background relative">
-      {/* Top transition gradient from previous section */}
-      <div className="absolute top-0 left-0 right-0 h-48 bg-gradient-to-b from-beige via-beige/70 to-transparent z-20 pointer-events-none" />
-      
+    <section id="workshops" className="bg-background">
       {/* Full-width background image section */}
       <div className="relative">
         {/* Background Image */}

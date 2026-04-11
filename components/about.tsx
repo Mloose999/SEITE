@@ -8,10 +8,7 @@ export function About() {
   const { t } = useLanguage()
 
   return (
-    <section id="about" className="py-28 md:py-40 bg-background relative">
-      {/* Top transition gradient from previous section */}
-      <div className="absolute top-0 left-0 right-0 h-48 bg-gradient-to-b from-beige via-beige/50 to-transparent pointer-events-none z-10" />
-      
+    <section id="about" className="py-28 md:py-40 bg-background">
       <div className="max-w-7xl mx-auto px-8">
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
