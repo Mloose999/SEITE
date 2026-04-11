@@ -5,8 +5,8 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const inputPath = path.join(__dirname, '../public/images/logo-original.png');
-const outputPath = path.join(__dirname, '../public/images/favicon-wine-logo.png');
+const inputPath = '/vercel/share/v0-project/public/images/logo-original.png';
+const outputPath = '/vercel/share/v0-project/public/images/favicon-wine-logo.png';
 
 // Wine red color: #722F37 -> RGB: 114, 47, 55
 async function recolorLogo() {
