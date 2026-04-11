@@ -44,7 +44,7 @@ export function About() {
               <p className="font-serif text-2xl md:text-3xl lg:text-4xl text-foreground font-bold text-center relative z-10 px-4">
                 {t("about.highlight")}
               </p>
-              <span className="absolute -bottom-12 right-0 font-serif text-[120px] md:text-[160px] text-foreground/10 leading-none select-none pointer-events-none rotate-180">"</span>
+              <span className="absolute -bottom-2 right-0 font-serif text-[120px] md:text-[160px] text-foreground/10 leading-none select-none pointer-events-none rotate-180">"</span>
             </div>
             <p>{t("about.p8")}</p>
             <p>{t("about.p9")}</p>
