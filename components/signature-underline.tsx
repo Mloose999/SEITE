@@ -14,17 +14,17 @@ export function SignatureUnderline({ className = "", width = "default" }: { clas
       aria-hidden="true"
       preserveAspectRatio="none"
     >
-      {/* First curvy line */}
+      {/* First line - slight curve, slopes down to the right */}
       <path
-        d="M0 6 Q 40 2, 90 8 T 180 4 T 260 10 T 300 6"
+        d="M0 5 Q 150 4, 300 10"
         stroke="currentColor"
         strokeWidth="1.5"
         strokeLinecap="round"
         fill="none"
       />
-      {/* Second curvy line */}
+      {/* Second line - slight curve, slopes down to the right */}
       <path
-        d="M0 14 Q 50 10, 100 16 T 200 12 T 270 18 T 300 14"
+        d="M0 10 Q 150 9, 300 15"
         stroke="currentColor"
         strokeWidth="1.5"
         strokeLinecap="round"
