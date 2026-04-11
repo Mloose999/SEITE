@@ -64,7 +64,7 @@ export function Workshops() {
           fill
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-beige/80 via-beige/60 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-beige via-beige/60 to-background" />
         
         {/* Content over background */}
         <div className="relative z-10 pt-28 md:pt-40 pb-20 md:pb-28">
