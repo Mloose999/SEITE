@@ -2,6 +2,7 @@
 
 import { Leaf, HeartHandshake, Sun, Compass } from "lucide-react"
 import { useLanguage } from "@/lib/language-context"
+import { SignatureUnderline } from "./signature-underline"
 
 export function Services() {
   const { t } = useLanguage()
@@ -37,9 +38,10 @@ export function Services() {
           <p className="text-foreground/70 font-semibold tracking-widest uppercase text-sm mb-4">
             {t("services.label")}
           </p>
-          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
+          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-2">
             {t("services.title")}
           </h2>
+          <SignatureUnderline className="mx-auto text-foreground/40 mb-6" />
           <p className="text-foreground/70 leading-relaxed max-w-2xl mx-auto text-lg">
             {t("services.description")}
           </p>

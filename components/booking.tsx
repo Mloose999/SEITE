@@ -4,6 +4,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { useLanguage } from "@/lib/language-context"
+import { SignatureUnderline } from "./signature-underline"
 
 export function Booking() {
   const { t } = useLanguage()
@@ -29,9 +30,10 @@ export function Booking() {
           {/* Text Box - slightly overlapping the image on desktop */}
           <div className="relative w-full lg:w-1/2 lg:-ml-12 z-20">
             <div className="bg-[#f5f5f3] p-8 md:p-12 text-center lg:text-left shadow-lg">
-              <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl font-extrabold text-foreground mb-4">
+              <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl font-extrabold text-foreground mb-2">
                 {t("booking.title")}
               </h2>
+              <SignatureUnderline className="text-foreground/40 mb-4 mx-auto lg:mx-0" />
               
               <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-8">
                 {t("booking.description")}
