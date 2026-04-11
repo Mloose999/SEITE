@@ -116,7 +116,7 @@ export function Workshops() {
           </div>
         </div>
 
-        {/* Individual Workshops - Card Style with Images */}
+        {/* Individual Workshops - Side by Side with Arch Images */}
         <div className="mb-28">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-12 gap-4">
             <div>
@@ -125,41 +125,35 @@ export function Workshops() {
               </h3>
               <p className="text-muted-foreground mt-2">{t("workshops.individualDescription")}</p>
             </div>
-            <p className="text-accent font-serif text-2xl font-bold">29 € <span className="text-base font-normal text-muted-foreground">{t("workshops.perWorkshop")}</span></p>
+            <p className="text-foreground font-serif text-2xl font-bold">29 € <span className="text-base font-normal text-muted-foreground">{t("workshops.perWorkshop")}</span></p>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-12">
-            {workshops.map((workshop, index) => {
-              const isEven = index % 2 === 0
-              return (
-                <div 
-                  key={index} 
-                  className="group relative"
-                >
-                  {/* Image */}
-                  <div className="relative aspect-[4/3] overflow-hidden">
-                    <Image
-                      src={workshop.image}
-                      alt={workshop.title}
-                      fill
-                      className="object-cover"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/20 to-transparent" />
-                  </div>
-                  {/* White text box - alternating positions */}
-                  <div className={`relative z-20 -mt-16 ${isEven ? 'mr-8 ml-0' : 'ml-8 mr-0'}`}>
-                    <div className="bg-[#f5f5f3] p-6 shadow-lg">
-                      <h4 className="font-serif text-lg md:text-xl font-bold text-foreground mb-2">
-                        {workshop.title}
-                      </h4>
-                      <p className="text-muted-foreground leading-relaxed text-sm">
-                        {workshop.description}
-                      </p>
-                    </div>
-                  </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+            {workshops.map((workshop, index) => (
+              <div 
+                key={index} 
+                className="group"
+              >
+                {/* Arch-shaped Image */}
+                <div className="relative aspect-[3/4] overflow-hidden rounded-t-full mb-5">
+                  <Image
+                    src={workshop.image}
+                    alt={workshop.title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
                 </div>
-              )
-            })}
+                {/* Simple Text Below */}
+                <div className="text-center">
+                  <h4 className="font-serif text-base md:text-lg font-bold text-foreground mb-2">
+                    {workshop.title}
+                  </h4>
+                  <p className="text-muted-foreground leading-relaxed text-sm">
+                    {workshop.description}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
 
