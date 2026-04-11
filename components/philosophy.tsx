@@ -33,33 +33,30 @@ export function Philosophy() {
             {t("philosophy.title")}
           </h2>
         </motion.div>
-      </div>
 
-      {/* Featured Image with Quote - Full Width */}
-      <motion.div 
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 1 }}
-        className="relative mb-28"
-      >
-        <div className="relative overflow-hidden aspect-[16/9] md:aspect-[21/9] min-h-[300px] md:min-h-[400px]">
-          <Image
-            src="/images/hourglass.jpg"
-            alt="Transformation takes time - hourglass symbolizing the journey"
-            fill
-            className="object-cover object-center"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-          <div className="absolute bottom-0 left-0 right-0 p-8 md:p-16 lg:p-20 max-w-7xl mx-auto">
-            <p className="text-white font-serif text-xl md:text-3xl lg:text-4xl font-light italic leading-relaxed max-w-3xl">
-              {t("philosophy.quote")}
-            </p>
+        {/* Featured Image with Quote */}
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.98 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1 }}
+          className="relative mb-28"
+        >
+          <div className="relative overflow-hidden aspect-square md:aspect-[16/9]">
+            <Image
+              src="/images/hourglass.jpg"
+              alt="Transformation takes time - hourglass symbolizing the journey"
+              fill
+              className="object-cover object-center"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+            <div className="absolute bottom-0 left-0 right-0 p-8 md:p-14">
+              <p className="text-white font-serif text-xl md:text-2xl lg:text-3xl font-light italic leading-relaxed max-w-2xl">
+                {t("philosophy.quote")}
+              </p>
+            </div>
           </div>
-        </div>
-      </motion.div>
-
-      <div className="max-w-7xl mx-auto px-8">
+        </motion.div>
         {/* Two Column Layout with elegant centered lines */}
         <div className="grid md:grid-cols-2 gap-16 md:gap-24">
           {philosophyItems.map((item, index) => (

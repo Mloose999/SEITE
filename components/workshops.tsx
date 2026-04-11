@@ -54,50 +54,55 @@ export function Workshops() {
   ]
 
   return (
-    <section id="workshops" className="py-28 md:py-40 bg-background">
-      <div className="max-w-7xl mx-auto px-8">
-        {/* Section Header */}
-        <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-24"
-        >
-          <p className="text-foreground/50 font-light tracking-[0.3em] uppercase text-xs mb-6">{t("workshops.label")}</p>
-          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground mb-8 text-balance leading-tight">
-            {t("workshops.title")}
-          </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed font-light">
-            {t("workshops.description")}
-          </p>
-        </motion.div>
+    <section id="workshops" className="bg-background">
+      {/* Full-width background image section */}
+      <div className="relative">
+        {/* Background Image */}
+        <Image
+          src="/images/workshop-hero.jpg"
+          alt=""
+          fill
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-beige/80 via-beige/60 to-background" />
+        
+        {/* Content over background */}
+        <div className="relative z-10 pt-28 md:pt-40 pb-20 md:pb-28">
+          <div className="max-w-7xl mx-auto px-8">
+            {/* Section Header */}
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+            >
+              <p className="text-foreground/60 font-light tracking-[0.3em] uppercase text-xs mb-6">{t("workshops.label")}</p>
+              <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground mb-8 text-balance leading-tight">
+                {t("workshops.title")}
+              </h2>
+              <p className="text-foreground/70 text-lg max-w-2xl mx-auto leading-relaxed font-light">
+                {t("workshops.description")}
+              </p>
+            </motion.div>
 
-        {/* Hero Image with Overlay Text - Split Layout */}
-        <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1 }}
-          className="relative mb-28 grid md:grid-cols-5 gap-0"
-        >
-          {/* Text Side */}
-          <div className="md:col-span-2 bg-gradient-to-br from-accent to-beige p-10 md:p-14 flex items-center order-2 md:order-1">
-            <p className="text-foreground font-serif text-2xl md:text-3xl lg:text-4xl font-medium leading-snug">
-              {t("workshops.heroText")}
-            </p>
+            {/* Hero Text */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="max-w-3xl mx-auto text-center"
+            >
+              <p className="text-foreground font-serif text-2xl md:text-3xl lg:text-4xl font-medium leading-snug">
+                {t("workshops.heroText")}
+              </p>
+            </motion.div>
           </div>
-          {/* Image Side */}
-          <div className="md:col-span-3 relative aspect-[4/3] md:aspect-auto md:min-h-[400px] order-1 md:order-2">
-            <Image
-              src="/images/workshop-hero.jpg"
-              alt="Personal transformation workshop"
-              fill
-              className="object-cover"
-            />
-          </div>
-        </motion.div>
+        </div>
+      </div>
 
+      <div className="max-w-7xl mx-auto px-8 py-20 md:py-28">
         {/* Workshop Structure */}
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
@@ -192,7 +197,6 @@ export function Workshops() {
             ))}
           </div>
         </motion.div>
-
       </div>
 
       {/* Complete Program Package - Elegant Full Width */}
