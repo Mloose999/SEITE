@@ -157,40 +157,38 @@ export function Workshops() {
           </div>
         </div>
 
-        {/* Complete Program Package - Elegant Card Design */}
+        {/* Complete Program Package - Clean Design */}
         <div className="mb-28">
-          <div className="relative bg-foreground text-card overflow-hidden rounded-sm">
+          <div className="relative">
             {/* Decorative large number */}
-            <span className="absolute -right-8 -top-16 font-serif text-[280px] md:text-[400px] font-bold text-card/5 leading-none select-none pointer-events-none">
+            <span className="absolute -right-4 -top-20 font-serif text-[200px] md:text-[300px] font-bold text-foreground/5 leading-none select-none pointer-events-none">
               4
             </span>
             
-            <div className="relative z-10 p-10 md:p-16 lg:p-20">
-              <div className="max-w-3xl">
-                <p className="text-card/60 font-semibold tracking-widest uppercase text-sm mb-4">{t("workshops.completePackage")}</p>
-                <h3 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-card mb-6">
-                  {t("workshops.fullProgram")}
-                </h3>
-                <p className="text-card/70 leading-relaxed text-lg mb-10 max-w-xl">
-                  {t("workshops.fullProgramDescription")}
-                </p>
+            <div className="relative z-10">
+              <p className="text-muted-foreground font-semibold tracking-widest uppercase text-sm mb-4">{t("workshops.completePackage")}</p>
+              <h3 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
+                {t("workshops.fullProgram")}
+              </h3>
+              <p className="text-muted-foreground leading-relaxed text-lg mb-10 max-w-xl">
+                {t("workshops.fullProgramDescription")}
+              </p>
+              
+              <div className="flex flex-col md:flex-row md:items-end gap-8 md:gap-16">
+                {/* Price */}
+                <div>
+                  <span className="text-muted-foreground line-through text-lg block mb-1">116 €</span>
+                  <span className="font-serif text-6xl md:text-7xl font-bold text-foreground">99 €</span>
+                </div>
                 
-                <div className="flex flex-col md:flex-row md:items-end gap-8 md:gap-16">
-                  {/* Price */}
-                  <div>
-                    <span className="text-card/40 line-through text-lg block mb-1">116 €</span>
-                    <span className="font-serif text-6xl md:text-7xl font-bold text-card">99 €</span>
-                  </div>
-                  
-                  {/* Benefits */}
-                  <div className="space-y-3 pb-2">
-                    {[t("workshops.allWorkshops"), t("workshops.structuredJourney"), t("workshops.saveBundle")].map((item, i) => (
-                      <div key={i} className="flex items-center gap-3 text-card/80">
-                        <Check className="w-5 h-5 text-beige" />
-                        <span>{item}</span>
-                      </div>
-                    ))}
-                  </div>
+                {/* Benefits */}
+                <div className="space-y-3 pb-2">
+                  {[t("workshops.allWorkshops"), t("workshops.structuredJourney"), t("workshops.saveBundle")].map((item, i) => (
+                    <div key={i} className="flex items-center gap-3 text-foreground">
+                      <Check className="w-5 h-5 text-foreground" />
+                      <span>{item}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
