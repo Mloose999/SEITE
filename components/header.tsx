@@ -62,7 +62,7 @@ export function Header() {
             width={45}
             height={45}
             className="object-contain transition-transform duration-300 group-hover:scale-105"
-            style={{ filter: "sepia(0.3) saturate(1.2) brightness(0.9) hue-rotate(-10deg)" }}
+            style={{ filter: "sepia(0.5) saturate(1.5) brightness(0.95) hue-rotate(5deg)" }}
           />
           <div className="hidden sm:flex flex-col">
             <span className={`font-serif text-lg font-semibold tracking-wide transition-colors duration-300 ${

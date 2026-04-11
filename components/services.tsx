@@ -31,8 +31,13 @@ export function Services() {
   ]
 
   return (
-    <section id="services" className="py-28 md:py-40 bg-beige-light">
-      <div className="max-w-7xl mx-auto px-8">
+    <section id="services" className="py-28 md:py-40 bg-gradient-to-br from-accent via-beige to-beige-light relative overflow-hidden">
+      {/* Decorative elements */}
+      <div className="absolute top-0 left-0 w-64 h-64 bg-white/30 rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl" />
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-white/20 rounded-full translate-x-1/3 translate-y-1/3 blur-3xl" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-white/10 rounded-full blur-3xl" />
+      
+      <div className="max-w-7xl mx-auto px-8 relative z-10">
         {/* Header */}
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
@@ -61,31 +66,25 @@ export function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="group relative"
+              className="group relative p-10 md:p-12"
             >
-              {/* Card */}
-              <div className="relative bg-white p-10 md:p-12 transition-all duration-500 group-hover:shadow-2xl">
-                {/* Decorative corner accent */}
-                <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-accent/30 to-transparent" />
-                
-                {/* Icon with circle background */}
-                <div className="relative mb-8">
-                  <div className="w-20 h-20 rounded-full bg-gradient-to-br from-beige to-accent/40 flex items-center justify-center transition-all duration-500 group-hover:scale-110">
-                    <service.icon className="w-8 h-8 text-foreground/70" strokeWidth={1.2} />
-                  </div>
+              {/* Icon with circle background */}
+              <div className="relative mb-8">
+                <div className="w-20 h-20 rounded-full bg-white/50 backdrop-blur-sm flex items-center justify-center transition-all duration-500 group-hover:scale-110 group-hover:bg-white/70">
+                  <service.icon className="w-8 h-8 text-foreground/70" strokeWidth={1.2} />
                 </div>
-                
-                {/* Content */}
-                <h3 className="font-serif text-2xl font-medium text-foreground mb-4">
-                  {service.title}
-                </h3>
-                <p className="text-muted-foreground leading-relaxed font-light">
-                  {service.description}
-                </p>
-                
-                {/* Subtle bottom border on hover */}
-                <div className="absolute bottom-0 left-10 right-10 h-px bg-gradient-to-r from-transparent via-accent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </div>
+              
+              {/* Content */}
+              <h3 className="font-serif text-2xl font-medium text-foreground mb-4">
+                {service.title}
+              </h3>
+              <p className="text-foreground/60 leading-relaxed font-light">
+                {service.description}
+              </p>
+              
+              {/* Subtle bottom border on hover */}
+              <div className="absolute bottom-0 left-10 right-10 h-px bg-gradient-to-r from-transparent via-foreground/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </motion.div>
           ))}
         </div>
