@@ -63,7 +63,7 @@ export function Header() {
             height={60}
             className="object-contain transition-transform duration-300 group-hover:scale-105"
             style={{ 
-              filter: "sepia(1) saturate(3) brightness(1.1) hue-rotate(10deg) drop-shadow(0 0 8px rgba(212, 175, 55, 0.8)) drop-shadow(0 0 15px rgba(255, 215, 0, 0.6))" 
+              filter: "sepia(1) saturate(4) brightness(0.9) hue-rotate(-30deg) drop-shadow(0 0 10px rgba(128, 0, 32, 0.7)) drop-shadow(0 0 20px rgba(139, 0, 0, 0.5))" 
             }}
           />
           <div className="hidden sm:flex flex-col">
