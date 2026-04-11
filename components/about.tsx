@@ -8,8 +8,8 @@ export function About() {
   const { t } = useLanguage()
 
   return (
-    <section id="about" className="py-28 md:py-40 bg-background">
-      <div className="max-w-7xl mx-auto px-8">
+    <section id="about" className="pt-28 md:pt-40 pb-0 bg-background">
+      <div className="max-w-7xl mx-auto px-8 pb-28 md:pb-40">
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -75,6 +75,9 @@ export function About() {
           </motion.div>
         </div>
       </div>
+      
+      {/* Transition gradient to booking section */}
+      <div className="h-32 md:h-48 bg-gradient-to-b from-background via-background/50 to-beige-light" />
     </section>
   )
 }

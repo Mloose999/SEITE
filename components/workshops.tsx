@@ -64,10 +64,10 @@ export function Workshops() {
           fill
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-beige/80 via-beige/60 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-beige via-beige/60 to-background" />
         
         {/* Content over background */}
-        <div className="relative z-10 pt-28 md:pt-40 pb-20 md:pb-28">
+        <div className="relative z-10 pt-40 md:pt-56 pb-28 md:pb-40">
           <div className="max-w-7xl mx-auto px-8">
             {/* Section Header */}
             <motion.div 
@@ -208,7 +208,7 @@ export function Workshops() {
           fill
           className="object-cover object-[center_30%] md:object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-beige/40 via-beige/30 to-beige/50 md:from-beige/60 md:via-beige/50 md:to-beige/70" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-beige/40 to-background md:from-background md:via-beige/50 md:to-background" />
         
         <div className="relative z-10">
           {/* Complete Package Section */}
