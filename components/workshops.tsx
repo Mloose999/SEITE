@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image"
-import { Brain, Flame, Sparkles, Heart, Check } from "lucide-react"
+import { Brain, Flame, Sparkles, Heart, Check, Video, Mail, Phone } from "lucide-react"
 import { useLanguage } from "@/lib/language-context"
 import { motion } from "framer-motion"
 
@@ -199,95 +199,101 @@ export function Workshops() {
         </motion.div>
       </div>
 
-      {/* Complete Program Package - Elegant Full Width */}
-      <motion.div 
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 1 }}
-        className="-mt-8 md:-mt-12 relative overflow-hidden"
-      >
-        {/* Background Image with elegant overlay */}
+      {/* Complete Program Package + 1:1 Coaching - Single Background Image */}
+      <div className="-mt-8 md:-mt-12 relative overflow-hidden">
+        {/* Single Background Image covering both sections */}
         <Image
           src="/images/complete-package-bg.jpg"
           alt=""
           fill
-          className="object-cover"
+          className="object-cover object-[center_30%] md:object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-beige/60 via-beige/40 to-beige/50" />
+        <div className="absolute inset-0 bg-gradient-to-b from-beige/40 via-beige/30 to-beige/50 md:from-beige/60 md:via-beige/50 md:to-beige/70" />
         
-        <div className="relative z-10 max-w-7xl mx-auto px-8 py-24 md:py-32">
-          <p className="text-foreground/60 font-light tracking-[0.3em] uppercase text-xs mb-6">{t("workshops.completePackage")}</p>
-          <h3 className="font-serif text-4xl md:text-5xl lg:text-6xl font-medium text-foreground mb-8 leading-tight">
-            {t("workshops.fullProgram")}
-          </h3>
-          <p className="text-foreground/70 leading-relaxed text-lg mb-14 max-w-xl font-light">
-            {t("workshops.fullProgramDescription")}
-          </p>
-          
-          <div className="flex flex-col md:flex-row md:items-end gap-12 md:gap-20">
-            {/* Price with elegant styling */}
-            <div>
-              <span className="text-foreground/50 line-through text-lg block mb-2 font-light">116 €</span>
-              <span className="font-serif text-7xl md:text-8xl font-medium text-foreground tracking-tight">99 €</span>
-            </div>
-            
-            {/* Benefits with refined styling */}
-            <div className="space-y-4 pb-3">
-              {[t("workshops.allWorkshops"), t("workshops.structuredJourney"), t("workshops.saveBundle")].map((item, i) => (
-                <div key={i} className="flex items-center gap-4 text-foreground">
-                  <div className="w-5 h-5 border border-foreground/30 flex items-center justify-center">
-                    <Check className="w-3 h-3 text-foreground" />
-                  </div>
-                  <span className="font-light">{item}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </motion.div>
-
-      {/* 1:1 Coaching - Elegant Split Section */}
-      <div className="w-full bg-beige-light py-28 md:py-36 pb-36 md:pb-48">
-        <div className="max-w-7xl mx-auto px-8">
+        <div className="relative z-10">
+          {/* Complete Package Section */}
           <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="grid md:grid-cols-2 gap-0 shadow-xl"
+            transition={{ duration: 1 }}
+            className="max-w-7xl mx-auto px-8 py-24 md:py-32"
           >
-            {/* Left - Warm accent panel */}
-            <div className="bg-gradient-to-br from-accent to-beige p-10 md:p-14 lg:p-16 flex flex-col justify-center">
-              <p className="text-foreground/60 font-light tracking-[0.3em] uppercase text-xs mb-6">{t("workshops.personalSupport")}</p>
-              <h3 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium text-foreground mb-6 leading-tight">
-                {t("workshops.coaching")}
-              </h3>
-              <p className="text-foreground/70 leading-relaxed font-light text-lg">
-                {t("workshops.coachingDescription")}
-              </p>
-            </div>
+            <p className="text-foreground/60 font-light tracking-[0.3em] uppercase text-xs mb-6">{t("workshops.completePackage")}</p>
+            <h3 className="font-serif text-4xl md:text-5xl lg:text-6xl font-medium text-foreground mb-8 leading-tight">
+              {t("workshops.fullProgram")}
+            </h3>
+            <p className="text-foreground/70 leading-relaxed text-lg mb-14 max-w-xl font-light">
+              {t("workshops.fullProgramDescription")}
+            </p>
             
-            {/* Right - White formats panel */}
-            <div className="bg-white p-10 md:p-14 lg:p-16">
-              <p className="text-foreground font-medium tracking-wide mb-10 text-sm uppercase">{t("workshops.availableFormats")}</p>
-              <div className="space-y-8">
-                {[
-                  { format: t("workshops.liveSessions"), desc: t("workshops.liveSessionsDesc"), num: "01" },
-                  { format: t("workshops.emailCoaching"), desc: t("workshops.emailCoachingDesc"), num: "02" },
-                  { format: t("workshops.phoneWhatsapp"), desc: t("workshops.phoneWhatsappDesc"), num: "03" }
-                ].map((item, i) => (
-                  <div key={i} className="flex items-start gap-6 group">
-                    <span className="font-serif text-3xl font-light text-accent/50 group-hover:text-accent transition-colors">{item.num}</span>
-                    <div className="pt-1">
-                      <span className="text-foreground font-medium block mb-1">{item.format}</span>
-                      <span className="text-muted-foreground text-sm font-light">{item.desc}</span>
+            <div className="flex flex-col md:flex-row md:items-end gap-12 md:gap-20">
+              {/* Price with elegant styling */}
+              <div>
+                <span className="text-foreground/50 line-through text-lg block mb-2 font-light">116 €</span>
+                <span className="font-serif text-7xl md:text-8xl font-medium text-foreground tracking-tight">99 €</span>
+              </div>
+              
+              {/* Benefits with refined styling */}
+              <div className="space-y-4 pb-3">
+                {[t("workshops.allWorkshops"), t("workshops.structuredJourney"), t("workshops.saveBundle")].map((item, i) => (
+                  <div key={i} className="flex items-center gap-4 text-foreground">
+                    <div className="w-5 h-5 border border-foreground/30 flex items-center justify-center">
+                      <Check className="w-3 h-3 text-foreground" />
                     </div>
+                    <span className="font-light">{item}</span>
                   </div>
                 ))}
               </div>
             </div>
           </motion.div>
+
+          {/* Divider */}
+          <div className="max-w-7xl mx-auto px-8">
+            <div className="h-px bg-foreground/10" />
+          </div>
+
+          {/* 1:1 Coaching Section */}
+          <div className="max-w-7xl mx-auto px-8 py-28 md:py-36 pb-36 md:pb-48">
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="grid md:grid-cols-2 gap-16 md:gap-20"
+            >
+              {/* Left - Content */}
+              <div className="flex flex-col justify-center">
+                <p className="text-foreground/60 font-light tracking-[0.3em] uppercase text-xs mb-6">{t("workshops.personalSupport")}</p>
+                <h3 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium text-foreground mb-6 leading-tight">
+                  {t("workshops.coaching")}
+                </h3>
+                <p className="text-foreground/70 leading-relaxed font-light text-lg">
+                  {t("workshops.coachingDescription")}
+                </p>
+              </div>
+              
+              {/* Right - Formats */}
+              <div className="flex flex-col justify-center">
+                <p className="text-foreground font-medium tracking-wide mb-10 text-sm uppercase">{t("workshops.availableFormats")}</p>
+                <div className="space-y-8">
+                  {[
+                    { format: t("workshops.liveSessions"), desc: t("workshops.liveSessionsDesc"), icon: Video },
+                    { format: t("workshops.emailCoaching"), desc: t("workshops.emailCoachingDesc"), icon: Mail },
+                    { format: t("workshops.phoneWhatsapp"), desc: t("workshops.phoneWhatsappDesc"), icon: Phone }
+                  ].map((item, i) => (
+                    <div key={i} className="flex items-start gap-5 group">
+                      <item.icon className="w-6 h-6 text-foreground/60 mt-0.5 transition-all duration-300 group-hover:text-foreground group-hover:scale-110" strokeWidth={1.5} />
+                      <div>
+                        <span className="text-foreground font-medium block mb-1">{item.format}</span>
+                        <span className="text-foreground/60 text-sm font-light">{item.desc}</span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </div>
     </section>

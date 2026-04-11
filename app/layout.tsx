@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   description: 'Change Your Life with Linda. My job is to see you win. Personal mindset coaching to help you break free from limiting beliefs and step into a life of abundance.',
   generator: 'v0.app',
   icons: {
-    icon: '/images/favicon.jpg',
-    apple: '/images/favicon.jpg',
+    icon: '/images/favicon-wine.jpg',
+    apple: '/images/favicon-wine.jpg',
   },
 }
 

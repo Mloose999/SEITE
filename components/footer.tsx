@@ -37,10 +37,12 @@ export function Footer() {
             <Image
               src="/images/logo-original.png"
               alt="Change Your Life with Linda"
-              width={70}
-              height={70}
+              width={90}
+              height={90}
               className="object-contain"
-              style={{ filter: "sepia(0.3) saturate(1.2) brightness(0.9) hue-rotate(-10deg)" }}
+              style={{ 
+                filter: "sepia(1) saturate(4) brightness(0.9) hue-rotate(-30deg) drop-shadow(0 0 10px rgba(128, 0, 32, 0.7)) drop-shadow(0 0 20px rgba(139, 0, 0, 0.5))" 
+              }}
             />
             <div>
               <p className="font-serif text-2xl font-medium mb-2 text-foreground">{t("header.brand")}</p>

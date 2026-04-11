@@ -59,10 +59,12 @@ export function Header() {
           <Image
             src="/images/logo-original.png"
             alt="Change Your Life with Linda"
-            width={45}
-            height={45}
+            width={60}
+            height={60}
             className="object-contain transition-transform duration-300 group-hover:scale-105"
-            style={{ filter: "sepia(0.3) saturate(1.2) brightness(0.9) hue-rotate(-10deg)" }}
+            style={{ 
+              filter: "sepia(1) saturate(4) brightness(0.9) hue-rotate(-30deg) drop-shadow(0 0 10px rgba(128, 0, 32, 0.7)) drop-shadow(0 0 20px rgba(139, 0, 0, 0.5))" 
+            }}
           />
           <div className="hidden sm:flex flex-col">
             <span className={`font-serif text-lg font-semibold tracking-wide transition-colors duration-300 ${

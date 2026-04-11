@@ -19,7 +19,9 @@ export function Philosophy() {
   ]
 
   return (
-    <section id="philosophy" className="py-28 md:py-40 bg-background">
+    <section id="philosophy" className="py-28 md:py-40 bg-gradient-to-b from-background via-background to-beige-light/50 relative">
+      {/* Top fade from hero */}
+      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-foreground/5 to-transparent" />
       <div className="max-w-7xl mx-auto px-8">
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
