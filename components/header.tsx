@@ -61,7 +61,7 @@ export function Header() {
             width={50}
             height={50}
             className="object-contain"
-            style={{ filter: "hue-rotate(-30deg) saturate(1.4) brightness(0.7)" }}
+            style={{ filter: "sepia(0.3) saturate(1.2) brightness(0.9) hue-rotate(-10deg)" }}
           />
           <div className="hidden sm:flex flex-col">
             <span className={`font-serif text-lg font-bold transition-colors ${

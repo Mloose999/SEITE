@@ -21,7 +21,7 @@ export function About() {
           <div className="relative">
             <div className="aspect-[4/5] overflow-hidden w-full relative">
               <Image
-                src="/images/coach.jpg"
+                src="/images/about-portrait.jpeg"
                 alt="Linda Holtkamp - Mindset Coach"
                 fill
                 className="object-cover"
@@ -33,16 +33,21 @@ export function About() {
           {/* Text Content */}
           <div className="space-y-6 text-muted-foreground leading-relaxed">
             <p>{t("about.p1")}</p>
-            <p className="font-serif text-xl text-accent font-medium">
-              {t("about.highlight")}
-            </p>
             <p>{t("about.p2")}</p>
             <p>{t("about.p3")}</p>
             <p>{t("about.p4")}</p>
             <p>{t("about.p5")}</p>
             <p>{t("about.p6")}</p>
-            <p className="font-serif text-lg text-foreground">
-              {t("about.mission")}
+            <p>{t("about.p7")}</p>
+            <p className="font-serif text-2xl md:text-3xl text-foreground font-bold py-4 border-l-4 border-accent pl-6">
+              {t("about.highlight")}
+            </p>
+            <p>{t("about.p8")}</p>
+            <p>{t("about.p9")}</p>
+            <p>{t("about.p10")}</p>
+            <p>{t("about.p11")}</p>
+            <p className="font-serif text-lg text-foreground font-medium">
+              {t("about.closing")}
             </p>
           </div>
         </div>
