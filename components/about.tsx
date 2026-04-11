@@ -21,7 +21,7 @@ export function About() {
           <div className="relative">
             <div className="aspect-[4/5] overflow-hidden w-full relative">
               <Image
-                src="/images/about-portrait.jpeg"
+                src="/images/about-portrait.jpg"
                 alt="Linda Holtkamp - Mindset Coach"
                 fill
                 className="object-cover"

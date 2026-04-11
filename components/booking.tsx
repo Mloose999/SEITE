@@ -9,7 +9,7 @@ export function Booking() {
   const { t } = useLanguage()
 
   return (
-    <section id="booking" className="py-24 md:py-32 bg-background">
+    <section id="booking" className="py-24 md:py-32 bg-beige-light">
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-0">
           {/* Image */}
