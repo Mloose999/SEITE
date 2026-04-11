@@ -10,8 +10,24 @@ export function Booking() {
   const { t } = useLanguage()
 
   return (
-    <section id="booking" className="py-28 md:py-40 bg-beige-light">
-      <div className="max-w-7xl mx-auto px-8">
+    <section id="booking" className="py-28 md:py-40 relative overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <Image
+          src="/images/booking-bg.jpg"
+          alt=""
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-beige/80 via-beige-light/70 to-accent/50" />
+      </div>
+      
+      {/* Decorative elements */}
+      <div className="absolute top-0 right-0 w-72 h-72 bg-white/20 rounded-full translate-x-1/3 -translate-y-1/3 blur-3xl" />
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent/20 rounded-full -translate-x-1/3 translate-y-1/3 blur-3xl" />
+      
+      <div className="max-w-7xl mx-auto px-8 relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-0">
           {/* Image with elegant treatment */}
           <motion.div 
