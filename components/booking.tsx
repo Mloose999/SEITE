@@ -4,53 +4,66 @@ import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { useLanguage } from "@/lib/language-context"
+import { motion } from "framer-motion"
 
 export function Booking() {
   const { t } = useLanguage()
 
   return (
-    <section id="booking" className="py-24 md:py-32 bg-beige-light">
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-0">
-          {/* Image */}
-          <div className="relative w-full lg:w-1/2 max-w-md mx-auto lg:mx-0 flex-shrink-0">
+    <section id="booking" className="py-28 md:py-40 bg-beige-light">
+      <div className="max-w-7xl mx-auto px-8">
+        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-0">
+          {/* Image with elegant treatment */}
+          <motion.div 
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="relative w-full lg:w-1/2 max-w-lg mx-auto lg:mx-0 flex-shrink-0"
+          >
             <div className="relative">
               <Image
                 src="/images/book.jpg"
                 alt="Book a coaching session"
-                width={400}
-                height={400}
+                width={500}
+                height={500}
                 className="object-cover w-full h-auto"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/20 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-foreground/30 via-transparent to-transparent" />
             </div>
-          </div>
+          </motion.div>
           
-          {/* Text Box - slightly overlapping the image on desktop */}
-          <div className="relative w-full lg:w-1/2 lg:-ml-12 z-20">
-            <div className="bg-[#f5f5f3] p-8 md:p-12 text-center lg:text-left shadow-lg">
-              <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl font-extrabold text-foreground mb-4">
+          {/* Text Box - elegant overlapping design */}
+          <motion.div 
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="relative w-full lg:w-1/2 lg:-ml-16 z-20"
+          >
+            <div className="bg-white p-10 md:p-14 lg:p-16 text-center lg:text-left shadow-xl">
+              <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium text-foreground mb-6 leading-tight">
                 {t("booking.title")}
               </h2>
               
-              <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-8">
+              <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-10 font-light">
                 {t("booking.description")}
               </p>
               
               <Link href="/contact">
                 <Button 
                   size="lg"
-                  className="bg-primary text-primary-foreground hover:bg-primary/90 px-10 py-6 text-base font-medium transition-all duration-300 hover:scale-105"
+                  className="bg-foreground text-white hover:bg-foreground/80 px-12 py-7 text-xs tracking-[0.15em] uppercase font-medium transition-all duration-500"
                 >
                   {t("booking.cta")}
                 </Button>
               </Link>
 
-              <p className="mt-8 text-muted-foreground text-sm">
+              <p className="mt-10 text-muted-foreground text-sm font-light">
                 {t("booking.info")}
               </p>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 import { useLanguage } from "@/lib/language-context"
 import { LanguageToggle } from "@/components/language-toggle"
+import { motion, AnimatePresence } from "framer-motion"
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -43,34 +44,34 @@ export function Header() {
 
   return (
     <header 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled 
-          ? "bg-card/95 backdrop-blur-md shadow-sm py-3" 
-          : "bg-transparent py-4"
+          ? "bg-white/95 backdrop-blur-md shadow-sm py-4" 
+          : "bg-transparent py-6"
       }`}
     >
-      <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-8 flex items-center justify-between">
         {/* Logo */}
         <Link 
           href="/" 
-          className="flex items-center gap-3"
+          className="flex items-center gap-4 group"
         >
           <Image
             src="/images/logo-original.png"
             alt="Change Your Life with Linda"
-            width={50}
-            height={50}
-            className="object-contain"
+            width={45}
+            height={45}
+            className="object-contain transition-transform duration-300 group-hover:scale-105"
             style={{ filter: "sepia(0.3) saturate(1.2) brightness(0.9) hue-rotate(-10deg)" }}
           />
           <div className="hidden sm:flex flex-col">
-            <span className={`font-serif text-lg font-bold transition-colors ${
-              isScrolled ? "text-foreground" : "text-card"
+            <span className={`font-serif text-lg font-semibold tracking-wide transition-colors duration-300 ${
+              isScrolled ? "text-foreground" : "text-white"
             }`}>
               {t("header.brand")}
             </span>
-            <span className={`text-xs font-medium italic transition-colors ${
-              isScrolled ? "text-muted-foreground" : "text-card/80"
+            <span className={`text-[11px] tracking-[0.15em] uppercase transition-colors duration-300 ${
+              isScrolled ? "text-muted-foreground" : "text-white/70"
             }`}>
               {t("header.tagline")}
             </span>
@@ -78,14 +79,16 @@ export function Header() {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-6">
+        <nav className="hidden md:flex items-center gap-10">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               onClick={(e) => scrollToSection(e, link.href)}
-              className={`text-sm font-medium transition-colors hover:opacity-80 ${
-                isScrolled ? "text-foreground" : "text-card"
+              className={`text-sm tracking-wide font-light transition-all duration-300 hover:opacity-70 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:transition-all after:duration-300 hover:after:w-full ${
+                isScrolled 
+                  ? "text-foreground after:bg-foreground" 
+                  : "text-white after:bg-white"
               }`}
             >
               {link.name}
@@ -94,10 +97,10 @@ export function Header() {
           <LanguageToggle isScrolled={isScrolled} />
           <Button 
             size="sm"
-            className={`px-6 transition-all ${
+            className={`px-8 py-5 text-xs tracking-[0.15em] uppercase font-medium transition-all duration-500 ${
               isScrolled 
-                ? "bg-primary text-primary-foreground hover:bg-primary/90" 
-                : "bg-card text-foreground hover:bg-card/90"
+                ? "bg-foreground text-white hover:bg-foreground/80" 
+                : "bg-white text-foreground hover:bg-white/90"
             }`}
             onClick={navigateToContact}
           >
@@ -106,10 +109,10 @@ export function Header() {
         </nav>
 
         {/* Mobile Menu Button */}
-        <div className="md:hidden flex items-center gap-2">
+        <div className="md:hidden flex items-center gap-3">
           <LanguageToggle isScrolled={isScrolled} />
           <button
-            className={`p-2 ${isScrolled ? "text-foreground" : "text-card"}`}
+            className={`p-2 transition-colors duration-300 ${isScrolled ? "text-foreground" : "text-white"}`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -118,32 +121,52 @@ export function Header() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
-      {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-card border-b border-border shadow-lg">
-          <nav className="flex flex-col p-6 gap-4">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={(e) => scrollToSection(e, link.href)}
-                className="text-foreground font-medium py-2"
+      {/* Mobile Menu with elegant animation */}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div 
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.3 }}
+            className="md:hidden absolute top-full left-0 right-0 bg-white border-b border-border/50 shadow-lg"
+          >
+            <nav className="flex flex-col p-8 gap-6">
+              {navLinks.map((link, index) => (
+                <motion.div
+                  key={link.href}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.3, delay: index * 0.1 }}
+                >
+                  <Link
+                    href={link.href}
+                    onClick={(e) => scrollToSection(e, link.href)}
+                    className="text-foreground font-light text-lg tracking-wide py-2 block"
+                  >
+                    {link.name}
+                  </Link>
+                </motion.div>
+              ))}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.3, delay: navLinks.length * 0.1 }}
               >
-                {link.name}
-              </Link>
-            ))}
-            <Button 
-              className="bg-primary text-primary-foreground hover:bg-primary/90 mt-2"
-              onClick={() => {
-                setIsMobileMenuOpen(false)
-                navigateToContact()
-              }}
-            >
-              {t("nav.bookNow")}
-            </Button>
-          </nav>
-        </div>
-      )}
+                <Button 
+                  className="bg-foreground text-white hover:bg-foreground/80 mt-4 w-full py-6 text-xs tracking-[0.15em] uppercase"
+                  onClick={() => {
+                    setIsMobileMenuOpen(false)
+                    navigateToContact()
+                  }}
+                >
+                  {t("nav.bookNow")}
+                </Button>
+              </motion.div>
+            </nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   )
 }
