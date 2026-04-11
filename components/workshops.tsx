@@ -116,7 +116,7 @@ export function Workshops() {
           </div>
         </div>
 
-        {/* Individual Workshops - Card Style with Images */}
+        {/* Individual Workshops - Side by Side with Arch Images */}
         <div className="mb-28">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-12 gap-4">
             <div>
@@ -125,79 +125,71 @@ export function Workshops() {
               </h3>
               <p className="text-muted-foreground mt-2">{t("workshops.individualDescription")}</p>
             </div>
-            <p className="text-accent font-serif text-2xl font-bold">29 € <span className="text-base font-normal text-muted-foreground">{t("workshops.perWorkshop")}</span></p>
+            <p className="text-foreground font-serif text-2xl font-bold">29 € <span className="text-base font-normal text-muted-foreground">{t("workshops.perWorkshop")}</span></p>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-12">
-            {workshops.map((workshop, index) => {
-              const isEven = index % 2 === 0
-              return (
-                <div 
-                  key={index} 
-                  className="group relative"
-                >
-                  {/* Image */}
-                  <div className="relative aspect-[4/3] overflow-hidden">
-                    <Image
-                      src={workshop.image}
-                      alt={workshop.title}
-                      fill
-                      className="object-cover"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/20 to-transparent" />
-                  </div>
-                  {/* White text box - alternating positions */}
-                  <div className={`relative z-20 -mt-16 ${isEven ? 'mr-8 ml-0' : 'ml-8 mr-0'}`}>
-                    <div className="bg-[#f5f5f3] p-6 shadow-lg">
-                      <h4 className="font-serif text-lg md:text-xl font-bold text-foreground mb-2">
-                        {workshop.title}
-                      </h4>
-                      <p className="text-muted-foreground leading-relaxed text-sm">
-                        {workshop.description}
-                      </p>
-                    </div>
-                  </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+            {workshops.map((workshop, index) => (
+              <div 
+                key={index} 
+                className="group"
+              >
+                {/* Arch-shaped Image */}
+                <div className="relative aspect-[3/4] overflow-hidden rounded-t-full mb-5">
+                  <Image
+                    src={workshop.image}
+                    alt={workshop.title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
                 </div>
-              )
-            })}
+                {/* Simple Text Below */}
+                <div className="text-center">
+                  <h4 className="font-serif text-base md:text-lg font-bold text-foreground mb-2">
+                    {workshop.title}
+                  </h4>
+                  <p className="text-muted-foreground leading-relaxed text-sm">
+                    {workshop.description}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
 
-        {/* Complete Program Package - Modern Split Design */}
+        {/* Complete Program Package - Clean Design */}
         <div className="mb-28">
-          <div className="grid md:grid-cols-2 gap-0">
-            {/* Image Side */}
-            <div className="relative aspect-square md:aspect-auto">
-              <Image
-                src="/images/complete-package.jpg"
-                alt="Complete transformation program"
-                fill
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/20 to-transparent" />
-            </div>
-            {/* Content Side */}
-            <div className="bg-secondary p-8 md:p-12 lg:p-16 flex flex-col justify-center">
-              <p className="text-card/70 font-semibold tracking-widest uppercase text-sm mb-4">{t("workshops.completePackage")}</p>
-              <h3 className="font-serif text-3xl md:text-4xl font-bold text-card mb-6">
+          <div className="relative">
+            {/* Decorative large number */}
+            <span className="absolute -right-4 -top-20 font-serif text-[200px] md:text-[300px] font-bold text-foreground/5 leading-none select-none pointer-events-none">
+              4
+            </span>
+            
+            <div className="relative z-10">
+              <p className="text-muted-foreground font-semibold tracking-widest uppercase text-sm mb-4">{t("workshops.completePackage")}</p>
+              <h3 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
                 {t("workshops.fullProgram")}
               </h3>
-              <p className="text-card/80 leading-relaxed mb-8">
+              <p className="text-muted-foreground leading-relaxed text-lg mb-10 max-w-xl">
                 {t("workshops.fullProgramDescription")}
               </p>
               
-              <div className="flex items-baseline gap-3 mb-8">
-                <span className="text-card/50 line-through text-lg">116 €</span>
-                <span className="font-serif text-5xl font-bold text-card">99 €</span>
-              </div>
-              
-              <div className="space-y-3">
-                {[t("workshops.allWorkshops"), t("workshops.structuredJourney"), t("workshops.saveBundle")].map((item, i) => (
-                  <div key={i} className="flex items-center gap-3 text-card/90">
-                    <Check className="w-5 h-5 text-accent" />
-                    <span>{item}</span>
-                  </div>
-                ))}
+              <div className="flex flex-col md:flex-row md:items-end gap-8 md:gap-16">
+                {/* Price */}
+                <div>
+                  <span className="text-muted-foreground line-through text-lg block mb-1">116 €</span>
+                  <span className="font-serif text-6xl md:text-7xl font-bold text-foreground">99 €</span>
+                </div>
+                
+                {/* Benefits */}
+                <div className="space-y-3 pb-2">
+                  {[t("workshops.allWorkshops"), t("workshops.structuredJourney"), t("workshops.saveBundle")].map((item, i) => (
+                    <div key={i} className="flex items-center gap-3 text-foreground">
+                      <Check className="w-5 h-5 text-foreground" />
+                      <span>{item}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
@@ -209,11 +201,11 @@ export function Workshops() {
       <div className="w-full bg-beige-light py-20 md:py-28 mt-28">
         <div className="max-w-6xl mx-auto px-6">
           <div className="max-w-3xl mx-auto text-center">
-            <p className="text-accent font-semibold tracking-widest uppercase text-sm mb-4">{t("workshops.personalSupport")}</p>
+            <p className="text-foreground/70 font-semibold tracking-widest uppercase text-sm mb-4">{t("workshops.personalSupport")}</p>
             <h3 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-6">
               {t("workshops.coaching")}
             </h3>
-            <p className="text-muted-foreground leading-relaxed mb-10">
+            <p className="text-foreground/70 leading-relaxed mb-10">
               {t("workshops.coachingDescription")}
             </p>
             
@@ -226,9 +218,8 @@ export function Workshops() {
                   { format: t("workshops.phoneWhatsapp"), desc: t("workshops.phoneWhatsappDesc") }
                 ].map((item, i) => (
                   <div key={i} className="flex flex-col items-center gap-2">
-                    <div className="w-3 h-3 bg-accent rounded-full mb-1" />
                     <span className="text-foreground font-medium">{item.format}</span>
-                    <span className="text-muted-foreground text-sm">{item.desc}</span>
+                    <span className="text-foreground/70 text-sm">{item.desc}</span>
                   </div>
                 ))}
               </div>

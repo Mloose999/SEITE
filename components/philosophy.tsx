@@ -1,7 +1,6 @@
 "use client"
 
 import Image from "next/image"
-import { Feather, Infinity } from "lucide-react"
 import { useLanguage } from "@/lib/language-context"
 
 export function Philosophy() {
@@ -9,12 +8,10 @@ export function Philosophy() {
 
   const philosophyItems = [
     {
-      icon: Feather,
       title: t("philosophy.item1.title"),
       description: t("philosophy.item1.description")
     },
     {
-      icon: Infinity,
       title: t("philosophy.item2.title"),
       description: t("philosophy.item2.description")
     }
@@ -48,22 +45,25 @@ export function Philosophy() {
           </div>
         </div>
 
-        <div className="space-y-20">
+        {/* Two Column Layout with Large Numbers */}
+        <div className="grid md:grid-cols-2 gap-12 md:gap-16">
           {philosophyItems.map((item, index) => (
             <div 
               key={index}
-              className={`flex flex-col md:flex-row items-center gap-8 md:gap-16 ${
-                index % 2 === 1 ? "md:flex-row-reverse" : ""
-              }`}
+              className="relative"
             >
-              <div className="flex-shrink-0">
-                <item.icon className="w-16 h-16 text-accent" strokeWidth={1.5} />
-              </div>
-              <div className={`text-center ${index % 2 === 0 ? "md:text-left" : "md:text-right"}`}>
+              {/* Large decorative number */}
+              <span className="absolute -top-8 -left-2 md:-top-12 md:-left-4 font-serif text-[120px] md:text-[180px] font-bold text-foreground/5 leading-none select-none pointer-events-none">
+                {String(index + 1).padStart(2, '0')}
+              </span>
+              
+              {/* Content */}
+              <div className="relative pt-8">
+                <div className="w-12 h-[2px] bg-foreground/30 mb-6" />
                 <h3 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-4 text-balance">
                   {item.title}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed text-lg max-w-xl">
+                <p className="text-muted-foreground leading-relaxed text-lg">
                   {item.description}
                 </p>
               </div>
