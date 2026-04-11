@@ -220,7 +220,6 @@ export function Workshops() {
                   { format: t("workshops.phoneWhatsapp"), desc: t("workshops.phoneWhatsappDesc") }
                 ].map((item, i) => (
                   <div key={i} className="flex flex-col items-center gap-2">
-                    <div className="w-3 h-3 bg-foreground/40 rounded-full mb-1" />
                     <span className="text-foreground font-medium">{item.format}</span>
                     <span className="text-foreground/70 text-sm">{item.desc}</span>
                   </div>
