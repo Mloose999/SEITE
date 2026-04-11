@@ -52,29 +52,40 @@ export function Services() {
           </p>
         </motion.div>
 
-        {/* Services - Elegant 4 Columns */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-12 md:gap-16">
+        {/* Services - Elegant Staggered Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((service, index) => (
             <motion.div 
               key={index}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.15 }}
-              className="flex flex-col items-center text-center group"
+              className={`group relative overflow-hidden ${index % 2 === 1 ? 'lg:mt-12' : ''}`}
             >
-              {/* Icon with elegant styling */}
-              <div className="w-16 h-16 border border-foreground/10 flex items-center justify-center mb-7 transition-all duration-500 group-hover:border-foreground/30">
-                <service.icon className="w-7 h-7 text-foreground/40 group-hover:text-foreground/60 transition-colors duration-500" strokeWidth={1} />
+              {/* Card with hover effect */}
+              <div className="bg-white p-8 md:p-10 h-full transition-all duration-500 group-hover:shadow-xl group-hover:-translate-y-2">
+                {/* Number */}
+                <span className="font-serif text-5xl font-light text-foreground/10 block mb-6">
+                  {String(index + 1).padStart(2, '0')}
+                </span>
+                
+                {/* Icon */}
+                <div className="w-14 h-14 bg-beige-light flex items-center justify-center mb-6 transition-all duration-500 group-hover:bg-foreground">
+                  <service.icon className="w-6 h-6 text-foreground/60 group-hover:text-white transition-colors duration-500" strokeWidth={1.5} />
+                </div>
+                
+                {/* Content */}
+                <h3 className="font-serif text-xl font-medium text-foreground mb-4">
+                  {service.title}
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed font-light">
+                  {service.description}
+                </p>
+                
+                {/* Bottom accent line */}
+                <div className="absolute bottom-0 left-0 w-0 h-1 bg-foreground transition-all duration-500 group-hover:w-full" />
               </div>
-              
-              {/* Content */}
-              <h3 className="font-serif text-lg md:text-xl font-medium text-foreground mb-3">
-                {service.title}
-              </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed font-light">
-                {service.description}
-              </p>
             </motion.div>
           ))}
         </div>

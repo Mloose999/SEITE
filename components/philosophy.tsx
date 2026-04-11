@@ -34,32 +34,33 @@ export function Philosophy() {
           </h2>
         </motion.div>
 
-        {/* Featured Image with Quote */}
+        {/* Featured Image with Quote - Split Layout */}
         <motion.div 
-          initial={{ opacity: 0, scale: 0.98 }}
-          whileInView={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1 }}
-          className="relative mb-24"
+          className="relative mb-28 grid md:grid-cols-2 gap-0"
         >
-          <div className="relative overflow-hidden aspect-square md:aspect-[16/9]">
+          {/* Quote Side */}
+          <div className="bg-foreground p-10 md:p-16 flex items-center justify-center order-2 md:order-1">
+            <p className="text-white font-serif text-xl md:text-2xl lg:text-3xl font-light italic leading-relaxed max-w-md text-center md:text-left">
+              {t("philosophy.quote")}
+            </p>
+          </div>
+          {/* Image Side */}
+          <div className="relative aspect-square md:aspect-auto order-1 md:order-2">
             <Image
-              src="/images/hourglass.jpg"
-              alt="Transformation takes time - hourglass symbolizing the journey"
+              src="/images/transformation-journey.jpg"
+              alt="Transformation journey - peaceful sunrise"
               fill
-              className="object-cover object-center"
+              className="object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent" />
-            <div className="absolute bottom-0 left-0 right-0 p-8 md:p-14">
-              <p className="text-white font-serif text-xl md:text-2xl lg:text-3xl font-light italic max-w-2xl leading-relaxed">
-                {t("philosophy.quote")}
-              </p>
-            </div>
           </div>
         </motion.div>
 
-        {/* Two Column Layout with elegant numbers */}
-        <div className="grid md:grid-cols-2 gap-16 md:gap-20">
+        {/* Two Column Layout with elegant centered lines */}
+        <div className="grid md:grid-cols-2 gap-16 md:gap-24">
           {philosophyItems.map((item, index) => (
             <motion.div 
               key={index}
@@ -67,20 +68,23 @@ export function Philosophy() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
-              className="relative"
+              className="relative text-center"
             >
-              {/* Elegant number styling */}
-              <span className="font-serif text-8xl md:text-9xl font-light text-foreground/5 leading-none select-none pointer-events-none mb-6 block">
-                {String(index + 1).padStart(2, '0')}
-              </span>
+              {/* Number with centered lines */}
+              <div className="flex items-center justify-center gap-6 mb-10">
+                <div className="w-16 h-px bg-foreground/20" />
+                <span className="font-serif text-6xl md:text-7xl font-light text-foreground/15 leading-none select-none">
+                  {String(index + 1).padStart(2, '0')}
+                </span>
+                <div className="w-16 h-px bg-foreground/20" />
+              </div>
               
               {/* Content */}
-              <div className="relative -mt-12">
-                <div className="w-16 h-px bg-foreground/20 mb-8" />
+              <div>
                 <h3 className="font-serif text-2xl md:text-3xl font-medium text-foreground mb-5 text-balance leading-snug">
                   {item.title}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed text-lg font-light">
+                <p className="text-muted-foreground leading-relaxed text-lg font-light max-w-md mx-auto">
                   {item.description}
                 </p>
               </div>

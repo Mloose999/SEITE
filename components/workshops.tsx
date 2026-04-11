@@ -244,40 +244,44 @@ export function Workshops() {
         </div>
       </motion.div>
 
-      {/* 1:1 Coaching - Elegant Beige Section */}
+      {/* 1:1 Coaching - Dynamic Split Section */}
       <div className="w-full bg-beige-light py-28 md:py-36 pb-36 md:pb-48">
         <div className="max-w-7xl mx-auto px-8">
-          {/* Elegant white box */}
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="bg-white p-12 md:p-16 lg:p-20 max-w-4xl mx-auto shadow-sm"
+            className="grid md:grid-cols-2 gap-0"
           >
-            <div className="text-center">
-              <p className="text-foreground/50 font-light tracking-[0.3em] uppercase text-xs mb-6">{t("workshops.personalSupport")}</p>
-              <h3 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium text-foreground mb-8">
+            {/* Left - Dark accent panel */}
+            <div className="bg-foreground p-10 md:p-14 lg:p-16 flex flex-col justify-center">
+              <p className="text-white/50 font-light tracking-[0.3em] uppercase text-xs mb-6">{t("workshops.personalSupport")}</p>
+              <h3 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium text-white mb-6 leading-tight">
                 {t("workshops.coaching")}
               </h3>
-              <p className="text-muted-foreground leading-relaxed mb-14 max-w-2xl mx-auto font-light text-lg">
+              <p className="text-white/70 leading-relaxed font-light text-lg">
                 {t("workshops.coachingDescription")}
               </p>
-              
+            </div>
+            
+            {/* Right - White formats panel */}
+            <div className="bg-white p-10 md:p-14 lg:p-16">
+              <p className="text-foreground font-medium tracking-wide mb-10 text-sm uppercase">{t("workshops.availableFormats")}</p>
               <div className="space-y-8">
-                <p className="text-foreground font-medium tracking-wide">{t("workshops.availableFormats")}</p>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-                  {[
-                    { format: t("workshops.liveSessions"), desc: t("workshops.liveSessionsDesc") },
-                    { format: t("workshops.emailCoaching"), desc: t("workshops.emailCoachingDesc") },
-                    { format: t("workshops.phoneWhatsapp"), desc: t("workshops.phoneWhatsappDesc") }
-                  ].map((item, i) => (
-                    <div key={i} className="flex flex-col items-center gap-3">
-                      <span className="text-foreground font-medium">{item.format}</span>
+                {[
+                  { format: t("workshops.liveSessions"), desc: t("workshops.liveSessionsDesc"), num: "01" },
+                  { format: t("workshops.emailCoaching"), desc: t("workshops.emailCoachingDesc"), num: "02" },
+                  { format: t("workshops.phoneWhatsapp"), desc: t("workshops.phoneWhatsappDesc"), num: "03" }
+                ].map((item, i) => (
+                  <div key={i} className="flex items-start gap-6 group">
+                    <span className="font-serif text-3xl font-light text-foreground/15 group-hover:text-foreground/30 transition-colors">{item.num}</span>
+                    <div className="pt-1">
+                      <span className="text-foreground font-medium block mb-1">{item.format}</span>
                       <span className="text-muted-foreground text-sm font-light">{item.desc}</span>
                     </div>
-                  ))}
-                </div>
+                  </div>
+                ))}
               </div>
             </div>
           </motion.div>
