@@ -247,18 +247,27 @@ export function Workshops() {
         </div>
       </motion.div>
 
-      {/* 1:1 Coaching - Elegant Split Section */}
-      <div className="w-full bg-beige-light py-28 md:py-36 pb-36 md:pb-48">
-        <div className="max-w-7xl mx-auto px-8">
+      {/* 1:1 Coaching - Full Width with Extended Background Image */}
+      <div className="w-full relative overflow-hidden">
+        {/* Extended Background Image covering both sections */}
+        <Image
+          src="/images/complete-package-bg.jpg"
+          alt=""
+          fill
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-beige/70 via-beige/60 to-beige/80" />
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-8 py-28 md:py-36 pb-36 md:pb-48">
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="grid md:grid-cols-2 gap-0 shadow-xl"
+            className="grid md:grid-cols-2 gap-16 md:gap-20"
           >
-            {/* Left - Warm accent panel */}
-            <div className="bg-gradient-to-br from-accent to-beige p-10 md:p-14 lg:p-16 flex flex-col justify-center">
+            {/* Left - Content without box */}
+            <div className="flex flex-col justify-center">
               <p className="text-foreground/60 font-light tracking-[0.3em] uppercase text-xs mb-6">{t("workshops.personalSupport")}</p>
               <h3 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium text-foreground mb-6 leading-tight">
                 {t("workshops.coaching")}
@@ -268,8 +277,8 @@ export function Workshops() {
               </p>
             </div>
             
-            {/* Right - White formats panel */}
-            <div className="bg-white p-10 md:p-14 lg:p-16">
+            {/* Right - Formats without white box */}
+            <div className="flex flex-col justify-center">
               <p className="text-foreground font-medium tracking-wide mb-10 text-sm uppercase">{t("workshops.availableFormats")}</p>
               <div className="space-y-8">
                 {[
@@ -278,10 +287,10 @@ export function Workshops() {
                   { format: t("workshops.phoneWhatsapp"), desc: t("workshops.phoneWhatsappDesc"), num: "03" }
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-6 group">
-                    <span className="font-serif text-3xl font-light text-accent/50 group-hover:text-accent transition-colors">{item.num}</span>
+                    <span className="font-serif text-3xl font-light text-foreground/40 group-hover:text-foreground/70 transition-colors">{item.num}</span>
                     <div className="pt-1">
                       <span className="text-foreground font-medium block mb-1">{item.format}</span>
-                      <span className="text-muted-foreground text-sm font-light">{item.desc}</span>
+                      <span className="text-foreground/60 text-sm font-light">{item.desc}</span>
                     </div>
                   </div>
                 ))}
