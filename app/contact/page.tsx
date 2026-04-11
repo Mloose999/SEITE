@@ -187,7 +187,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="text-sm text-foreground/50 font-medium">Telefon</p>
-                    <p className="font-medium text-foreground">+49 123 456 7890</p>
+                    <p className="font-medium text-foreground">+49 171 5812251</p>
                   </div>
                 </motion.div>
 
