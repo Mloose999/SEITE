@@ -2,6 +2,7 @@
 
 import Image from "next/image"
 import { useLanguage } from "@/lib/language-context"
+import { motion } from "framer-motion"
 
 export function Philosophy() {
   const { t } = useLanguage()
@@ -18,56 +19,74 @@ export function Philosophy() {
   ]
 
   return (
-    <section id="philosophy" className="py-24 md:py-32 bg-background">
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="text-center mb-20">
-          <p className="text-accent font-semibold tracking-widest uppercase text-sm mb-4">{t("philosophy.label")}</p>
-          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-extrabold text-foreground text-balance">
+    <section id="philosophy" className="py-28 md:py-40 bg-background">
+      <div className="max-w-7xl mx-auto px-8">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-24"
+        >
+          <p className="text-foreground/50 font-light tracking-[0.3em] uppercase text-xs mb-6">{t("philosophy.label")}</p>
+          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-medium text-foreground text-balance leading-tight">
             {t("philosophy.title")}
           </h2>
-        </div>
+        </motion.div>
 
         {/* Featured Image with Quote */}
-        <div className="relative mb-20">
-          <div className="relative overflow-hidden aspect-square md:aspect-[4/3]">
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.98 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1 }}
+          className="relative mb-28"
+        >
+          <div className="relative overflow-hidden aspect-square md:aspect-[16/9]">
             <Image
               src="/images/hourglass.jpg"
               alt="Transformation takes time - hourglass symbolizing the journey"
               fill
               className="object-cover object-center"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-foreground/90 via-foreground/20 to-transparent" />
-            <div className="absolute bottom-0 left-0 right-0 p-6 md:p-10">
-              <p className="text-card font-serif text-lg md:text-xl lg:text-2xl font-medium italic max-w-xl">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+            <div className="absolute bottom-0 left-0 right-0 p-8 md:p-14">
+              <p className="text-white font-serif text-xl md:text-2xl lg:text-3xl font-light italic leading-relaxed max-w-2xl">
                 {t("philosophy.quote")}
               </p>
             </div>
           </div>
-        </div>
-
-        {/* Two Column Layout with Large Numbers */}
-        <div className="grid md:grid-cols-2 gap-12 md:gap-16">
+        </motion.div>
+        {/* Two Column Layout with elegant centered lines */}
+        <div className="grid md:grid-cols-2 gap-16 md:gap-24">
           {philosophyItems.map((item, index) => (
-            <div 
+            <motion.div 
               key={index}
-              className="relative"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: index * 0.2 }}
+              className="relative text-center"
             >
-              {/* Large decorative number */}
-              <span className="absolute -top-8 -left-2 md:-top-12 md:-left-4 font-serif text-[120px] md:text-[180px] font-bold text-foreground/5 leading-none select-none pointer-events-none">
-                {String(index + 1).padStart(2, '0')}
-              </span>
+              {/* Number with centered lines */}
+              <div className="flex items-center justify-center gap-6 mb-10">
+                <div className="w-16 h-px bg-foreground/20" />
+                <span className="font-serif text-6xl md:text-7xl font-light text-foreground/15 leading-none select-none">
+                  {String(index + 1).padStart(2, '0')}
+                </span>
+                <div className="w-16 h-px bg-foreground/20" />
+              </div>
               
               {/* Content */}
-              <div className="relative pt-8">
-                <div className="w-12 h-[2px] bg-foreground/30 mb-6" />
-                <h3 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-4 text-balance">
+              <div>
+                <h3 className="font-serif text-2xl md:text-3xl font-medium text-foreground mb-5 text-balance leading-snug">
                   {item.title}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed text-lg">
+                <p className="text-muted-foreground leading-relaxed text-lg font-light max-w-md mx-auto">
                   {item.description}
                 </p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

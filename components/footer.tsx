@@ -29,33 +29,33 @@ export function Footer() {
   }
 
   return (
-    <footer className="bg-secondary text-secondary-foreground py-16">
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+    <footer className="bg-beige text-foreground py-20">
+      <div className="max-w-7xl mx-auto px-8">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-12">
           {/* Brand */}
-          <div className="text-center md:text-left flex flex-col items-center md:items-start gap-4">
+          <div className="text-center md:text-left flex flex-col items-center md:items-start gap-5">
             <Image
               src="/images/logo-original.png"
               alt="Change Your Life with Linda"
-              width={80}
-              height={80}
+              width={70}
+              height={70}
               className="object-contain"
               style={{ filter: "sepia(0.3) saturate(1.2) brightness(0.9) hue-rotate(-10deg)" }}
             />
             <div>
-              <p className="font-serif text-2xl font-extrabold mb-1 text-foreground">{t("header.brand")}</p>
-              <p className="text-secondary-foreground/70 text-sm italic">{t("header.tagline")}</p>
+              <p className="font-serif text-2xl font-medium mb-2 text-foreground">{t("header.brand")}</p>
+              <p className="text-foreground/50 text-sm font-light tracking-wide">{t("header.tagline")}</p>
             </div>
           </div>
 
           {/* Navigation */}
-          <nav className="flex items-center gap-8">
+          <nav className="flex items-center gap-10">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 onClick={(e) => scrollToSection(e, link.href)}
-                className="text-secondary-foreground/80 hover:text-accent transition-colors duration-200 text-sm"
+                className="text-foreground/60 hover:text-foreground transition-colors duration-300 text-sm font-light tracking-wide"
               >
                 {link.name}
               </Link>
@@ -63,40 +63,40 @@ export function Footer() {
           </nav>
 
           {/* Social Links */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-5">
             {socialLinks.map((social) => (
               <Link
                 key={social.name}
                 href={social.href}
-                className="w-10 h-10 bg-foreground/10 flex items-center justify-center hover:bg-foreground/20 transition-colors duration-200"
+                className="w-11 h-11 border border-foreground/20 flex items-center justify-center hover:border-foreground/50 hover:bg-white/30 transition-all duration-300"
                 aria-label={social.name}
               >
-                <social.icon className="w-5 h-5 text-foreground" />
+                <social.icon className="w-4 h-4 text-foreground/70" />
               </Link>
             ))}
           </div>
         </div>
 
         {/* Impressum */}
-        <div className="mt-12 pt-8 border-t border-secondary-foreground/10">
-          <div className="text-center mb-6">
-            <h3 className="font-serif text-lg font-semibold text-foreground mb-4">{t("footer.impressum")}</h3>
-            <div className="text-foreground/70 text-sm space-y-1">
-              <p className="font-medium text-foreground">Linda Holtkamp</p>
-              <p>Reemstückenkamp 22 c, 22523 Hamburg</p>
+        <div className="mt-16 pt-10 border-t border-foreground/10">
+          <div className="text-center mb-8">
+            <h3 className="font-serif text-lg font-medium text-foreground mb-5 tracking-wide">{t("footer.impressum")}</h3>
+            <div className="text-foreground/50 text-sm space-y-2 font-light">
+              <p className="font-medium text-foreground/80">Linda Holtkamp</p>
+              <p>Reemstuckenkamp 22 c, 22523 Hamburg</p>
               <p>
-                <a href="tel:+491715812251" className="hover:text-foreground transition-colors">
+                <a href="tel:+491715812251" className="hover:text-foreground transition-colors duration-300">
                   +49 171 5812251
                 </a>
               </p>
               <p>
-                <a href="mailto:info@lindaholtkamp.com" className="hover:text-foreground transition-colors">
+                <a href="mailto:info@lindaholtkamp.com" className="hover:text-foreground transition-colors duration-300">
                   info@lindaholtkamp.com
                 </a>
               </p>
             </div>
           </div>
-          <p className="text-foreground/60 text-sm text-center">
+          <p className="text-foreground/40 text-sm text-center font-light">
             © {new Date().getFullYear()} Linda Holtkamp - Mindset Coaching. {t("footer.rights")}
           </p>
         </div>

@@ -3,6 +3,7 @@
 import Image from "next/image"
 import { Brain, Flame, Sparkles, Heart, Check } from "lucide-react"
 import { useLanguage } from "@/lib/language-context"
+import { motion } from "framer-motion"
 
 export function Workshops() {
   const { t } = useLanguage()
@@ -53,184 +54,240 @@ export function Workshops() {
   ]
 
   return (
-    <section id="workshops" className="py-24 md:py-32 bg-background">
-      <div className="max-w-6xl mx-auto px-6">
-        {/* Section Header */}
-        <div className="text-center mb-20">
-          <p className="text-accent font-semibold tracking-widest uppercase text-sm mb-4">{t("workshops.label")}</p>
-          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-extrabold text-foreground mb-6 text-balance">
-            {t("workshops.title")}
-          </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
-            {t("workshops.description")}
-          </p>
-        </div>
+    <section id="workshops" className="bg-background">
+      {/* Full-width background image section */}
+      <div className="relative">
+        {/* Background Image */}
+        <Image
+          src="/images/workshop-hero.jpg"
+          alt=""
+          fill
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-beige/80 via-beige/60 to-background" />
+        
+        {/* Content over background */}
+        <div className="relative z-10 pt-28 md:pt-40 pb-20 md:pb-28">
+          <div className="max-w-7xl mx-auto px-8">
+            {/* Section Header */}
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+            >
+              <p className="text-foreground/60 font-light tracking-[0.3em] uppercase text-xs mb-6">{t("workshops.label")}</p>
+              <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground mb-8 text-balance leading-tight">
+                {t("workshops.title")}
+              </h2>
+              <p className="text-foreground/70 text-lg max-w-2xl mx-auto leading-relaxed font-light">
+                {t("workshops.description")}
+              </p>
+            </motion.div>
 
-        {/* Hero Image with Overlay Text */}
-        <div className="relative mb-24">
-          <div className="relative overflow-hidden aspect-[21/9]">
-            <Image
-              src="/images/workshop.jpg"
-              alt="Personal transformation workshop"
-              fill
-              className="object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-foreground/70 via-foreground/40 to-transparent" />
-            <div className="absolute inset-0 flex items-center">
-              <div className="px-8 md:px-12 max-w-xl">
-                <p className="text-card font-serif text-2xl md:text-3xl lg:text-4xl font-bold leading-tight">
-                  {t("workshops.heroText")}
-                </p>
-              </div>
-            </div>
+            {/* Hero Text */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="max-w-3xl mx-auto text-center"
+            >
+              <p className="text-foreground font-serif text-2xl md:text-3xl lg:text-4xl font-medium leading-snug">
+                {t("workshops.heroText")}
+              </p>
+            </motion.div>
           </div>
         </div>
+      </div>
 
+      <div className="max-w-7xl mx-auto px-8 py-20 md:py-28">
         {/* Workshop Structure */}
-        <div className="mb-28">
-          <div className="text-center mb-16">
-            <h3 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-6">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="mb-32"
+        >
+          <div className="text-center mb-20">
+            <h3 className="font-serif text-3xl md:text-4xl font-medium text-foreground mb-6">
               {t("workshops.howItWorks")}
             </h3>
-            <p className="text-muted-foreground leading-relaxed text-lg max-w-2xl mx-auto">
+            <p className="text-muted-foreground leading-relaxed text-lg max-w-2xl mx-auto font-light">
               {t("workshops.howItWorksDescription")}
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-12 md:gap-6 relative">
-            {/* Connecting line for desktop */}
-            <div className="hidden md:block absolute top-6 left-[16%] right-[16%] h-px bg-accent/30" />
+          <div className="grid md:grid-cols-3 gap-16 md:gap-8 relative">
+            {/* Elegant connecting line for desktop */}
+            <div className="hidden md:block absolute top-8 left-[20%] right-[20%] h-px bg-border" />
             
             {workshopStructure.map((item, index) => (
-              <div key={index} className="relative text-center group">
-                <div className="relative z-10 w-12 h-12 rounded-full bg-accent text-accent-foreground flex items-center justify-center font-serif font-bold text-sm mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+              <motion.div 
+                key={index} 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.2 }}
+                className="relative text-center group"
+              >
+                <div className="relative z-10 w-16 h-16 bg-white border border-border flex items-center justify-center font-serif font-medium text-lg mx-auto mb-8 transition-all duration-500 group-hover:border-foreground group-hover:shadow-lg">
                   {item.step}
                 </div>
-                <h4 className="font-serif text-xl font-bold text-foreground mb-3">
+                <h4 className="font-serif text-xl font-medium text-foreground mb-4">
                   {item.title}
                 </h4>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed font-light">
                   {item.description}
                 </p>
-              </div>
+              </motion.div>
             ))}
           </div>
-        </div>
+        </motion.div>
 
-        {/* Individual Workshops - Side by Side with Arch Images */}
-        <div className="mb-28">
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-12 gap-4">
+        {/* Individual Workshops - Elegant Grid */}
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="mb-32"
+        >
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-16 gap-6">
             <div>
-              <h3 className="font-serif text-2xl md:text-3xl font-bold text-foreground">
+              <h3 className="font-serif text-3xl md:text-4xl font-medium text-foreground">
                 {t("workshops.individual")}
               </h3>
-              <p className="text-muted-foreground mt-2">{t("workshops.individualDescription")}</p>
+              <p className="text-muted-foreground mt-3 font-light">{t("workshops.individualDescription")}</p>
             </div>
-            <p className="text-foreground font-serif text-2xl font-bold">29 € <span className="text-base font-normal text-muted-foreground">{t("workshops.perWorkshop")}</span></p>
+            <p className="text-foreground font-serif text-3xl font-medium">29 € <span className="text-base font-light text-muted-foreground ml-1">{t("workshops.perWorkshop")}</span></p>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-10">
             {workshops.map((workshop, index) => (
-              <div 
+              <motion.div 
                 key={index} 
-                className="group"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.15 }}
+                className="group cursor-pointer"
               >
-                {/* Arch-shaped Image */}
-                <div className="relative aspect-[3/4] overflow-hidden rounded-t-full mb-5">
+                {/* Arch-shaped Image with elegant hover */}
+                <div className="relative aspect-[3/4] overflow-hidden rounded-t-full mb-6">
                   <Image
                     src={workshop.image}
                     alt={workshop.title}
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="object-cover transition-all duration-700 group-hover:scale-105"
                   />
+                  <div className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/10 transition-all duration-500" />
                 </div>
-                {/* Simple Text Below */}
+                {/* Text Below */}
                 <div className="text-center">
-                  <h4 className="font-serif text-base md:text-lg font-bold text-foreground mb-2">
+                  <h4 className="font-serif text-lg md:text-xl font-medium text-foreground mb-3 transition-colors duration-300 group-hover:text-foreground/70">
                     {workshop.title}
                   </h4>
-                  <p className="text-muted-foreground leading-relaxed text-sm">
+                  <p className="text-muted-foreground leading-relaxed text-sm font-light">
                     {workshop.description}
                   </p>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
-        </div>
-
+        </motion.div>
       </div>
 
-      {/* Complete Program Package - Full Width with Background Image - negative margin to reduce gap */}
-      <div className="-mt-12 md:-mt-16 relative overflow-hidden">
-        {/* Background Image with beige tint */}
+      {/* Complete Program Package - Elegant Full Width */}
+      <motion.div 
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1 }}
+        className="-mt-8 md:-mt-12 relative overflow-hidden"
+      >
+        {/* Background Image with elegant overlay */}
         <Image
           src="/images/complete-package-bg.jpg"
           alt=""
           fill
           className="object-cover"
         />
-        {/* Beige overlay to match site color scheme */}
-        <div className="absolute inset-0 bg-beige/40 mix-blend-multiply" />
+        <div className="absolute inset-0 bg-gradient-to-r from-beige/60 via-beige/40 to-beige/50" />
         
-        <div className="relative z-10 max-w-6xl mx-auto px-6 py-16 md:py-20 lg:py-24">
-          <p className="text-foreground/70 font-semibold tracking-widest uppercase text-sm mb-4">{t("workshops.completePackage")}</p>
-          <h3 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
+        <div className="relative z-10 max-w-7xl mx-auto px-8 py-24 md:py-32">
+          <p className="text-foreground/60 font-light tracking-[0.3em] uppercase text-xs mb-6">{t("workshops.completePackage")}</p>
+          <h3 className="font-serif text-4xl md:text-5xl lg:text-6xl font-medium text-foreground mb-8 leading-tight">
             {t("workshops.fullProgram")}
           </h3>
-          <p className="text-foreground/70 leading-relaxed text-lg mb-10 max-w-xl">
+          <p className="text-foreground/70 leading-relaxed text-lg mb-14 max-w-xl font-light">
             {t("workshops.fullProgramDescription")}
           </p>
           
-          <div className="flex flex-col md:flex-row md:items-end gap-8 md:gap-16">
-            {/* Price */}
+          <div className="flex flex-col md:flex-row md:items-end gap-12 md:gap-20">
+            {/* Price with elegant styling */}
             <div>
-              <span className="text-foreground/60 line-through text-lg block mb-1">116 €</span>
-              <span className="font-serif text-6xl md:text-7xl font-bold text-foreground">99 €</span>
+              <span className="text-foreground/50 line-through text-lg block mb-2 font-light">116 €</span>
+              <span className="font-serif text-7xl md:text-8xl font-medium text-foreground tracking-tight">99 €</span>
             </div>
             
-            {/* Benefits */}
-            <div className="space-y-3 pb-2">
+            {/* Benefits with refined styling */}
+            <div className="space-y-4 pb-3">
               {[t("workshops.allWorkshops"), t("workshops.structuredJourney"), t("workshops.saveBundle")].map((item, i) => (
-                <div key={i} className="flex items-center gap-3 text-foreground">
-                  <Check className="w-5 h-5 text-foreground" />
-                  <span>{item}</span>
+                <div key={i} className="flex items-center gap-4 text-foreground">
+                  <div className="w-5 h-5 border border-foreground/30 flex items-center justify-center">
+                    <Check className="w-3 h-3 text-foreground" />
+                  </div>
+                  <span className="font-light">{item}</span>
                 </div>
               ))}
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
 
-      {/* 1:1 Coaching - Full Width Beige Section */}
-      <div className="w-full bg-beige-light py-20 md:py-28 pb-32 md:pb-40">
-        <div className="max-w-6xl mx-auto px-6">
-          {/* White box with sharp corners */}
-          <div className="bg-white p-8 md:p-12 lg:p-16 max-w-3xl mx-auto">
-            <div className="text-center">
-              <p className="text-foreground/70 font-semibold tracking-widest uppercase text-sm mb-4">{t("workshops.personalSupport")}</p>
-              <h3 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-6">
+      {/* 1:1 Coaching - Elegant Split Section */}
+      <div className="w-full bg-beige-light py-28 md:py-36 pb-36 md:pb-48">
+        <div className="max-w-7xl mx-auto px-8">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="grid md:grid-cols-2 gap-0 shadow-xl"
+          >
+            {/* Left - Warm accent panel */}
+            <div className="bg-gradient-to-br from-accent to-beige p-10 md:p-14 lg:p-16 flex flex-col justify-center">
+              <p className="text-foreground/60 font-light tracking-[0.3em] uppercase text-xs mb-6">{t("workshops.personalSupport")}</p>
+              <h3 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium text-foreground mb-6 leading-tight">
                 {t("workshops.coaching")}
               </h3>
-              <p className="text-foreground/70 leading-relaxed mb-10">
+              <p className="text-foreground/70 leading-relaxed font-light text-lg">
                 {t("workshops.coachingDescription")}
               </p>
-              
-              <div className="space-y-6">
-                <p className="text-foreground font-medium">{t("workshops.availableFormats")}</p>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                  {[
-                    { format: t("workshops.liveSessions"), desc: t("workshops.liveSessionsDesc") },
-                    { format: t("workshops.emailCoaching"), desc: t("workshops.emailCoachingDesc") },
-                    { format: t("workshops.phoneWhatsapp"), desc: t("workshops.phoneWhatsappDesc") }
-                  ].map((item, i) => (
-                    <div key={i} className="flex flex-col items-center gap-2">
-                      <span className="text-foreground font-medium">{item.format}</span>
-                      <span className="text-foreground/70 text-sm">{item.desc}</span>
+            </div>
+            
+            {/* Right - White formats panel */}
+            <div className="bg-white p-10 md:p-14 lg:p-16">
+              <p className="text-foreground font-medium tracking-wide mb-10 text-sm uppercase">{t("workshops.availableFormats")}</p>
+              <div className="space-y-8">
+                {[
+                  { format: t("workshops.liveSessions"), desc: t("workshops.liveSessionsDesc"), num: "01" },
+                  { format: t("workshops.emailCoaching"), desc: t("workshops.emailCoachingDesc"), num: "02" },
+                  { format: t("workshops.phoneWhatsapp"), desc: t("workshops.phoneWhatsappDesc"), num: "03" }
+                ].map((item, i) => (
+                  <div key={i} className="flex items-start gap-6 group">
+                    <span className="font-serif text-3xl font-light text-accent/50 group-hover:text-accent transition-colors">{item.num}</span>
+                    <div className="pt-1">
+                      <span className="text-foreground font-medium block mb-1">{item.format}</span>
+                      <span className="text-muted-foreground text-sm font-light">{item.desc}</span>
                     </div>
-                  ))}
-                </div>
+                  </div>
+                ))}
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
