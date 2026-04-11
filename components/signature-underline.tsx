@@ -7,28 +7,30 @@ export function SignatureUnderline({ className = "", width = "default" }: { clas
   
   return (
     <svg
-      viewBox="0 0 300 20"
+      viewBox="0 0 300 16"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className={`${widthClasses[width]} h-auto ${className}`}
+      className={`${widthClasses[width]} h-auto -mt-1 ${className}`}
       aria-hidden="true"
       preserveAspectRatio="none"
     >
-      {/* First line - slight curve, slopes down to the right */}
+      {/* First line - handwritten style with slight variation */}
       <path
-        d="M0 5 Q 150 4, 300 10"
+        d="M0 3 C 50 2, 100 4, 150 3.5 S 250 5, 300 8"
         stroke="currentColor"
-        strokeWidth="1.5"
+        strokeWidth="2.5"
         strokeLinecap="round"
         fill="none"
+        className="text-foreground"
       />
-      {/* Second line - slight curve, slopes down to the right */}
+      {/* Second line - handwritten style, parallel */}
       <path
-        d="M0 10 Q 150 9, 300 15"
+        d="M0 9 C 60 8, 120 10, 180 9 S 260 11, 300 14"
         stroke="currentColor"
-        strokeWidth="1.5"
+        strokeWidth="2.5"
         strokeLinecap="round"
         fill="none"
+        className="text-foreground"
       />
     </svg>
   )

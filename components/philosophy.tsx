@@ -26,7 +26,7 @@ export function Philosophy() {
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-extrabold text-foreground text-balance mb-2">
             {t("philosophy.title")}
           </h2>
-          <SignatureUnderline className="mx-auto text-foreground/40" />
+          <SignatureUnderline className="mx-auto" />
         </div>
 
         {/* Featured Image with Quote */}

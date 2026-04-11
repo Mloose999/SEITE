@@ -28,7 +28,7 @@ export function Newsletter() {
         <h2 className="font-serif text-3xl md:text-4xl font-extrabold text-foreground mb-2">
           {t("newsletter.title")}
         </h2>
-        <SignatureUnderline className="mx-auto text-foreground/40 mb-4" />
+        <SignatureUnderline className="mx-auto mb-4" />
         
         <p className="text-muted-foreground text-lg leading-relaxed mb-10">
           {t("newsletter.description")}

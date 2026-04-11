@@ -41,7 +41,7 @@ export function Services() {
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-2">
             {t("services.title")}
           </h2>
-          <SignatureUnderline className="mx-auto text-foreground/40 mb-6" />
+          <SignatureUnderline className="mx-auto mb-6" />
           <p className="text-foreground/70 leading-relaxed max-w-2xl mx-auto text-lg">
             {t("services.description")}
           </p>

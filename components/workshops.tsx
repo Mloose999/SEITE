@@ -62,7 +62,7 @@ export function Workshops() {
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-extrabold text-foreground mb-2 text-balance">
             {t("workshops.title")}
           </h2>
-          <SignatureUnderline className="mx-auto text-foreground/40 mb-6" />
+          <SignatureUnderline className="mx-auto mb-6" />
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
             {t("workshops.description")}
           </p>
@@ -209,7 +209,7 @@ export function Workshops() {
             <h3 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-2">
               {t("workshops.coaching")}
             </h3>
-            <SignatureUnderline className="mx-auto text-foreground/40 mb-6" width="wide" />
+            <SignatureUnderline className="mx-auto mb-6" width="wide" />
             <p className="text-foreground/70 leading-relaxed mb-10">
               {t("workshops.coachingDescription")}
             </p>

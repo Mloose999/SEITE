@@ -15,7 +15,7 @@ export function About() {
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-extrabold text-foreground mb-2">
             {t("about.title")}
           </h2>
-          <SignatureUnderline className="mx-auto text-foreground/40" />
+          <SignatureUnderline className="mx-auto" />
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">

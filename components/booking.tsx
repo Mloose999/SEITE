@@ -33,7 +33,7 @@ export function Booking() {
               <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl font-extrabold text-foreground mb-2">
                 {t("booking.title")}
               </h2>
-              <SignatureUnderline className="text-foreground/40 mb-4 mx-auto lg:mx-0" />
+              <SignatureUnderline className="mb-4 mx-auto lg:mx-0" />
               
               <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-8">
                 {t("booking.description")}
