@@ -10,8 +10,8 @@ export function Booking() {
   const { t } = useLanguage()
 
   return (
-    <section id="booking" className="py-28 md:py-40 bg-beige-light">
-      <div className="max-w-7xl mx-auto px-8">
+    <section id="booking" className="pt-28 md:pt-40 pb-0 bg-beige-light">
+      <div className="max-w-7xl mx-auto px-8 pb-28 md:pb-40">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-0">
           {/* Image with elegant treatment */}
           <motion.div 
@@ -66,6 +66,9 @@ export function Booking() {
           </motion.div>
         </div>
       </div>
+      
+      {/* Transition gradient to newsletter section */}
+      <div className="h-32 md:h-48 bg-gradient-to-b from-beige-light via-beige-light/50 to-accent" />
     </section>
   )
 }
