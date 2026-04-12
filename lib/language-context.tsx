@@ -185,6 +185,13 @@ const translations: Record<Language, Record<string, string>> = {
     "agb.liability.content": "The client participates in coaching at their own responsibility. The coach is not liable for the success of the coaching or for decisions made by the client based on the coaching.",
     "agb.final.title": "Final Provisions",
     "agb.final.content": "German law applies. Should individual provisions of these terms and conditions be or become invalid, this shall not affect the validity of the remaining provisions.",
+    
+    // Cookie Consent
+    "cookies.title": "Cookie Settings",
+    "cookies.description": "We use cookies to analyze our website traffic and improve your experience. By clicking \"Accept\", you consent to the use of analytics cookies.",
+    "cookies.accept": "Accept",
+    "cookies.decline": "Decline",
+    "cookies.learnMore": "Learn more",
   },
   de: {
     // Header
@@ -360,6 +367,13 @@ const translations: Record<Language, Record<string, string>> = {
     "agb.liability.content": "Der Klient nimmt am Coaching in eigener Verantwortung teil. Der Coach haftet nicht für den Erfolg des Coachings oder für Entscheidungen, die der Klient auf Grundlage des Coachings trifft.",
     "agb.final.title": "Schlussbestimmungen",
     "agb.final.content": "Es gilt deutsches Recht. Sollten einzelne Bestimmungen dieser AGB unwirksam sein oder werden, berührt dies die Wirksamkeit der übrigen Bestimmungen nicht.",
+    
+    // Cookie Consent
+    "cookies.title": "Cookie-Einstellungen",
+    "cookies.description": "Wir verwenden Cookies, um unseren Website-Traffic zu analysieren und dein Erlebnis zu verbessern. Mit Klick auf \"Akzeptieren\" stimmst du der Verwendung von Analyse-Cookies zu.",
+    "cookies.accept": "Akzeptieren",
+    "cookies.decline": "Ablehnen",
+    "cookies.learnMore": "Mehr erfahren",
   }
 }
 
