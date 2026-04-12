@@ -82,7 +82,6 @@ export function Footer() {
         {/* Impressum */}
         <div className="mt-16 pt-10 border-t border-foreground/10">
           <div className="text-center mb-8">
-            <h3 className="font-serif text-lg font-medium text-foreground mb-5 tracking-wide">{t("footer.impressum")}</h3>
             <div className="text-foreground/50 text-sm space-y-2 font-light">
               <p className="font-medium text-foreground/80">Linda Holtkamp</p>
               <p>Reemstuckenkamp 22 c, 22523 Hamburg</p>
