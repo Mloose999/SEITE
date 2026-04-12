@@ -68,7 +68,7 @@ export function CookieConsent() {
           transition={{ duration: 0.3 }}
           className="fixed bottom-0 left-0 right-0 z-50 p-4 md:p-6"
         >
-          <div className="max-w-4xl mx-auto bg-background border border-foreground/10 rounded-2xl shadow-2xl p-6 md:p-8">
+          <div className="max-w-4xl mx-auto bg-background border border-foreground/10 shadow-2xl p-6 md:p-8">
             <div className="flex flex-col md:flex-row md:items-center gap-6">
               <div className="flex-1">
                 <h3 className="font-serif text-lg font-medium text-foreground mb-2">
@@ -87,13 +87,13 @@ export function CookieConsent() {
               <div className="flex flex-col sm:flex-row gap-3">
                 <button
                   onClick={declineCookies}
-                  className="px-6 py-3 text-sm font-medium text-foreground/70 hover:text-foreground border border-foreground/20 rounded-full transition-colors"
+                  className="px-6 py-3 text-sm font-medium text-foreground/70 hover:text-foreground border border-foreground/20 transition-colors"
                 >
                   {t("cookies.decline")}
                 </button>
                 <button
                   onClick={acceptCookies}
-                  className="px-6 py-3 text-sm font-medium text-background bg-accent hover:bg-accent/90 rounded-full transition-colors"
+                  className="px-6 py-3 text-sm font-medium text-background bg-accent hover:bg-accent/90 transition-colors"
                 >
                   {t("cookies.accept")}
                 </button>
