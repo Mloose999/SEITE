@@ -14,20 +14,6 @@ const socialLinks = [
 export function Footer() {
   const { t } = useLanguage()
 
-  const navLinks = [
-    { name: t("nav.about"), href: "#about" },
-    { name: t("nav.services"), href: "#services" },
-    { name: t("nav.booking"), href: "#booking" },
-  ]
-
-  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    if (href.startsWith("#")) {
-      e.preventDefault()
-      const element = document.querySelector(href)
-      element?.scrollIntoView({ behavior: "smooth" })
-    }
-  }
-
   return (
     <footer className="bg-background text-foreground py-20">
       <div className="max-w-7xl mx-auto px-8">
@@ -49,20 +35,6 @@ export function Footer() {
               <p className="text-foreground/50 text-sm font-light tracking-wide">{t("header.tagline")}</p>
             </div>
           </div>
-
-          {/* Navigation */}
-          <nav className="flex items-center gap-10">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={(e) => scrollToSection(e, link.href)}
-                className="text-foreground/60 hover:text-foreground transition-colors duration-300 text-sm font-light tracking-wide"
-              >
-                {link.name}
-              </Link>
-            ))}
-          </nav>
 
           {/* Social Links */}
           <div className="flex items-center gap-5">
