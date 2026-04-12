@@ -66,6 +66,14 @@ export default function DatenschutzPage() {
                 <p>{t("datenschutz.cookies.content")}</p>
               </div>
 
+              {/* Google Analytics */}
+              <div>
+                <h2 className="font-serif text-xl font-semibold text-foreground mb-4">
+                  {t("datenschutz.analytics.title")}
+                </h2>
+                <p>{t("datenschutz.analytics.content")}</p>
+              </div>
+
               {/* Your Rights */}
               <div>
                 <h2 className="font-serif text-xl font-semibold text-foreground mb-4">
