@@ -15,6 +15,7 @@ import { motion } from "framer-motion"
 export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [error, setError] = useState<string | null>(null)
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -26,12 +27,29 @@ export default function ContactPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
+    setError(null)
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1500))
-    
-    setIsSubmitting(false)
-    setIsSubmitted(true)
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      })
+
+      const data = await response.json()
+
+      if (!response.ok) {
+        throw new Error(data.error || "Ein Fehler ist aufgetreten")
+      }
+
+      setIsSubmitted(true)
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Ein Fehler ist aufgetreten")
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -228,6 +246,13 @@ export default function ContactPage() {
                 </div>
                 
                 <form onSubmit={handleSubmit} className="space-y-5">
+                  {/* Error Message */}
+                  {error && (
+                    <div className="p-4 bg-red-50 border border-red-200 rounded-2xl text-red-700 text-sm">
+                      {error}
+                    </div>
+                  )}
+                  
                   {/* Name Field */}
                   <motion.div 
                     className="relative"
