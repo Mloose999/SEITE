@@ -14,20 +14,6 @@ const socialLinks = [
 export function Footer() {
   const { t } = useLanguage()
 
-  const navLinks = [
-    { name: t("nav.about"), href: "#about" },
-    { name: t("nav.services"), href: "#services" },
-    { name: t("nav.booking"), href: "#booking" },
-  ]
-
-  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    if (href.startsWith("#")) {
-      e.preventDefault()
-      const element = document.querySelector(href)
-      element?.scrollIntoView({ behavior: "smooth" })
-    }
-  }
-
   return (
     <footer className="bg-background text-foreground py-20">
       <div className="max-w-7xl mx-auto px-8">
@@ -50,20 +36,6 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Navigation */}
-          <nav className="flex items-center gap-10">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={(e) => scrollToSection(e, link.href)}
-                className="text-foreground/60 hover:text-foreground transition-colors duration-300 text-sm font-light tracking-wide"
-              >
-                {link.name}
-              </Link>
-            ))}
-          </nav>
-
           {/* Social Links */}
           <div className="flex items-center gap-5">
             {socialLinks.map((social) => (
@@ -82,7 +54,6 @@ export function Footer() {
         {/* Impressum */}
         <div className="mt-16 pt-10 border-t border-foreground/10">
           <div className="text-center mb-8">
-            <h3 className="font-serif text-lg font-medium text-foreground mb-5 tracking-wide">{t("footer.impressum")}</h3>
             <div className="text-foreground/50 text-sm space-y-2 font-light">
               <p className="font-medium text-foreground/80">Linda Holtkamp</p>
               <p>Reemstuckenkamp 22 c, 22523 Hamburg</p>
@@ -98,6 +69,31 @@ export function Footer() {
               </p>
             </div>
           </div>
+          
+          {/* Legal Links */}
+          <div className="flex items-center justify-center gap-6 mb-8">
+            <Link
+              href="/impressum"
+              className="text-foreground/50 hover:text-foreground transition-colors duration-300 text-sm font-light"
+            >
+              {t("footer.impressum")}
+            </Link>
+            <span className="text-foreground/30">|</span>
+            <Link
+              href="/datenschutz"
+              className="text-foreground/50 hover:text-foreground transition-colors duration-300 text-sm font-light"
+            >
+              {t("footer.datenschutz")}
+            </Link>
+            <span className="text-foreground/30">|</span>
+            <Link
+              href="/agb"
+              className="text-foreground/50 hover:text-foreground transition-colors duration-300 text-sm font-light"
+            >
+              {t("footer.agb")}
+            </Link>
+          </div>
+          
           <p className="text-foreground/40 text-sm text-center font-light">
             © {new Date().getFullYear()} Linda Holtkamp - Mindset Coaching. {t("footer.rights")}
           </p>
