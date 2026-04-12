@@ -98,6 +98,31 @@ export function Footer() {
               </p>
             </div>
           </div>
+          
+          {/* Legal Links */}
+          <div className="flex items-center justify-center gap-6 mb-8">
+            <Link
+              href="/impressum"
+              className="text-foreground/50 hover:text-foreground transition-colors duration-300 text-sm font-light"
+            >
+              {t("footer.impressum")}
+            </Link>
+            <span className="text-foreground/30">|</span>
+            <Link
+              href="/datenschutz"
+              className="text-foreground/50 hover:text-foreground transition-colors duration-300 text-sm font-light"
+            >
+              {t("footer.datenschutz")}
+            </Link>
+            <span className="text-foreground/30">|</span>
+            <Link
+              href="/agb"
+              className="text-foreground/50 hover:text-foreground transition-colors duration-300 text-sm font-light"
+            >
+              {t("footer.agb")}
+            </Link>
+          </div>
+          
           <p className="text-foreground/40 text-sm text-center font-light">
             © {new Date().getFullYear()} Linda Holtkamp - Mindset Coaching. {t("footer.rights")}
           </p>

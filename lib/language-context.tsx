@@ -141,6 +141,50 @@ const translations: Record<Language, Record<string, string>> = {
     "contact.back": "Back",
     "contact.backHome": "Back to Home",
     "contact.responseTime": "Linda typically responds within 24-48 hours.",
+    
+    // Legal Pages
+    "legal.backHome": "Back to Home",
+    "footer.datenschutz": "Privacy Policy",
+    "footer.agb": "Terms & Conditions",
+    
+    // Impressum Page
+    "impressum.title": "Impressum",
+    "impressum.responsible": "Responsible according to § 5 TMG",
+    "impressum.contact": "Contact",
+    "impressum.disclaimer.title": "Disclaimer",
+    "impressum.disclaimer.content": "Liability for Content: As a service provider, we are responsible for our own content on these pages according to general laws pursuant to § 7 Para.1 TMG. According to §§ 8 to 10 TMG, however, we are not obligated as a service provider to monitor transmitted or stored third-party information or to investigate circumstances that indicate illegal activity.",
+    "impressum.disclaimer.links": "Liability for Links: Our offer contains links to external websites of third parties, on whose contents we have no influence. Therefore, we cannot assume any liability for these external contents. The respective provider or operator of the pages is always responsible for the contents of the linked pages.",
+    "impressum.copyright.title": "Copyright",
+    "impressum.copyright.content": "The content and works created by the site operators on these pages are subject to German copyright law. Duplication, processing, distribution, or any form of commercialization of such material beyond the scope of the copyright law shall require the prior written consent of its respective author or creator.",
+    
+    // Datenschutz Page
+    "datenschutz.title": "Privacy Policy",
+    "datenschutz.intro": "We take the protection of your personal data very seriously. We treat your personal data confidentially and in accordance with the statutory data protection regulations and this privacy policy.",
+    "datenschutz.collection.title": "Data Collection",
+    "datenschutz.collection.content": "When you visit our website, certain data is automatically collected for technical reasons. This includes: IP address, date and time of the request, time zone difference to GMT, content of the request, access status/HTTP status code, amount of data transferred, website from which the request comes, browser, operating system and its interface, language and version of the browser software.",
+    "datenschutz.contact.title": "Contact Form",
+    "datenschutz.contact.content": "If you send us inquiries via the contact form, your details from the inquiry form, including the contact data you provide there, will be stored by us for the purpose of processing the inquiry and in case of follow-up questions. We will not share this data without your consent.",
+    "datenschutz.cookies.title": "Cookies",
+    "datenschutz.cookies.content": "Our website uses cookies. These are small text files that your web browser stores on your device. Cookies help us to make our offer more user-friendly, effective and secure.",
+    "datenschutz.rights.title": "Your Rights",
+    "datenschutz.rights.content": "You have the right to receive information about the origin, recipient and purpose of your stored personal data free of charge at any time. You also have the right to request the correction, blocking or deletion of this data. You can contact us at any time at the address given in the legal notice if you have further questions on the subject of data protection.",
+    
+    // AGB Page
+    "agb.title": "Terms & Conditions",
+    "agb.scope.title": "Scope of Application",
+    "agb.scope.content": "These General Terms and Conditions apply to all contracts concluded between Linda Holtkamp - Mindset Coaching and clients regarding coaching services, workshops, and online programs.",
+    "agb.services.title": "Services",
+    "agb.services.content": "The scope of services results from the respective service description. Coaching services are not a substitute for medical or psychotherapeutic treatment. The client is responsible for seeking professional medical help if needed.",
+    "agb.booking.title": "Booking and Payment",
+    "agb.booking.content": "Bookings become binding upon confirmation. Payment is due according to the agreed payment terms. For workshops and programs, the fee is due before the start of the service.",
+    "agb.cancellation.title": "Cancellation Policy",
+    "agb.cancellation.content": "Appointments can be cancelled or rescheduled free of charge up to 48 hours before the agreed date. In case of later cancellation or no-show, the full fee will be charged.",
+    "agb.confidentiality.title": "Confidentiality",
+    "agb.confidentiality.content": "All information shared during coaching sessions is treated confidentially. The coach is bound by professional secrecy.",
+    "agb.liability.title": "Liability",
+    "agb.liability.content": "The client participates in coaching at their own responsibility. The coach is not liable for the success of the coaching or for decisions made by the client based on the coaching.",
+    "agb.final.title": "Final Provisions",
+    "agb.final.content": "German law applies. Should individual provisions of these terms and conditions be or become invalid, this shall not affect the validity of the remaining provisions.",
   },
   de: {
     // Header
@@ -272,6 +316,50 @@ const translations: Record<Language, Record<string, string>> = {
     "contact.back": "Zurück",
     "contact.backHome": "Zur Startseite",
     "contact.responseTime": "Linda antwortet in der Regel innerhalb von 24-48 Stunden.",
+    
+    // Legal Pages
+    "legal.backHome": "Zur Startseite",
+    "footer.datenschutz": "Datenschutz",
+    "footer.agb": "AGB",
+    
+    // Impressum Page
+    "impressum.title": "Impressum",
+    "impressum.responsible": "Verantwortlich gemäß § 5 TMG",
+    "impressum.contact": "Kontakt",
+    "impressum.disclaimer.title": "Haftungsausschluss",
+    "impressum.disclaimer.content": "Haftung für Inhalte: Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.",
+    "impressum.disclaimer.links": "Haftung für Links: Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.",
+    "impressum.copyright.title": "Urheberrecht",
+    "impressum.copyright.content": "Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.",
+    
+    // Datenschutz Page
+    "datenschutz.title": "Datenschutzerklärung",
+    "datenschutz.intro": "Wir nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung.",
+    "datenschutz.collection.title": "Datenerfassung",
+    "datenschutz.collection.content": "Beim Besuch unserer Website werden aus technischen Gründen bestimmte Daten automatisch erfasst. Dazu gehören: IP-Adresse, Datum und Uhrzeit der Anfrage, Zeitzonendifferenz zur GMT, Inhalt der Anforderung, Zugriffsstatus/HTTP-Statuscode, übertragene Datenmenge, Website von der die Anforderung kommt, Browser, Betriebssystem und dessen Oberfläche, Sprache und Version der Browsersoftware.",
+    "datenschutz.contact.title": "Kontaktformular",
+    "datenschutz.contact.content": "Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.",
+    "datenschutz.cookies.title": "Cookies",
+    "datenschutz.cookies.content": "Unsere Website verwendet Cookies. Das sind kleine Textdateien, die Ihr Webbrowser auf Ihrem Endgerät speichert. Cookies helfen uns dabei, unser Angebot nutzerfreundlicher, effektiver und sicherer zu machen.",
+    "datenschutz.rights.title": "Ihre Rechte",
+    "datenschutz.rights.content": "Sie haben jederzeit das Recht auf unentgeltliche Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten. Sie haben außerdem ein Recht, die Berichtigung, Sperrung oder Löschung dieser Daten zu verlangen. Hierzu sowie zu weiteren Fragen zum Thema Datenschutz können Sie sich jederzeit unter der im Impressum angegebenen Adresse an uns wenden.",
+    
+    // AGB Page
+    "agb.title": "Allgemeine Geschäftsbedingungen",
+    "agb.scope.title": "Geltungsbereich",
+    "agb.scope.content": "Diese Allgemeinen Geschäftsbedingungen gelten für alle Verträge, die zwischen Linda Holtkamp - Mindset Coaching und Klienten über Coaching-Leistungen, Workshops und Online-Programme geschlossen werden.",
+    "agb.services.title": "Leistungen",
+    "agb.services.content": "Der Umfang der Leistungen ergibt sich aus der jeweiligen Leistungsbeschreibung. Coaching-Leistungen sind kein Ersatz für eine ärztliche oder psychotherapeutische Behandlung. Der Klient ist selbst dafür verantwortlich, bei Bedarf professionelle medizinische Hilfe zu suchen.",
+    "agb.booking.title": "Buchung und Zahlung",
+    "agb.booking.content": "Buchungen werden mit Bestätigung verbindlich. Die Zahlung ist entsprechend der vereinbarten Zahlungsbedingungen fällig. Bei Workshops und Programmen ist die Gebühr vor Beginn der Leistung fällig.",
+    "agb.cancellation.title": "Stornierungsbedingungen",
+    "agb.cancellation.content": "Termine können bis zu 48 Stunden vor dem vereinbarten Termin kostenlos storniert oder verschoben werden. Bei späterer Absage oder Nichterscheinen wird die volle Gebühr berechnet.",
+    "agb.confidentiality.title": "Vertraulichkeit",
+    "agb.confidentiality.content": "Alle während der Coaching-Sitzungen geteilten Informationen werden vertraulich behandelt. Der Coach ist zur Verschwiegenheit verpflichtet.",
+    "agb.liability.title": "Haftung",
+    "agb.liability.content": "Der Klient nimmt am Coaching in eigener Verantwortung teil. Der Coach haftet nicht für den Erfolg des Coachings oder für Entscheidungen, die der Klient auf Grundlage des Coachings trifft.",
+    "agb.final.title": "Schlussbestimmungen",
+    "agb.final.content": "Es gilt deutsches Recht. Sollten einzelne Bestimmungen dieser AGB unwirksam sein oder werden, berührt dies die Wirksamkeit der übrigen Bestimmungen nicht.",
   }
 }
 
