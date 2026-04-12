@@ -154,7 +154,7 @@ export default function ContactPage() {
       {/* Main Content */}
       <section className="relative z-10 py-16 md:py-24">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center max-w-5xl mx-auto">
             
             {/* Left Side - Info */}
             <motion.div

@@ -56,16 +56,18 @@ export function Header() {
           href="/" 
           className="flex items-center gap-4 group"
         >
-          <Image
-            src="/images/logo-original.png"
-            alt="Change Your Life with Linda"
-            width={60}
-            height={60}
-            className="object-contain transition-transform duration-300 group-hover:scale-105"
-            style={{ 
-              filter: "sepia(1) saturate(4) brightness(0.9) hue-rotate(-30deg) drop-shadow(0 0 10px rgba(128, 0, 32, 0.7)) drop-shadow(0 0 20px rgba(139, 0, 0, 0.5))" 
-            }}
-          />
+          <div className="relative overflow-hidden rounded-full shadow-md">
+            <Image
+              src="/images/logo-original.png"
+              alt="Change Your Life with Linda"
+              width={65}
+              height={65}
+              className="object-contain transition-transform duration-300 group-hover:scale-110"
+              style={{ 
+                filter: "sepia(1) saturate(4) brightness(0.9) hue-rotate(-30deg) drop-shadow(0 0 10px rgba(128, 0, 32, 0.7)) drop-shadow(0 0 20px rgba(139, 0, 0, 0.5))" 
+              }}
+            />
+          </div>
           <div className="hidden sm:flex flex-col">
             <span className={`font-serif text-lg font-semibold tracking-wide transition-colors duration-300 ${
               isScrolled ? "text-foreground" : "text-white"
