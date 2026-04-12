@@ -20,16 +20,18 @@ export function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-12">
           {/* Brand */}
           <div className="text-center md:text-left flex flex-col items-center md:items-start gap-5">
-            <Image
-              src="/images/logo-original.png"
-              alt="Change Your Life with Linda"
-              width={90}
-              height={90}
-              className="object-contain"
-              style={{ 
-                filter: "sepia(1) saturate(4) brightness(0.9) hue-rotate(-30deg) drop-shadow(0 0 10px rgba(128, 0, 32, 0.7)) drop-shadow(0 0 20px rgba(139, 0, 0, 0.5))" 
-              }}
-            />
+            <div className="relative overflow-hidden rounded-full shadow-md">
+              <Image
+                src="/images/logo-original.png"
+                alt="Change Your Life with Linda"
+                width={90}
+                height={90}
+                className="object-contain"
+                style={{ 
+                  filter: "sepia(1) saturate(4) brightness(0.9) hue-rotate(-30deg) drop-shadow(0 0 10px rgba(128, 0, 32, 0.7)) drop-shadow(0 0 20px rgba(139, 0, 0, 0.5))" 
+                }}
+              />
+            </div>
             <div>
               <p className="font-serif text-2xl font-medium mb-2 text-foreground">{t("header.brand")}</p>
               <p className="text-foreground/50 text-sm font-light tracking-wide">{t("header.tagline")}</p>
