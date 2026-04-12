@@ -30,8 +30,10 @@ export function CookieConsent() {
   }
 
   const loadGoogleAnalytics = () => {
-    const measurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
-    if (!measurementId) return
+    const measurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "G-NRNV8VSD5N"
+    
+    // Check if script is already loaded
+    if (document.querySelector(`script[src*="googletagmanager.com/gtag/js"]`)) return
 
     // Load gtag.js script
     const script = document.createElement("script")
