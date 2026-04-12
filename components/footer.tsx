@@ -44,10 +44,10 @@ export function Footer() {
               <Link
                 key={social.name}
                 href={social.href}
-                className="w-11 h-11 border border-foreground/20 flex items-center justify-center hover:border-foreground/50 hover:bg-white/30 transition-all duration-300"
+                className="flex items-center justify-center hover:scale-110 transition-all duration-300"
                 aria-label={social.name}
               >
-                <social.icon className="w-4 h-4 text-foreground/70" />
+                <social.icon className="w-5 h-5 text-foreground/70 hover:text-foreground" />
               </Link>
             ))}
           </div>
