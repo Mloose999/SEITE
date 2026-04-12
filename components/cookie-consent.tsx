@@ -30,26 +30,32 @@ export function CookieConsent() {
   }
 
   const loadGoogleAnalytics = () => {
-    const measurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "G-NRNV8VSD5N"
+    const measurementId = "G-NRNV8VSD5N"
     
     // Check if script is already loaded
-    if (document.querySelector(`script[src*="googletagmanager.com/gtag/js"]`)) return
+    if (document.querySelector(`script[src*="googletagmanager.com/gtag/js"]`)) {
+      console.log("[v0] GA script already loaded")
+      return
+    }
+
+    console.log("[v0] Loading Google Analytics with ID:", measurementId)
+
+    // Initialize dataLayer and gtag function BEFORE loading the script
+    window.dataLayer = window.dataLayer || []
+    window.gtag = function(...args: unknown[]) {
+      window.dataLayer.push(arguments)
+    }
+    window.gtag("js", new Date())
+    window.gtag("config", measurementId)
 
     // Load gtag.js script
     const script = document.createElement("script")
     script.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`
     script.async = true
-    document.head.appendChild(script)
-
-    // Initialize gtag
-    window.dataLayer = window.dataLayer || []
-    function gtag(...args: unknown[]) {
-      window.dataLayer.push(args)
+    script.onload = () => {
+      console.log("[v0] GA script loaded successfully")
     }
-    gtag("js", new Date())
-    gtag("config", measurementId, {
-      anonymize_ip: true,
-    })
+    document.head.appendChild(script)
   }
 
   // Check on mount if consent was given previously
@@ -112,5 +118,6 @@ export function CookieConsent() {
 declare global {
   interface Window {
     dataLayer: unknown[]
+    gtag: (...args: unknown[]) => void
   }
 }
