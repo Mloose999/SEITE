@@ -78,9 +78,9 @@ export default function ContactPage() {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className="relative z-10 max-w-md w-full text-center bg-white/60 backdrop-blur-xl p-12 rounded-3xl shadow-2xl border border-white/50"
+          className="relative z-10 max-w-md w-full text-center bg-white/60 backdrop-blur-xl p-12 shadow-2xl border border-white/50"
         >
-          <div className="bg-accent/50 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+          <div className="bg-accent/50 w-20 h-20 flex items-center justify-center mx-auto mb-6">
             <CheckCircle className="w-10 h-10 text-foreground" />
           </div>
           <h1 className="font-serif text-3xl font-bold text-foreground mb-4">
@@ -90,7 +90,7 @@ export default function ContactPage() {
             {t("contact.received")}
           </p>
           <Link href="/">
-            <Button className="bg-foreground text-white hover:bg-foreground/90 px-8 rounded-full">
+            <Button className="bg-foreground text-white hover:bg-foreground/90 px-8">
               <ArrowLeft className="w-4 h-4 mr-2" />
               {t("contact.backHome")}
             </Button>
@@ -142,7 +142,7 @@ export default function ContactPage() {
           <div className="flex items-center gap-3">
             <LanguageToggle isScrolled={true} />
             <Link href="/">
-              <Button variant="ghost" className="text-foreground/70 hover:text-foreground hover:bg-white/30 rounded-full">
+              <Button variant="ghost" className="text-foreground/70 hover:text-foreground hover:bg-white/30">
                 <ArrowLeft className="w-4 h-4 mr-2" />
                 {t("contact.back")}
               </Button>
@@ -154,7 +154,7 @@ export default function ContactPage() {
       {/* Main Content */}
       <section className="relative z-10 py-16 md:py-24">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             
             {/* Left Side - Info */}
             <motion.div
@@ -186,9 +186,9 @@ export default function ContactPage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3 }}
-                  className="flex items-center gap-4 p-5 bg-white/50 backdrop-blur-sm rounded-2xl border border-white/50 hover:bg-white/70 hover:shadow-lg transition-all duration-300"
+                  className="flex items-center gap-4 p-5 bg-white/50 backdrop-blur-sm border border-white/50 hover:bg-white/70 hover:shadow-lg transition-all duration-300"
                 >
-                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-accent to-beige flex items-center justify-center shadow-sm">
+                  <div className="w-14 h-14 bg-gradient-to-br from-accent to-beige flex items-center justify-center shadow-sm">
                     <Mail className="w-6 h-6 text-foreground/80" />
                   </div>
                   <div>
@@ -201,9 +201,9 @@ export default function ContactPage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4 }}
-                  className="flex items-center gap-4 p-5 bg-white/50 backdrop-blur-sm rounded-2xl border border-white/50 hover:bg-white/70 hover:shadow-lg transition-all duration-300"
+                  className="flex items-center gap-4 p-5 bg-white/50 backdrop-blur-sm border border-white/50 hover:bg-white/70 hover:shadow-lg transition-all duration-300"
                 >
-                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-accent to-beige flex items-center justify-center shadow-sm">
+                  <div className="w-14 h-14 bg-gradient-to-br from-accent to-beige flex items-center justify-center shadow-sm">
                     <Phone className="w-6 h-6 text-foreground/80" />
                   </div>
                   <div>
@@ -216,9 +216,9 @@ export default function ContactPage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.5 }}
-                  className="flex items-center gap-4 p-5 bg-white/50 backdrop-blur-sm rounded-2xl border border-white/50 hover:bg-white/70 hover:shadow-lg transition-all duration-300"
+                  className="flex items-center gap-4 p-5 bg-white/50 backdrop-blur-sm border border-white/50 hover:bg-white/70 hover:shadow-lg transition-all duration-300"
                 >
-                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-accent to-beige flex items-center justify-center shadow-sm">
+                  <div className="w-14 h-14 bg-gradient-to-br from-accent to-beige flex items-center justify-center shadow-sm">
                     <MapPin className="w-6 h-6 text-foreground/80" />
                   </div>
                   <div>
@@ -235,9 +235,9 @@ export default function ContactPage() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <div className="p-2 md:p-4">
+              <div className="p-6 md:p-10 bg-white/40 backdrop-blur-sm border border-white/50">
                 <div className="flex items-center gap-3 mb-8">
-                  <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-accent to-beige flex items-center justify-center shadow-lg">
+                  <div className="w-12 h-12 bg-gradient-to-br from-accent to-beige flex items-center justify-center shadow-lg">
                     <Send className="w-5 h-5 text-foreground/80" />
                   </div>
                   <h2 className="font-serif text-3xl font-bold text-foreground">
@@ -248,7 +248,7 @@ export default function ContactPage() {
                 <form onSubmit={handleSubmit} className="space-y-5">
                   {/* Error Message */}
                   {error && (
-                    <div className="p-4 bg-red-50 border border-red-200 rounded-2xl text-red-700 text-sm">
+                    <div className="p-4 bg-red-50 border border-red-200 text-red-700 text-sm">
                       {error}
                     </div>
                   )}
@@ -278,7 +278,7 @@ export default function ContactPage() {
                       onChange={handleChange}
                       onFocus={() => setFocusedField('name')}
                       onBlur={() => setFocusedField(null)}
-                      className="bg-white/40 backdrop-blur-sm border-2 border-accent/30 focus:border-accent focus:ring-0 rounded-2xl py-6 px-4 transition-all duration-300 hover:border-accent/50 hover:bg-white/50"
+                      className="bg-white/40 backdrop-blur-sm border-2 border-accent/30 focus:border-accent focus:ring-0 py-6 px-4 transition-all duration-300 hover:border-accent/50 hover:bg-white/50"
                     />
                   </motion.div>
 
@@ -307,7 +307,7 @@ export default function ContactPage() {
                       onChange={handleChange}
                       onFocus={() => setFocusedField('email')}
                       onBlur={() => setFocusedField(null)}
-                      className="bg-white/40 backdrop-blur-sm border-2 border-accent/30 focus:border-accent focus:ring-0 rounded-2xl py-6 px-4 transition-all duration-300 hover:border-accent/50 hover:bg-white/50"
+                      className="bg-white/40 backdrop-blur-sm border-2 border-accent/30 focus:border-accent focus:ring-0 py-6 px-4 transition-all duration-300 hover:border-accent/50 hover:bg-white/50"
                     />
                   </motion.div>
 
@@ -336,18 +336,18 @@ export default function ContactPage() {
                       onChange={handleChange}
                       onFocus={() => setFocusedField('message')}
                       onBlur={() => setFocusedField(null)}
-                      className="bg-white/40 backdrop-blur-sm border-2 border-accent/30 focus:border-accent focus:ring-0 rounded-2xl py-4 px-4 pt-6 resize-none transition-all duration-300 hover:border-accent/50 hover:bg-white/50"
+                      className="bg-white/40 backdrop-blur-sm border-2 border-accent/30 focus:border-accent focus:ring-0 py-4 px-4 pt-6 resize-none transition-all duration-300 hover:border-accent/50 hover:bg-white/50"
                     />
                   </motion.div>
 
                   <Button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-gradient-to-r from-foreground to-foreground/90 text-white hover:from-foreground/90 hover:to-foreground/80 py-6 text-base font-medium transition-all duration-300 hover:scale-[1.02] hover:shadow-xl disabled:opacity-70 disabled:hover:scale-100 rounded-2xl mt-2"
+                    className="w-full bg-gradient-to-r from-foreground to-foreground/90 text-white hover:from-foreground/90 hover:to-foreground/80 py-6 text-base font-medium transition-all duration-300 hover:scale-[1.02] hover:shadow-xl disabled:opacity-70 disabled:hover:scale-100 mt-2"
                   >
                     {isSubmitting ? (
                       <span className="flex items-center justify-center gap-3">
-                        <span className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                        <span className="w-5 h-5 border-2 border-white/30 border-t-white animate-spin" />
                         {t("contact.sending")}
                       </span>
                     ) : (
@@ -360,7 +360,7 @@ export default function ContactPage() {
                 </form>
 
                 <div className="flex items-center gap-2 justify-center mt-8 text-foreground/50 text-sm">
-                  <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+                  <div className="w-2 h-2 bg-green-500 animate-pulse" />
                   {t("contact.responseTime")}
                 </div>
               </div>
