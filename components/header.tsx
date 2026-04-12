@@ -7,7 +7,6 @@ import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 import { useLanguage } from "@/lib/language-context"
 import { LanguageToggle } from "@/components/language-toggle"
-import { ThemeToggle } from "@/components/theme-toggle"
 import { motion, AnimatePresence } from "framer-motion"
 
 export function Header() {
@@ -100,7 +99,6 @@ export function Header() {
             </Link>
           ))}
           <LanguageToggle isScrolled={isScrolled} />
-          <ThemeToggle isScrolled={isScrolled} />
           <Button 
             size="sm"
             className={`px-8 py-5 text-xs tracking-[0.15em] uppercase font-medium transition-all duration-500 ${
@@ -116,7 +114,6 @@ export function Header() {
 
         {/* Mobile Menu Button */}
         <div className="md:hidden flex items-center gap-3">
-          <ThemeToggle isScrolled={isScrolled} />
           <LanguageToggle isScrolled={isScrolled} />
           <button
             className={`p-2 transition-colors duration-300 ${isScrolled ? "text-foreground" : "text-white"}`}
