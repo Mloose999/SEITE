@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import Link from "next/link"
 import { ArrowLeft, Check, Video, Mail, MessageCircle, Phone } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -74,46 +75,50 @@ export default function TransformationCoachingPage() {
 
   return (
     <main className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="border-b border-foreground/10">
-        <div className="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between">
-          <Link href="/#workshops">
-            <Button variant="ghost" className="text-foreground/70 hover:text-foreground hover:bg-accent/20 rounded-full">
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              {t("legal.backHome")}
-            </Button>
-          </Link>
-          <LanguageToggle isScrolled={true} />
-        </div>
-      </header>
+      {/* Language Toggle - Fixed top right */}
+      <div className="fixed top-6 right-8 z-50">
+        <LanguageToggle isScrolled={true} />
+      </div>
 
-      {/* Hero Section */}
-      <section className="py-16 md:py-24 border-b border-foreground/10">
-        <div className="max-w-4xl mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="text-center"
-          >
-            <p className="text-foreground/60 font-light tracking-[0.3em] uppercase text-xs mb-6">
-              {t("transformation.label")}
-            </p>
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground mb-8 text-balance leading-tight">
-              {t("transformation.title")}
-            </h1>
-            <p className="text-foreground/70 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed font-light mb-10">
-              {t("transformation.description")}
-            </p>
-            
-            {/* Investment */}
-            <div className="inline-block bg-foreground/5 border border-foreground/10 px-8 py-6 rounded-sm">
-              <p className="text-foreground/60 text-sm font-light mb-2">{t("transformation.investment")}</p>
-              <p className="font-serif text-4xl font-medium text-foreground">
-                {t("transformation.price")}
+      {/* Hero Section with Image */}
+      <section className="relative min-h-[60vh] md:min-h-[70vh] flex items-end overflow-hidden">
+        <Image
+          src="/images/transformation-coaching-hero.jpg"
+          alt={t("transformation.title")}
+          fill
+          className="object-cover absolute inset-0"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
+        
+        <div className="relative z-10 w-full pb-12 md:pb-16">
+          <div className="max-w-4xl mx-auto px-6">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              <p className="text-foreground/70 font-light tracking-[0.3em] uppercase text-xs mb-4">
+                {t("transformation.label")}
               </p>
-            </div>
-          </motion.div>
+              <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground mb-6 leading-tight text-balance">
+                {t("transformation.title")}
+              </h1>
+              <p className="text-foreground/80 text-lg md:text-xl max-w-2xl leading-relaxed font-light mb-8">
+                {t("transformation.description")}
+              </p>
+              
+              {/* Investment */}
+              <div className="flex items-end gap-6">
+                <div>
+                  <p className="text-foreground/60 text-sm font-light mb-2 tracking-[0.2em] uppercase">{t("transformation.investment")}</p>
+                  <p className="font-serif text-4xl md:text-5xl font-medium text-foreground">
+                    {t("transformation.price")}
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
