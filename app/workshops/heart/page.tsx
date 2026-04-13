@@ -239,6 +239,40 @@ export default function HeartPage() {
         </div>
       </section>
 
+      {/* Personal Coaching Aside */}
+      <section className="py-16 md:py-20">
+        <div className="max-w-4xl mx-auto px-8">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <Link
+              href="/transformation-coaching"
+              className="group block relative overflow-hidden"
+            >
+              <div className="flex items-center gap-8 py-8 px-10 border-l-2 border-foreground/10 hover:border-foreground/30 transition-all duration-500 bg-gradient-to-r from-beige/20 to-transparent">
+                <div className="flex-1">
+                  <p className="text-foreground/40 font-light text-xs tracking-[0.3em] uppercase mb-2">
+                    {t("workshopDetails.premium.label")}
+                  </p>
+                  <p className="font-serif text-lg md:text-xl text-foreground/80 group-hover:text-foreground transition-colors duration-300">
+                    {t("workshopDetails.premium.title")}
+                  </p>
+                </div>
+                <div className="flex-shrink-0">
+                  <span className="inline-flex items-center gap-2 text-foreground/50 group-hover:text-foreground text-sm font-light transition-all duration-300 group-hover:gap-3">
+                    {t("workshopDetails.premium.hintLink")}
+                    <ArrowRight className="w-4 h-4" />
+                  </span>
+                </div>
+              </div>
+            </Link>
+          </motion.div>
+        </div>
+      </section>
+
       {/* What changes */}
       <section className="py-20 md:py-28 bg-foreground/3">
         <div className="max-w-4xl mx-auto px-8">
