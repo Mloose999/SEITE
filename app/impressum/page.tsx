@@ -65,8 +65,8 @@ export default function ImpressumPage() {
                   </p>
                   <p>
                     E-Mail:{" "}
-                    <a href="mailto:info@lindaholtkamp.com" className="text-foreground hover:underline">
-                      info@lindaholtkamp.com
+                    <a href="mailto:info@lindaholtkamp.de" className="text-foreground hover:underline">
+                      info@lindaholtkamp.de
                     </a>
                   </p>
                 </div>
