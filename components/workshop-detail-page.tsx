@@ -152,86 +152,56 @@ export function WorkshopDetailPage({ workshopKey, image, prevSlug, nextSlug }: W
 
       {/* Pricing CTA */}
       <section className="py-20 md:py-28 bg-beige/30">
-        <div className="max-w-4xl mx-auto px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="grid md:grid-cols-2 gap-12"
-          >
-            {/* Single */}
-            <div className="p-10 border border-foreground/10 bg-background">
-              <p className="text-foreground/60 font-light tracking-[0.2em] uppercase text-xs mb-4">
-                {t("workshopDetails.pricing.individual")}
-              </p>
-              <p className="font-serif text-3xl font-medium text-foreground">59 €</p>
-            </div>
-
-            {/* Bundle */}
-            <div className="p-10 border border-foreground bg-foreground text-background relative overflow-hidden">
-              <div className="absolute top-4 right-4 bg-background text-foreground text-xs font-medium px-3 py-1">
-                {t("workshopDetails.pricing.bestValue")}
-              </div>
-              <p className="text-background/60 font-light tracking-[0.2em] uppercase text-xs mb-4">
-                {t("workshopDetails.pricing.fullProgram")}
-              </p>
-              <div className="flex items-baseline gap-3 mb-2">
-                <span className="text-background/50 line-through text-lg">236 €</span>
-                <span className="font-serif text-3xl font-medium text-background">199 €</span>
-              </div>
-              <p className="text-background/60 font-light">{t("workshopDetails.pricing.allFour")}</p>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Premium Upsell Section */}
-      <section className="py-20 md:py-28 border-t border-foreground/5">
         <div className="max-w-5xl mx-auto px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="grid md:grid-cols-2 gap-12 items-center"
+            className="grid md:grid-cols-3 gap-6"
           >
-            {/* Text Content */}
-            <div>
-              <p className="text-foreground/50 font-light tracking-[0.3em] uppercase text-xs mb-4">
-                {t("workshopDetails.premium.label")}
+            {/* Single */}
+            <div className="p-8 border border-foreground/10 bg-background">
+              <p className="text-foreground/60 font-light tracking-[0.2em] uppercase text-xs mb-4">
+                {t("workshopDetails.pricing.individual")}
               </p>
-              <h3 className="font-serif text-2xl md:text-3xl font-medium text-foreground mb-5 leading-snug">
-                {t("workshopDetails.premium.title")}
-              </h3>
-              <p className="text-foreground/60 font-light leading-relaxed mb-8">
-                {t("workshopDetails.premium.description")}
-              </p>
-              <Link
-                href="/transformation-coaching"
-                className="inline-flex items-center gap-3 text-foreground font-medium text-sm tracking-wide hover:gap-5 transition-all duration-300 group"
-              >
-                {t("workshopDetails.premium.cta")}
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-              </Link>
+              <p className="font-serif text-2xl font-medium text-foreground">59 €</p>
             </div>
 
-            {/* Visual Element */}
-            <div className="relative">
-              <div className="aspect-[4/3] bg-beige/40 overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center p-8">
-                    <p className="text-foreground/30 font-light tracking-[0.4em] uppercase text-xs mb-3">Premium</p>
-                    <p className="font-serif text-xl md:text-2xl text-foreground/70 font-medium">
-                      Personal Transformation
-                    </p>
-                    <p className="font-serif text-xl md:text-2xl text-foreground/70 font-medium">
-                      Coaching
-                    </p>
-                  </div>
-                </div>
+            {/* Bundle */}
+            <div className="p-8 border border-foreground bg-foreground text-background relative overflow-hidden">
+              <div className="absolute top-3 right-3 bg-background text-foreground text-[10px] font-medium px-2 py-1">
+                {t("workshopDetails.pricing.bestValue")}
               </div>
+              <p className="text-background/60 font-light tracking-[0.2em] uppercase text-xs mb-4">
+                {t("workshopDetails.pricing.fullProgram")}
+              </p>
+              <div className="flex items-baseline gap-2 mb-2">
+                <span className="text-background/50 line-through text-sm">236 €</span>
+                <span className="font-serif text-2xl font-medium text-background">199 €</span>
+              </div>
+              <p className="text-background/60 font-light text-sm">{t("workshopDetails.pricing.allFour")}</p>
             </div>
+
+            {/* Premium 1:1 Coaching */}
+            <Link 
+              href="/transformation-coaching"
+              className="p-8 border border-dashed border-foreground/20 bg-background hover:border-foreground/40 transition-all duration-300 group"
+            >
+              <p className="text-foreground/50 font-light tracking-[0.2em] uppercase text-xs mb-4">
+                {t("workshopDetails.premium.label")}
+              </p>
+              <p className="font-serif text-lg font-medium text-foreground mb-3 group-hover:text-foreground/80 transition-colors">
+                {t("workshopDetails.premium.title")}
+              </p>
+              <p className="text-foreground/50 font-light text-sm leading-relaxed mb-4">
+                Personal 1:1 Coaching
+              </p>
+              <span className="inline-flex items-center gap-2 text-foreground/60 text-sm font-medium group-hover:gap-3 transition-all duration-300">
+                {t("workshopDetails.premium.cta")}
+                <ArrowRight className="w-3 h-3" />
+              </span>
+            </Link>
           </motion.div>
         </div>
       </section>
