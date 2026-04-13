@@ -147,6 +147,23 @@ export function WorkshopDetailPage({ workshopKey, image, prevSlug, nextSlug }: W
               </motion.div>
             ))}
           </div>
+
+          {/* Subtle link to personal coaching */}
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            className="text-center mt-16 text-foreground/50 font-light text-sm"
+          >
+            {t("workshopDetails.premium.hint")}{" "}
+            <Link 
+              href="/transformation-coaching" 
+              className="underline underline-offset-4 hover:text-foreground transition-colors duration-300"
+            >
+              {t("workshopDetails.premium.hintLink")}
+            </Link>
+          </motion.p>
         </div>
       </section>
 
@@ -183,27 +200,6 @@ export function WorkshopDetailPage({ workshopKey, image, prevSlug, nextSlug }: W
               <p className="text-background/60 font-light">{t("workshopDetails.pricing.allFour")}</p>
             </div>
           </motion.div>
-        </div>
-      </section>
-
-      {/* Personal Coaching CTA */}
-      <section className="py-14 border-t border-foreground/10">
-        <div className="max-w-7xl mx-auto px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
-          <div>
-            <p className="text-foreground/50 font-light text-sm mb-1">
-              {t("workshopDetails.premium.label")}
-            </p>
-            <p className="text-foreground font-light">
-              {t("workshopDetails.premium.title")}
-            </p>
-          </div>
-          <Link
-            href="/transformation-coaching"
-            className="flex-shrink-0 inline-flex items-center gap-3 border border-foreground px-8 py-3 text-sm font-medium tracking-wide text-foreground hover:bg-foreground hover:text-background transition-all duration-300"
-          >
-            {t("workshopDetails.premium.cta")}
-            <ArrowRight className="w-4 h-4" />
-          </Link>
         </div>
       </section>
 

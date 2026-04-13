@@ -556,6 +556,8 @@ const translations: Record<Language, Record<string, string>> = {
     "workshopDetails.premium.title": "Want Personal Guidance?",
     "workshopDetails.premium.description": "If you're ready for deeper, personalized transformation with 1:1 support, continuous guidance, and a structured process tailored to you — the Personal Transformation Coaching program might be exactly what you need.",
     "workshopDetails.premium.cta": "Learn More About 1:1 Coaching",
+    "workshopDetails.premium.hint": "Looking for more personal guidance?",
+    "workshopDetails.premium.hintLink": "Discover 1:1 Coaching",
   },
   de: {
     // Header
@@ -1102,6 +1104,8 @@ const translations: Record<Language, Record<string, string>> = {
     "workshopDetails.premium.title": "Wuenschst du dir persoenliche Begleitung?",
     "workshopDetails.premium.description": "Wenn du bereit bist fuer tiefere, personalisierte Transformation mit 1:1 Unterstuetzung, kontinuierlicher Begleitung und einem strukturierten Prozess, der auf dich zugeschnitten ist - koennte das Personal Transformation Coaching Programm genau das Richtige fuer dich sein.",
     "workshopDetails.premium.cta": "Mehr ueber 1:1 Coaching erfahren",
+    "workshopDetails.premium.hint": "Suchst du nach mehr persoenlicher Begleitung?",
+    "workshopDetails.premium.hintLink": "Entdecke 1:1 Coaching",
   }
 }
 
