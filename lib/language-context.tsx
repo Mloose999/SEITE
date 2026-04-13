@@ -256,7 +256,54 @@ const translations: Record<Language, Record<string, string>> = {
     "workshopDetails.pricing.getBundle": "Get the Full Program",
     "workshopDetails.prevWorkshop": "Previous Workshop",
     "workshopDetails.nextWorkshop": "Next Workshop",
-    
+
+    // Mindset Foundation Journey Page
+    "mindset.stepLabel": "Step",
+    "mindset.journey.label": "Your Foundation Journey",
+    "mindset.journey.title": "Your Foundation Journey",
+    "mindset.journey.description": "This program guides you step by step through the essential phases of inner work — giving you clarity, structure, and practical tools to understand and shift your mindset.",
+
+    "mindset.step1.title": "Awareness & Understanding",
+    "mindset.step1.intro": "You begin by building a deeper awareness of your inner world.",
+    "mindset.step1.point1": "Understand how belief systems are formed in childhood",
+    "mindset.step1.point2": "Recognize your thoughts, emotions, and behaviors",
+    "mindset.step1.point3": "Identify recurring patterns in your life",
+    "mindset.step1.outcome": "This step helps you clearly see what has been running in the background.",
+
+    "mindset.step2.title": "Pattern Recognition",
+    "mindset.step2.intro": "You start connecting the dots within your personal story.",
+    "mindset.step2.point1": "Identify limiting beliefs and inner blocks",
+    "mindset.step2.point2": "Understand emotional triggers and reactions",
+    "mindset.step2.point3": "See how past experiences influence your current reality",
+    "mindset.step2.outcome": "This step creates deeper self-understanding and clarity.",
+
+    "mindset.step3.title": "Mindset Shift",
+    "mindset.step3.intro": "Now you begin to actively shift your internal perspective.",
+    "mindset.step3.point1": "Learn how to question limiting beliefs",
+    "mindset.step3.point2": "Develop new empowering thought patterns",
+    "mindset.step3.point3": "Start consciously changing your mindset",
+    "mindset.step3.outcome": "This is where real inner change begins.",
+
+    "mindset.step4.title": "Integration into Daily Life",
+    "mindset.step4.intro": "You bring your new awareness into real-life situations.",
+    "mindset.step4.point1": "Apply what you have learned in your daily life",
+    "mindset.step4.point2": "Practice new ways of thinking and reacting",
+    "mindset.step4.point3": "Build consistency and self-awareness",
+    "mindset.step4.outcome": "This step helps you turn insight into real-life change.",
+
+    "mindset.included1": "Structured step-by-step video modules",
+    "mindset.included2": "Deep reflection workbook and exercises",
+    "mindset.included3": "Practical implementation tasks for real-life application",
+    "mindset.included4": "Clear guidance throughout the entire process",
+
+    "mindset.valuable.label": "What Makes This Program Valuable",
+    "mindset.valuable1": "Clear structure instead of overwhelm",
+    "mindset.valuable2": "Focus on real understanding, not surface-level motivation",
+    "mindset.valuable3": "Practical tools you can apply immediately",
+    "mindset.valuable4": "A strong foundation for deeper transformation",
+
+    "mindset.finalNote": "This program is designed to help you finally understand yourself on a deeper level and begin creating real change — step by step, at your own pace.",
+
     // Transformation Coaching Page
     "transformation.label": "Premium Program",
     "transformation.title": "Personal Transformation Coaching",
@@ -385,7 +432,7 @@ const translations: Record<Language, Record<string, string>> = {
     "workshops.fullProgramDescription": "Erlebe den kompletten Transformationsprozess mit allen vier Workshops kombiniert. Eine strukturierte, schrittweise Reise von innerer Heilung zu selbstbewussten, gesunden Beziehungen.",
     "workshops.allWorkshops": "Alle 4 Workshops inklusive",
     "workshops.structuredJourney": "Strukturierte Transformationsreise",
-    "workshops.saveBundle": "Spare 37 € mit dem Paket",
+    "workshops.saveBundle": "Spare 37 �� mit dem Paket",
     "workshops.savingsNote": "Du sparst 37 €",
     "workshops.viewDetails": "Details ansehen",
     "workshops.premiumProgram": "Premium Programm",
@@ -562,7 +609,54 @@ const translations: Record<Language, Record<string, string>> = {
     "workshopDetails.pricing.getBundle": "Hol dir das komplette Programm",
     "workshopDetails.prevWorkshop": "Vorheriger Workshop",
     "workshopDetails.nextWorkshop": "Naechster Workshop",
-    
+
+    // Mindset Foundation Journey Page
+    "mindset.stepLabel": "Schritt",
+    "mindset.journey.label": "Deine Foundation Journey",
+    "mindset.journey.title": "Deine Foundation Journey",
+    "mindset.journey.description": "Dieses Programm fuehrt dich Schritt fuer Schritt durch die wesentlichen Phasen der inneren Arbeit — mit Klarheit, Struktur und praktischen Werkzeugen, um dein Mindset zu verstehen und zu veraendern.",
+
+    "mindset.step1.title": "Bewusstsein & Verstaendnis",
+    "mindset.step1.intro": "Du beginnst damit, ein tieferes Bewusstsein fuer deine innere Welt aufzubauen.",
+    "mindset.step1.point1": "Verstehe, wie Glaubenssaetze in der Kindheit geformt werden",
+    "mindset.step1.point2": "Erkenne deine Gedanken, Emotionen und Verhaltensweisen",
+    "mindset.step1.point3": "Identifiziere wiederkehrende Muster in deinem Leben",
+    "mindset.step1.outcome": "Dieser Schritt hilft dir, klar zu sehen, was im Hintergrund lief.",
+
+    "mindset.step2.title": "Mustererkennung",
+    "mindset.step2.intro": "Du beginnst, die Zusammenhaenge in deiner persoenlichen Geschichte zu erkennen.",
+    "mindset.step2.point1": "Identifiziere limitierende Glaubenssaetze und innere Blockaden",
+    "mindset.step2.point2": "Verstehe emotionale Trigger und Reaktionen",
+    "mindset.step2.point3": "Erkenne, wie vergangene Erfahrungen deine aktuelle Realitaet beeinflussen",
+    "mindset.step2.outcome": "Dieser Schritt schafft tieferes Selbstverstaendnis und Klarheit.",
+
+    "mindset.step3.title": "Mindset-Shift",
+    "mindset.step3.intro": "Jetzt beginnst du aktiv, deine innere Perspektive zu veraendern.",
+    "mindset.step3.point1": "Lerne, limitierende Glaubenssaetze zu hinterfragen",
+    "mindset.step3.point2": "Entwickle neue staerkende Denkmuster",
+    "mindset.step3.point3": "Beginne, dein Mindset bewusst zu veraendern",
+    "mindset.step3.outcome": "Hier beginnt echte innere Veraenderung.",
+
+    "mindset.step4.title": "Integration in den Alltag",
+    "mindset.step4.intro": "Du bringst dein neues Bewusstsein in reale Lebenssituationen.",
+    "mindset.step4.point1": "Wende das Gelernte in deinem Alltag an",
+    "mindset.step4.point2": "Uebe neue Denk- und Reaktionsweisen",
+    "mindset.step4.point3": "Baue Konsistenz und Selbstbewusstsein auf",
+    "mindset.step4.outcome": "Dieser Schritt hilft dir, Erkenntnis in echte Lebensveraenderung umzuwandeln.",
+
+    "mindset.included1": "Strukturierte Schritt-fuer-Schritt Videomodule",
+    "mindset.included2": "Tiefgehendes Reflexions-Workbook mit Uebungen",
+    "mindset.included3": "Praktische Umsetzungsaufgaben fuer den Alltag",
+    "mindset.included4": "Klare Begleitung durch den gesamten Prozess",
+
+    "mindset.valuable.label": "Was dieses Programm wertvoll macht",
+    "mindset.valuable1": "Klare Struktur statt Ueberforderung",
+    "mindset.valuable2": "Fokus auf echtes Verstaendnis, nicht oberflaechliche Motivation",
+    "mindset.valuable3": "Praktische Werkzeuge, die du sofort anwenden kannst",
+    "mindset.valuable4": "Ein starkes Fundament fuer tiefere Transformation",
+
+    "mindset.finalNote": "Dieses Programm ist darauf ausgelegt, dir zu helfen, dich endlich auf einer tieferen Ebene zu verstehen und echte Veraenderung zu beginnen — Schritt fuer Schritt, in deinem eigenen Tempo.",
+
     // Transformation Coaching Page
     "transformation.label": "Premium Programm",
     "transformation.title": "Personal Transformation Coaching",
