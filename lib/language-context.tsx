@@ -362,6 +362,74 @@ const translations: Record<Language, Record<string, string>> = {
 
     "patterns.bridge": "Understanding your patterns is powerful — but real change comes from consistent guidance and deeper work.",
 
+    // Heal Your Heart Page
+    "heart.label": "Self-Guided Workshop",
+    "heart.title": "Heal Your Heart",
+    "heart.tagline1": "You don't miss them.",
+    "heart.tagline2": "You miss the version of yourself before everything started to hurt. This is where your healing begins.",
+    
+    "heart.journey.label": "What This Workshop Is",
+    "heart.journey.title": "A Structured Emotional Reset",
+    "heart.journey.description": "A structured emotional reset that helps you understand your heartbreak, break emotional loops, and reconnect with yourself again. Not distraction. Not 'just move on.' Real emotional processing.",
+    
+    "heart.stuck.label": "Why You Feel Stuck",
+    "heart.stuck.text1": "If you still can't let go, it's not because you're weak.",
+    "heart.stuck.text2": "It's because your mind is caught in attachment, memory loops, and emotional dependency. This workshop helps you break exactly that.",
+
+    "heart.step1.title": "Understanding Your Pain",
+    "heart.step1.intro": "We start by exploring why heartbreak affects you so deeply.",
+    "heart.step1.point1": "Why heartbreak feels physical",
+    "heart.step1.point2": "Why emotions override logic",
+    "heart.step1.point3": "Why letting go feels like losing part of yourself",
+    "heart.step1.outcome": "You stop blaming yourself for how you feel.",
+
+    "heart.step2.title": "Emotional Attachment",
+    "heart.step2.intro": "Understanding what's really keeping you stuck.",
+    "heart.step2.point1": "Why you're still holding on",
+    "heart.step2.point2": "Love vs attachment vs dependency",
+    "heart.step2.point3": "Why closure from them won't fix your pain",
+    "heart.step2.outcome": "You finally understand what's really happening inside you.",
+
+    "heart.step3.title": "Letting Go",
+    "heart.step3.intro": "Learning to release without forcing.",
+    "heart.step3.point1": "Why forcing yourself doesn't work",
+    "heart.step3.point2": "What emotional holding does to your nervous system",
+    "heart.step3.point3": "Guided release to create emotional space",
+    "heart.step3.outcome": "You begin to loosen the emotional grip.",
+
+    "heart.step4.title": "Breaking the Thought Loop",
+    "heart.step4.intro": "Regaining control over your mind.",
+    "heart.step4.point1": "Why your mind keeps repeating the past",
+    "heart.step4.point2": "Why overthinking feels uncontrollable",
+    "heart.step4.point3": "How to interrupt emotional spirals",
+    "heart.step4.outcome": "You regain mental clarity and control.",
+
+    "heart.step5.title": "Rebuilding You",
+    "heart.step5.intro": "Reconnecting with who you are.",
+    "heart.step5.point1": "Who you are without emotional dependency",
+    "heart.step5.point2": "How to rebuild self-worth after attachment",
+    "heart.step5.point3": "How to shift focus back to yourself",
+    "heart.step5.outcome": "You start feeling like yourself again.",
+
+    "heart.step6.title": "Emotional Detachment & Inner Peace",
+    "heart.step6.intro": "This is where real change happens. Not because the past disappears — but because it stops controlling you.",
+    "heart.step6.point1": "How to observe emotions instead of drowning in them",
+    "heart.step6.point2": "How to create your own emotional closure",
+    "heart.step6.point3": "How to calm emotional reactions in the moment",
+    "heart.step6.point4": "How to feel stable alone again",
+    "heart.step6.point5": "How to sit with yourself without avoidance",
+    "heart.step6.outcome": "Detachment is not becoming cold. It's becoming free.",
+
+    "heart.changes.title": "What Changes After This Workshop",
+    "heart.changes1": "You think about them less",
+    "heart.changes2": "It doesn't hurt the same anymore",
+    "heart.changes3": "You stop feeling stuck in the past",
+    "heart.changes4": "You feel emotionally lighter",
+    "heart.changes5": "You trust yourself again",
+
+    "heart.final1": "You didn't lose them. You lost yourself for a while.",
+    "heart.final2": "And now you're finding yourself again.",
+
     // Transformation Coaching Page
     "transformation.label": "Premium Program",
     "transformation.title": "Personal Transformation Coaching",
@@ -764,6 +832,74 @@ const translations: Record<Language, Record<string, string>> = {
     "patterns.valuable4": "Beginne deine Reise zum Durchbrechen des Zyklus",
 
     "patterns.bridge": "Deine Muster zu verstehen ist maechtig — aber echter Wandel kommt von konsistenter Anleitung und tieferer Arbeit.",
+
+    // Heal Your Heart Page
+    "heart.label": "Selbstgefuehrter Workshop",
+    "heart.title": "Heal Your Heart",
+    "heart.tagline1": "Du vermisst sie nicht.",
+    "heart.tagline2": "Du vermisst die Version von dir selbst, bevor alles angefangen hat wehzutun. Hier beginnt deine Heilung.",
+    
+    "heart.journey.label": "Was dieser Workshop ist",
+    "heart.journey.title": "Ein strukturierter emotionaler Reset",
+    "heart.journey.description": "Ein strukturierter emotionaler Reset, der dir hilft, deinen Herzschmerz zu verstehen, emotionale Schleifen zu durchbrechen und dich wieder mit dir selbst zu verbinden. Keine Ablenkung. Kein 'einfach weitermachen.' Echte emotionale Verarbeitung.",
+    
+    "heart.stuck.label": "Warum du dich festgefahren fuehlst",
+    "heart.stuck.text1": "Wenn du immer noch nicht loslassen kannst, liegt es nicht daran, dass du schwach bist.",
+    "heart.stuck.text2": "Es liegt daran, dass dein Verstand in Bindung, Erinnerungsschleifen und emotionaler Abhaengigkeit gefangen ist. Dieser Workshop hilft dir, genau das zu durchbrechen.",
+
+    "heart.step1.title": "Deinen Schmerz verstehen",
+    "heart.step1.intro": "Wir beginnen damit, zu erkunden, warum Herzschmerz dich so tief trifft.",
+    "heart.step1.point1": "Warum sich Herzschmerz koerperlich anfuehlt",
+    "heart.step1.point2": "Warum Emotionen die Logik ueberschreiben",
+    "heart.step1.point3": "Warum sich Loslassen anfuehlt, als wuerdest du einen Teil von dir verlieren",
+    "heart.step1.outcome": "Du hoerst auf, dir selbst die Schuld zu geben fuer das, was du fuehlst.",
+
+    "heart.step2.title": "Emotionale Bindung",
+    "heart.step2.intro": "Verstehen, was dich wirklich festhält.",
+    "heart.step2.point1": "Warum du immer noch festhältst",
+    "heart.step2.point2": "Liebe vs Bindung vs Abhaengigkeit",
+    "heart.step2.point3": "Warum Abschluss von ihnen deinen Schmerz nicht heilen wird",
+    "heart.step2.outcome": "Du verstehst endlich, was wirklich in dir passiert.",
+
+    "heart.step3.title": "Loslassen",
+    "heart.step3.intro": "Lernen, ohne Zwang loszulassen.",
+    "heart.step3.point1": "Warum dich zu zwingen nicht funktioniert",
+    "heart.step3.point2": "Was emotionales Festhalten mit deinem Nervensystem macht",
+    "heart.step3.point3": "Gefuehrte Freisetzung, um emotionalen Raum zu schaffen",
+    "heart.step3.outcome": "Du beginnst, den emotionalen Griff zu lockern.",
+
+    "heart.step4.title": "Die Gedankenschleife durchbrechen",
+    "heart.step4.intro": "Kontrolle ueber deinen Verstand zurueckgewinnen.",
+    "heart.step4.point1": "Warum dein Verstand die Vergangenheit immer wieder wiederholt",
+    "heart.step4.point2": "Warum sich Ueberdenken unkontrollierbar anfuehlt",
+    "heart.step4.point3": "Wie du emotionale Spiralen unterbrichst",
+    "heart.step4.outcome": "Du gewinnst mentale Klarheit und Kontrolle zurueck.",
+
+    "heart.step5.title": "Dich selbst wieder aufbauen",
+    "heart.step5.intro": "Dich wieder mit dir verbinden.",
+    "heart.step5.point1": "Wer du bist ohne emotionale Abhaengigkeit",
+    "heart.step5.point2": "Wie du Selbstwert nach Bindung wieder aufbaust",
+    "heart.step5.point3": "Wie du den Fokus wieder auf dich selbst richtest",
+    "heart.step5.outcome": "Du beginnst, dich wieder wie du selbst zu fuehlen.",
+
+    "heart.step6.title": "Emotionale Losloesung & innerer Frieden",
+    "heart.step6.intro": "Hier passiert echte Veraenderung. Nicht weil die Vergangenheit verschwindet — sondern weil sie aufhoert, dich zu kontrollieren.",
+    "heart.step6.point1": "Wie du Emotionen beobachtest, anstatt in ihnen zu ertrinken",
+    "heart.step6.point2": "Wie du deinen eigenen emotionalen Abschluss schaffst",
+    "heart.step6.point3": "Wie du emotionale Reaktionen im Moment beruhigst",
+    "heart.step6.point4": "Wie du dich wieder stabil allein fuehlst",
+    "heart.step6.point5": "Wie du mit dir selbst sein kannst ohne Vermeidung",
+    "heart.step6.outcome": "Losloesung bedeutet nicht, kalt zu werden. Es bedeutet, frei zu werden.",
+
+    "heart.changes.title": "Was sich nach diesem Workshop aendert",
+    "heart.changes1": "Du denkst weniger an sie",
+    "heart.changes2": "Es tut nicht mehr so weh",
+    "heart.changes3": "Du fuehlst dich nicht mehr in der Vergangenheit gefangen",
+    "heart.changes4": "Du fuehlst dich emotional leichter",
+    "heart.changes5": "Du vertraust dir selbst wieder",
+
+    "heart.final1": "Du hast sie nicht verloren. Du hast dich selbst fuer eine Weile verloren.",
+    "heart.final2": "Und jetzt findest du dich selbst wieder.",
 
     // Transformation Coaching Page
     "transformation.label": "Premium Programm",
