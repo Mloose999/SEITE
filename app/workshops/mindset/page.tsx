@@ -246,16 +246,32 @@ export default function MindsetPage() {
         </div>
       </section>
 
-      {/* Next workshop */}
+      {/* Navigation to other workshops */}
       <section className="py-12 border-t border-foreground/10">
-        <div className="max-w-7xl mx-auto px-8 flex justify-end">
-          <Link
-            href="/workshops/patterns"
-            className="inline-flex items-center gap-3 text-foreground/60 hover:text-foreground transition-colors duration-300"
-          >
-            {t("workshopDetails.nextWorkshop")}
-            <ArrowRight className="w-4 h-4" />
-          </Link>
+        <div className="max-w-7xl mx-auto px-8">
+          <div className="grid grid-cols-2 gap-6">
+            <Link
+              href="/workshops/nervous"
+              className="group flex items-center gap-3 p-6 border border-foreground/10 hover:border-foreground/30 transition-all duration-300"
+            >
+              <ArrowLeft className="w-5 h-5 text-foreground/60 group-hover:text-foreground transition-colors" strokeWidth={1.5} />
+              <div className="text-left">
+                <p className="text-foreground/60 font-light text-xs uppercase tracking-[0.2em]">{t("workshopDetails.prevWorkshop")}</p>
+                <p className="font-serif font-medium text-foreground">{t("workshops.workshop4.title")}</p>
+              </div>
+            </Link>
+
+            <Link
+              href="/workshops/patterns"
+              className="group flex items-center gap-3 p-6 border border-foreground/10 hover:border-foreground/30 transition-all duration-300 justify-end text-right"
+            >
+              <div className="text-right">
+                <p className="text-foreground/60 font-light text-xs uppercase tracking-[0.2em]">{t("workshopDetails.nextWorkshop")}</p>
+                <p className="font-serif font-medium text-foreground">{t("workshops.workshop2.title")}</p>
+              </div>
+              <ArrowRight className="w-5 h-5 text-foreground/60 group-hover:text-foreground transition-colors" strokeWidth={1.5} />
+            </Link>
+          </div>
         </div>
       </section>
 
