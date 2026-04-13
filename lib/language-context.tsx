@@ -619,7 +619,7 @@ const translations: Record<Language, Record<string, string>> = {
     "workshops.fullProgramDescription": "Erlebe den kompletten Transformationsprozess mit allen vier Workshops kombiniert. Eine strukturierte, schrittweise Reise von innerer Heilung zu selbstbewussten, gesunden Beziehungen.",
     "workshops.allWorkshops": "Alle 4 Workshops inklusive",
     "workshops.structuredJourney": "Strukturierte Transformationsreise",
-    "workshops.saveBundle": "Spare 37 �� mit dem Paket",
+    "workshops.saveBundle": "Spare 37 € mit dem Paket",
     "workshops.savingsNote": "Du sparst 37 €",
     "workshops.viewDetails": "Details ansehen",
     "workshops.premiumProgram": "Premium Programm",
@@ -743,10 +743,10 @@ const translations: Record<Language, Record<string, string>> = {
     "cookies.learnMore": "Mehr erfahren",
     
     // Workshop Details Page
-    "workshopDetails.back": "Zurueck zur Uebersicht",
-    "workshopDetails.label": "Selbstgefuehrte Programme",
+    "workshopDetails.back": "Zurück zur Übersicht",
+    "workshopDetails.label": "Selbstgeführte Programme",
     "workshopDetails.title": "Transformiere dein Leben",
-    "workshopDetails.description": "Jeder Workshop ist darauf ausgelegt, dich tiefer in das Verstaendnis deiner selbst zu fuehren, loszulassen was dir nicht mehr dient, und das Fundament fuer nachhaltige Veraenderung aufzubauen.",
+    "workshopDetails.description": "Jeder Workshop ist darauf ausgelegt, dich tiefer in das Verständnis deiner selbst zu führen, loszulassen was dir nicht mehr dient, und das Fundament für nachhaltige Veränderung aufzubauen.",
     "workshopDetails.workshop": "Workshop",
     "workshopDetails.whatYouLearn": "Was du lernen wirst:",
     
@@ -799,7 +799,7 @@ const translations: Record<Language, Record<string, string>> = {
     "workshopDetails.pricing.allFour": "Alle 4 Workshops enthalten",
     "workshopDetails.pricing.getBundle": "Hol dir das komplette Programm",
     "workshopDetails.prevWorkshop": "Vorheriger Workshop",
-    "workshopDetails.nextWorkshop": "Naechster Workshop",
+    "workshopDetails.nextWorkshop": "Nächster Workshop",
 
     // Mindset Foundation Journey Page
     "mindset.stepLabel": "Schritt",
