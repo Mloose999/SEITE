@@ -5,7 +5,7 @@ import Link from "next/link"
 import { useLanguage } from "@/lib/language-context"
 import { LanguageToggle } from "@/components/language-toggle"
 import { motion } from "framer-motion"
-import { ArrowLeft, Check } from "lucide-react"
+import { ArrowLeft, ArrowRight, Check } from "lucide-react"
 
 export default function NervousPage() {
   const { t } = useLanguage()
