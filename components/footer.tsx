@@ -65,8 +65,8 @@ export function Footer() {
                 </a>
               </p>
               <p>
-                <a href="mailto:info@lindaholtkamp.com" className="hover:text-foreground transition-colors duration-300">
-                  info@lindaholtkamp.com
+                <a href="mailto:info@lindaholtkamp.de" className="hover:text-foreground transition-colors duration-300">
+                  info@lindaholtkamp.de
                 </a>
               </p>
             </div>

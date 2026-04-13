@@ -14,7 +14,7 @@ export function Workshops() {
       icon: Sparkles,
       title: t("workshops.workshop1.title"),
       description: t("workshops.workshop1.description"),
-      image: "/images/workshop-mindset.jpg",
+      image: "/images/workshop-mindset-new.jpg",
       slug: "mindset"
     },
     {
@@ -166,8 +166,9 @@ export function Workshops() {
               </h3>
               <p className="text-muted-foreground mt-3 font-light">{t("workshops.individualDescription")}</p>
             </div>
-            <div className="flex items-baseline gap-4">
+            <div className="flex flex-col items-end gap-1">
               <p className="text-foreground font-serif text-3xl font-medium">59 € <span className="text-base font-light text-muted-foreground ml-1">{t("workshops.perWorkshop")}</span></p>
+              <p className="text-muted-foreground text-sm font-light">{t("pricing.oneTimeInvestment")}</p>
             </div>
           </div>
           
@@ -248,7 +249,8 @@ export function Workshops() {
               <div>
                 <span className="text-foreground/50 line-through text-lg block mb-2 font-light">236 €</span>
                 <span className="font-serif text-7xl md:text-8xl font-medium text-foreground tracking-tight">199 €</span>
-                <span className="text-foreground/60 text-sm block mt-2 font-light">{t("workshops.savingsNote")}</span>
+                <span className="text-foreground/60 text-sm block mt-2 font-light">{t("pricing.oneTimeInvestment")}</span>
+                <span className="text-foreground/60 text-sm block mt-1 font-light">{t("workshops.savingsNote")}</span>
               </div>
               
               {/* Benefits with refined styling */}

@@ -58,6 +58,11 @@ export default function MindsetPage() {
   return (
     <main className="bg-background min-h-screen">
 
+      {/* Language Toggle - Fixed top right */}
+      <div className="fixed top-6 right-8 z-50">
+        <LanguageToggle isScrolled={true} />
+      </div>
+
       {/* Hero – full-width background image */}
       <section className="relative min-h-[70vh] flex items-end overflow-hidden">
         <Image
@@ -122,6 +127,7 @@ export default function MindsetPage() {
             <div className="md:flex-shrink-0 md:pl-8">
               <p className="text-foreground/50 font-light text-sm mb-2 tracking-[0.2em] uppercase">{t("transformation.investment")}</p>
               <p className="font-serif text-5xl md:text-6xl font-medium text-foreground">59 €</p>
+              <p className="text-foreground/50 font-light text-sm mt-2">{t("pricing.oneTimeInvestment")}</p>
             </div>
           </motion.div>
         </div>
@@ -228,9 +234,15 @@ export default function MindsetPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <p className="font-serif text-2xl md:text-3xl font-medium text-foreground leading-relaxed">
+            <p className="font-serif text-2xl md:text-3xl font-medium text-foreground leading-relaxed mb-10">
               {t("mindset.finalNote")}
             </p>
+            <Link
+              href="/contact"
+              className="inline-block px-10 py-4 bg-foreground text-background font-medium text-sm tracking-[0.1em] uppercase hover:bg-foreground/90 transition-all duration-300"
+            >
+              {t("workshops.contactCta")}
+            </Link>
           </motion.div>
         </div>
       </section>

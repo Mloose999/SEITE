@@ -3,6 +3,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { useLanguage } from "@/lib/language-context"
+import { LanguageToggle } from "@/components/language-toggle"
 import { motion } from "framer-motion"
 import { ArrowLeft, Check } from "lucide-react"
 
@@ -58,6 +59,11 @@ export default function NervousPage() {
 
   return (
     <main className="min-h-screen bg-background">
+      {/* Language Toggle - Fixed top right */}
+      <div className="fixed top-6 right-8 z-50">
+        <LanguageToggle isScrolled={true} />
+      </div>
+
       {/* Hero with background image */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <Image
@@ -125,6 +131,7 @@ export default function NervousPage() {
             <div className="md:flex-shrink-0 md:pl-8">
               <p className="text-foreground/50 font-light text-sm mb-2 tracking-[0.2em] uppercase">{t("transformation.investment")}</p>
               <p className="font-serif text-5xl md:text-6xl font-medium text-foreground">59 €</p>
+              <p className="text-foreground/50 font-light text-sm mt-2">{t("pricing.oneTimeInvestment")}</p>
             </div>
           </motion.div>
         </div>
@@ -269,9 +276,15 @@ export default function NervousPage() {
             <p className="font-serif text-2xl md:text-3xl font-medium text-foreground leading-relaxed mb-6">
               {t("nervous.final1")}
             </p>
-            <p className="text-foreground/70 font-light text-lg">
+            <p className="text-foreground/70 font-light text-lg mb-10">
               {t("nervous.final2")}
             </p>
+            <Link
+              href="/contact"
+              className="inline-block px-10 py-4 bg-foreground text-background font-medium text-sm tracking-[0.1em] uppercase hover:bg-foreground/90 transition-all duration-300"
+            >
+              {t("workshops.contactCta")}
+            </Link>
           </motion.div>
         </div>
       </section>
