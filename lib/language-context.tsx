@@ -430,6 +430,63 @@ const translations: Record<Language, Record<string, string>> = {
     "heart.final1": "You didn't lose them. You lost yourself for a while.",
     "heart.final2": "And now you're finding yourself again.",
 
+    // Nervous System Regulation Page
+    "nervous.label": "Self-Guided Workshop",
+    "nervous.title": "Nervous System Regulation",
+    "nervous.subtitle": "Your Foundation for Healing",
+
+    "nervous.journey.label": "This Is Where Everything Begins",
+    "nervous.journey.title": "Before You Can Heal, Your Body Needs to Feel Safe",
+    "nervous.journey.description": "Before you can truly understand your emotions, let go, or reconnect with yourself — your body needs to feel safe first.",
+    "nervous.journey.truth": "Because healing doesn't start in your thoughts. It starts in your nervous system.",
+
+    "nervous.stuck.label": "Why You Feel Stuck",
+    "nervous.stuck.point1": "Why you keep overthinking",
+    "nervous.stuck.point2": "Why your emotions feel overwhelming",
+    "nervous.stuck.point3": "Why you can't stop going back to the past",
+    "nervous.stuck.point4": "Why letting go feels impossible",
+    "nervous.stuck.truth1": "It's not because you're weak.",
+    "nervous.stuck.truth2": "It's because your nervous system is in survival mode.",
+
+    "nervous.step1.title": "Understanding Your Nervous System",
+    "nervous.step1.intro": "In this part, you will understand how your nervous system affects everything.",
+    "nervous.step1.point1": "Why heartbreak is processed like emotional danger in the body",
+    "nervous.step1.point2": "Why your mind keeps looping even when you want to move on",
+    "nervous.step1.point3": "Why distraction doesn't actually heal anything long-term",
+    "nervous.step1.point4": "Why your body reacts before your thoughts do",
+    "nervous.step1.outcome": "Your reactions are not random — they are protective responses.",
+
+    "nervous.step2.title": "From Survival Mode to Safety",
+    "nervous.step2.intro": "You will learn how to bring your body back into a calm state.",
+    "nervous.step2.point1": "Recognize when your body is overwhelmed or triggered",
+    "nervous.step2.point2": "Understand your emotional stress responses",
+    "nervous.step2.point3": "Stop the cycle of panic, overthinking, and emotional spirals",
+    "nervous.step2.point4": "Bring your body back into a calm state",
+    "nervous.step2.outcome": "You begin to feel more grounded in yourself.",
+
+    "nervous.step3.title": "Regulating Your Emotions in Real Time",
+    "nervous.step3.intro": "Practical tools to return to yourself in the moment.",
+    "nervous.step3.point1": "Simple grounding techniques for emotional overwhelm",
+    "nervous.step3.point2": "How to calm your nervous system during triggers",
+    "nervous.step3.point3": "How to stop emotional spirals before they take over",
+    "nervous.step3.point4": "How to return to clarity when your mind feels chaotic",
+    "nervous.step3.outcome": "You learn how to come back to yourself in the moment.",
+
+    "nervous.foundation.label": "The Foundation of Everything Else",
+    "nervous.foundation.text1": "This is not about fixing yourself. You are not broken.",
+    "nervous.foundation.text2": "This is about creating safety within your own body — so your emotions don't feel like something you need to escape from.",
+    "nervous.foundation.text3": "Because when your nervous system feels safe… your mind stops fighting.",
+
+    "nervous.changes.title": "What Changes After This Workshop",
+    "nervous.changes1": "You feel less emotionally overwhelmed",
+    "nervous.changes2": "You recover faster from triggers",
+    "nervous.changes3": "You stop spiraling as deeply",
+    "nervous.changes4": "You feel more stable in yourself",
+    "nervous.changes5": "You are finally able to start real emotional healing",
+
+    "nervous.final1": "You don't heal by forcing yourself to move on.",
+    "nervous.final2": "You heal by learning how to feel safe again. And this is where your healing journey begins.",
+
     // Transformation Coaching Page
     "transformation.label": "Premium Program",
     "transformation.title": "Personal Transformation Coaching",
@@ -900,6 +957,63 @@ const translations: Record<Language, Record<string, string>> = {
 
     "heart.final1": "Du hast sie nicht verloren. Du hast dich selbst fuer eine Weile verloren.",
     "heart.final2": "Und jetzt findest du dich selbst wieder.",
+
+    // Nervous System Regulation Page
+    "nervous.label": "Selbstgefuehrter Workshop",
+    "nervous.title": "Nervous System Regulation",
+    "nervous.subtitle": "Dein Fundament fuer Heilung",
+
+    "nervous.journey.label": "Hier beginnt alles",
+    "nervous.journey.title": "Bevor du heilen kannst, muss sich dein Koerper sicher fuehlen",
+    "nervous.journey.description": "Bevor du deine Emotionen wirklich verstehen, loslassen oder dich wieder mit dir selbst verbinden kannst — muss sich dein Koerper zuerst sicher fuehlen.",
+    "nervous.journey.truth": "Denn Heilung beginnt nicht in deinen Gedanken. Sie beginnt in deinem Nervensystem.",
+
+    "nervous.stuck.label": "Warum du dich festgefahren fuehlst",
+    "nervous.stuck.point1": "Warum du staendig ueberdenkst",
+    "nervous.stuck.point2": "Warum sich deine Emotionen ueberwältigend anfuehlen",
+    "nervous.stuck.point3": "Warum du nicht aufhoeren kannst, zur Vergangenheit zurueckzukehren",
+    "nervous.stuck.point4": "Warum sich Loslassen unmoeglich anfuehlt",
+    "nervous.stuck.truth1": "Es liegt nicht daran, dass du schwach bist.",
+    "nervous.stuck.truth2": "Es liegt daran, dass dein Nervensystem im Ueberlebensmodus ist.",
+
+    "nervous.step1.title": "Dein Nervensystem verstehen",
+    "nervous.step1.intro": "In diesem Teil wirst du verstehen, wie dein Nervensystem alles beeinflusst.",
+    "nervous.step1.point1": "Warum Herzschmerz im Koerper wie emotionale Gefahr verarbeitet wird",
+    "nervous.step1.point2": "Warum dein Verstand sich weiter dreht, obwohl du weitermachen willst",
+    "nervous.step1.point3": "Warum Ablenkung langfristig nichts wirklich heilt",
+    "nervous.step1.point4": "Warum dein Koerper reagiert, bevor deine Gedanken es tun",
+    "nervous.step1.outcome": "Deine Reaktionen sind nicht zufaellig — sie sind schuetzende Antworten.",
+
+    "nervous.step2.title": "Vom Ueberlebensmodus zur Sicherheit",
+    "nervous.step2.intro": "Du wirst lernen, wie du deinen Koerper wieder in einen ruhigen Zustand bringst.",
+    "nervous.step2.point1": "Erkenne, wann dein Koerper ueberwaeltigt oder getriggert ist",
+    "nervous.step2.point2": "Verstehe deine emotionalen Stressreaktionen",
+    "nervous.step2.point3": "Stoppe den Kreislauf von Panik, Ueberdenken und emotionalen Spiralen",
+    "nervous.step2.point4": "Bringe deinen Koerper wieder in einen ruhigen Zustand",
+    "nervous.step2.outcome": "Du beginnst, dich geerdeter in dir selbst zu fuehlen.",
+
+    "nervous.step3.title": "Deine Emotionen in Echtzeit regulieren",
+    "nervous.step3.intro": "Praktische Werkzeuge, um im Moment zu dir selbst zurueckzukehren.",
+    "nervous.step3.point1": "Einfache Erdungstechniken bei emotionaler Ueberwältigung",
+    "nervous.step3.point2": "Wie du dein Nervensystem waehrend Triggern beruhigst",
+    "nervous.step3.point3": "Wie du emotionale Spiralen stoppst, bevor sie ueberhand nehmen",
+    "nervous.step3.point4": "Wie du zu Klarheit zurueckkehrst, wenn sich dein Verstand chaotisch anfuehlt",
+    "nervous.step3.outcome": "Du lernst, wie du im Moment zu dir selbst zurueckkommst.",
+
+    "nervous.foundation.label": "Das Fundament fuer alles andere",
+    "nervous.foundation.text1": "Hier geht es nicht darum, dich zu reparieren. Du bist nicht kaputt.",
+    "nervous.foundation.text2": "Es geht darum, Sicherheit in deinem eigenen Koerper zu schaffen — damit sich deine Emotionen nicht wie etwas anfuehlen, vor dem du fliehen musst.",
+    "nervous.foundation.text3": "Denn wenn sich dein Nervensystem sicher fuehlt… hoert dein Verstand auf zu kaempfen.",
+
+    "nervous.changes.title": "Was sich nach diesem Workshop aendert",
+    "nervous.changes1": "Du fuehlst dich weniger emotional ueberwaeltigt",
+    "nervous.changes2": "Du erholst dich schneller von Triggern",
+    "nervous.changes3": "Du spiralst nicht mehr so tief",
+    "nervous.changes4": "Du fuehlst dich stabiler in dir selbst",
+    "nervous.changes5": "Du bist endlich in der Lage, echte emotionale Heilung zu beginnen",
+
+    "nervous.final1": "Du heilst nicht, indem du dich zwingst, weiterzumachen.",
+    "nervous.final2": "Du heilst, indem du lernst, dich wieder sicher zu fuehlen. Und hier beginnt deine Heilungsreise.",
 
     // Transformation Coaching Page
     "transformation.label": "Premium Programm",
