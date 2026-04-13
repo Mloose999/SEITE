@@ -248,7 +248,7 @@ export default function WorkshopsPage() {
               </p>
               <div className="flex items-baseline gap-3 mb-4">
                 <span className="text-background/50 line-through text-xl">236 €</span>
-                <span className="font-serif text-5xl font-medium text-background">200 €</span>
+                <span className="font-serif text-5xl font-medium text-background">199 €</span>
               </div>
               <p className="text-background/60 font-light mb-8">{t("workshopDetails.pricing.allFour")}</p>
               <Link

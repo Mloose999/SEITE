@@ -79,8 +79,8 @@ const translations: Record<Language, Record<string, string>> = {
     "workshops.fullProgramDescription": "Experience the complete transformation process with all four workshops combined. A structured, step-by-step journey from inner healing to building confident, healthy relationships.",
     "workshops.allWorkshops": "All 4 workshops included",
     "workshops.structuredJourney": "Structured transformation journey",
-    "workshops.saveBundle": "Save 36 € with the bundle",
-    "workshops.savingsNote": "You save 36 €",
+    "workshops.saveBundle": "Save 37 € with the bundle",
+    "workshops.savingsNote": "You save 37 €",
     "workshops.viewDetails": "View Details",
     "workshops.premiumProgram": "Premium Program",
     "workshops.transformationCoaching": "Personal Transformation Coaching",
@@ -254,6 +254,8 @@ const translations: Record<Language, Record<string, string>> = {
     "workshopDetails.pricing.fullProgram": "Full Transformation Program",
     "workshopDetails.pricing.allFour": "All 4 workshops included",
     "workshopDetails.pricing.getBundle": "Get the Full Program",
+    "workshopDetails.prevWorkshop": "Previous Workshop",
+    "workshopDetails.nextWorkshop": "Next Workshop",
     
     // Transformation Coaching Page
     "transformation.label": "Premium Program",
@@ -383,8 +385,8 @@ const translations: Record<Language, Record<string, string>> = {
     "workshops.fullProgramDescription": "Erlebe den kompletten Transformationsprozess mit allen vier Workshops kombiniert. Eine strukturierte, schrittweise Reise von innerer Heilung zu selbstbewussten, gesunden Beziehungen.",
     "workshops.allWorkshops": "Alle 4 Workshops inklusive",
     "workshops.structuredJourney": "Strukturierte Transformationsreise",
-    "workshops.saveBundle": "Spare 36 € mit dem Paket",
-    "workshops.savingsNote": "Du sparst 36 €",
+    "workshops.saveBundle": "Spare 37 € mit dem Paket",
+    "workshops.savingsNote": "Du sparst 37 €",
     "workshops.viewDetails": "Details ansehen",
     "workshops.premiumProgram": "Premium Programm",
     "workshops.transformationCoaching": "Personal Transformation Coaching",
@@ -558,6 +560,8 @@ const translations: Record<Language, Record<string, string>> = {
     "workshopDetails.pricing.fullProgram": "Komplettes Transformations-Programm",
     "workshopDetails.pricing.allFour": "Alle 4 Workshops enthalten",
     "workshopDetails.pricing.getBundle": "Hol dir das komplette Programm",
+    "workshopDetails.prevWorkshop": "Vorheriger Workshop",
+    "workshopDetails.nextWorkshop": "Naechster Workshop",
     
     // Transformation Coaching Page
     "transformation.label": "Premium Programm",

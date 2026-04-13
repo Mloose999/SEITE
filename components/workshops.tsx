@@ -14,25 +14,29 @@ export function Workshops() {
       icon: Sparkles,
       title: t("workshops.workshop1.title"),
       description: t("workshops.workshop1.description"),
-      image: "/images/workshop-mindset.jpg"
+      image: "/images/workshop-mindset.jpg",
+      slug: "mindset"
     },
     {
       icon: Brain,
       title: t("workshops.workshop2.title"),
       description: t("workshops.workshop2.description"),
-      image: "/images/workshop-patterns.jpg"
+      image: "/images/workshop-patterns.jpg",
+      slug: "patterns"
     },
     {
       icon: Heart,
       title: t("workshops.workshop3.title"),
       description: t("workshops.workshop3.description"),
-      image: "/images/workshop-heart.jpg"
+      image: "/images/workshop-heart.jpg",
+      slug: "heart"
     },
     {
       icon: Flame,
       title: t("workshops.workshop4.title"),
       description: t("workshops.workshop4.description"),
-      image: "/images/workshop-nervous-new.jpg"
+      image: "/images/workshop-nervous-new.jpg",
+      slug: "nervous"
     }
   ]
 
@@ -181,26 +185,35 @@ export function Workshops() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.15 }}
-                className="group cursor-pointer"
+                className="group flex flex-col"
               >
                 {/* Arch-shaped Image with elegant hover */}
-                <div className="relative aspect-[3/4] overflow-hidden rounded-t-full mb-6">
-                  <Image
-                    src={workshop.image}
-                    alt={workshop.title}
-                    fill
-                    className="object-cover transition-all duration-700 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/10 transition-all duration-500" />
-                </div>
+                <Link href={`/workshops/${workshop.slug}`} className="block">
+                  <div className="relative aspect-[3/4] overflow-hidden rounded-t-full mb-6">
+                    <Image
+                      src={workshop.image}
+                      alt={workshop.title}
+                      fill
+                      className="object-cover transition-all duration-700 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/10 transition-all duration-500" />
+                  </div>
+                </Link>
                 {/* Text Below */}
-                <div className="text-center">
-                  <h4 className="font-serif text-lg md:text-xl font-medium text-foreground mb-3 transition-colors duration-300 group-hover:text-foreground/70">
+                <div className="text-center flex flex-col flex-1">
+                  <h4 className="font-serif text-lg md:text-xl font-medium text-foreground mb-3">
                     {workshop.title}
                   </h4>
-                  <p className="text-muted-foreground leading-relaxed text-sm font-light">
+                  <p className="text-muted-foreground leading-relaxed text-sm font-light mb-5 flex-1">
                     {workshop.description}
                   </p>
+                  <Link
+                    href={`/workshops/${workshop.slug}`}
+                    className="inline-flex items-center justify-center gap-2 text-foreground/70 text-sm font-medium hover:text-foreground transition-colors duration-300 group/btn"
+                  >
+                    {t("workshops.learnMore")}
+                    <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-1" strokeWidth={1.5} />
+                  </Link>
                 </div>
               </motion.div>
             ))}
@@ -240,7 +253,7 @@ export function Workshops() {
               {/* Price with elegant styling */}
               <div>
                 <span className="text-foreground/50 line-through text-lg block mb-2 font-light">236 €</span>
-                <span className="font-serif text-7xl md:text-8xl font-medium text-foreground tracking-tight">200 €</span>
+                <span className="font-serif text-7xl md:text-8xl font-medium text-foreground tracking-tight">199 €</span>
                 <span className="text-foreground/60 text-sm block mt-2 font-light">{t("workshops.savingsNote")}</span>
               </div>
               
