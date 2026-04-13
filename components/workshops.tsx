@@ -162,7 +162,15 @@ export function Workshops() {
               </h3>
               <p className="text-muted-foreground mt-3 font-light">{t("workshops.individualDescription")}</p>
             </div>
-            <p className="text-foreground font-serif text-3xl font-medium">29 € <span className="text-base font-light text-muted-foreground ml-1">{t("workshops.perWorkshop")}</span></p>
+            <div className="flex items-baseline gap-4">
+              <p className="text-foreground font-serif text-3xl font-medium">59 € <span className="text-base font-light text-muted-foreground ml-1">{t("workshops.perWorkshop")}</span></p>
+              <Link 
+                href="/workshops" 
+                className="text-foreground/70 text-sm font-medium hover:text-foreground transition-colors duration-300 underline underline-offset-4"
+              >
+                {t("workshops.viewDetails")}
+              </Link>
+            </div>
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-10">
@@ -231,8 +239,9 @@ export function Workshops() {
             <div className="flex flex-col md:flex-row md:items-end gap-12 md:gap-20">
               {/* Price with elegant styling */}
               <div>
-                <span className="text-foreground/50 line-through text-lg block mb-2 font-light">116 €</span>
-                <span className="font-serif text-7xl md:text-8xl font-medium text-foreground tracking-tight">99 €</span>
+                <span className="text-foreground/50 line-through text-lg block mb-2 font-light">236 €</span>
+                <span className="font-serif text-7xl md:text-8xl font-medium text-foreground tracking-tight">200 €</span>
+                <span className="text-foreground/60 text-sm block mt-2 font-light">{t("workshops.savingsNote")}</span>
               </div>
               
               {/* Benefits with refined styling */}
