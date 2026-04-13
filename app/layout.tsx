@@ -22,13 +22,13 @@ export const metadata: Metadata = {
   generator: 'v0.app',
   icons: {
     icon: [
-      { url: '/images/logo-original.png', sizes: '32x32', type: 'image/png' },
-      { url: '/images/logo-original.png', sizes: '16x16', type: 'image/png' },
-      { url: '/images/logo-original.png', sizes: '192x192', type: 'image/png' },
-      { url: '/images/logo-original.png', sizes: '512x512', type: 'image/png' },
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/icon.png', sizes: '32x32', type: 'image/png' },
+      { url: '/icon-192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/icon-512.png', sizes: '512x512', type: 'image/png' },
     ],
-    apple: '/images/logo-original.png',
-    shortcut: '/images/logo-original.png',
+    apple: '/apple-icon.png',
+    shortcut: '/favicon.ico',
   },
   manifest: '/manifest.json',
 }
