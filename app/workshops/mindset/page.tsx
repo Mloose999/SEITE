@@ -172,7 +172,6 @@ export default function MindsetPage() {
               </div>
             </motion.div>
           ))}
-          <div className="border-t border-foreground/10" />
         </div>
       </section>
 
