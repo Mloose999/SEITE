@@ -70,7 +70,7 @@ export default function MindsetPage() {
 
         <div className="relative z-10 w-full max-w-7xl mx-auto px-8 pb-20 md:pb-28">
           <Link
-            href="/workshops"
+            href="/"
             className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-colors duration-300 mb-10"
           >
             <ArrowLeft className="w-4 h-4" />

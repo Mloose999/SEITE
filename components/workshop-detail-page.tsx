@@ -37,7 +37,7 @@ export function WorkshopDetailPage({ workshopKey, image, prevSlug, nextSlug }: W
       <section className="relative pt-32 pb-20 md:pt-40 md:pb-0">
         <div className="max-w-7xl mx-auto px-8">
           <Link
-            href="/workshops"
+            href="/"
             className="inline-flex items-center gap-2 text-foreground/60 hover:text-foreground transition-colors duration-300 mb-12"
           >
             <ArrowLeft className="w-4 h-4" />
