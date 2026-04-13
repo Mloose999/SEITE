@@ -129,16 +129,15 @@ export default function TransformationCoachingPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
-              className="flex flex-col"
             >
               <p className="text-foreground/50 font-light tracking-[0.3em] uppercase text-xs mb-6">
                 {t("transformation.journey.title")}
               </p>
-              <p className="text-foreground/70 font-light leading-relaxed text-base mb-10">
+              <p className="text-foreground/70 font-light leading-relaxed text-base mb-8">
                 {t("transformation.journey.description")}
               </p>
               
-              <ul className="space-y-4 mt-auto">
+              <ul className="space-y-4">
                 {[
                   t("transformation.different.point1"),
                   t("transformation.different.point2"),
