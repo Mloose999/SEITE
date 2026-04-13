@@ -152,57 +152,58 @@ export function WorkshopDetailPage({ workshopKey, image, prevSlug, nextSlug }: W
 
       {/* Pricing CTA */}
       <section className="py-20 md:py-28 bg-beige/30">
-        <div className="max-w-5xl mx-auto px-8">
+        <div className="max-w-4xl mx-auto px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="grid md:grid-cols-3 gap-6"
+            className="grid md:grid-cols-2 gap-12"
           >
             {/* Single */}
-            <div className="p-8 border border-foreground/10 bg-background">
+            <div className="p-10 border border-foreground/10 bg-background">
               <p className="text-foreground/60 font-light tracking-[0.2em] uppercase text-xs mb-4">
                 {t("workshopDetails.pricing.individual")}
               </p>
-              <p className="font-serif text-2xl font-medium text-foreground">59 €</p>
+              <p className="font-serif text-3xl font-medium text-foreground">59 €</p>
             </div>
 
             {/* Bundle */}
-            <div className="p-8 border border-foreground bg-foreground text-background relative overflow-hidden">
-              <div className="absolute top-3 right-3 bg-background text-foreground text-[10px] font-medium px-2 py-1">
+            <div className="p-10 border border-foreground bg-foreground text-background relative overflow-hidden">
+              <div className="absolute top-4 right-4 bg-background text-foreground text-xs font-medium px-3 py-1">
                 {t("workshopDetails.pricing.bestValue")}
               </div>
               <p className="text-background/60 font-light tracking-[0.2em] uppercase text-xs mb-4">
                 {t("workshopDetails.pricing.fullProgram")}
               </p>
-              <div className="flex items-baseline gap-2 mb-2">
-                <span className="text-background/50 line-through text-sm">236 €</span>
-                <span className="font-serif text-2xl font-medium text-background">199 €</span>
+              <div className="flex items-baseline gap-3 mb-2">
+                <span className="text-background/50 line-through text-lg">236 €</span>
+                <span className="font-serif text-3xl font-medium text-background">199 €</span>
               </div>
-              <p className="text-background/60 font-light text-sm">{t("workshopDetails.pricing.allFour")}</p>
+              <p className="text-background/60 font-light">{t("workshopDetails.pricing.allFour")}</p>
             </div>
-
-            {/* Premium 1:1 Coaching */}
-            <Link 
-              href="/transformation-coaching"
-              className="p-8 border border-dashed border-foreground/20 bg-background hover:border-foreground/40 transition-all duration-300 group"
-            >
-              <p className="text-foreground/50 font-light tracking-[0.2em] uppercase text-xs mb-4">
-                {t("workshopDetails.premium.label")}
-              </p>
-              <p className="font-serif text-lg font-medium text-foreground mb-3 group-hover:text-foreground/80 transition-colors">
-                {t("workshopDetails.premium.title")}
-              </p>
-              <p className="text-foreground/50 font-light text-sm leading-relaxed mb-4">
-                Personal 1:1 Coaching
-              </p>
-              <span className="inline-flex items-center gap-2 text-foreground/60 text-sm font-medium group-hover:gap-3 transition-all duration-300">
-                {t("workshopDetails.premium.cta")}
-                <ArrowRight className="w-3 h-3" />
-              </span>
-            </Link>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Personal Coaching CTA */}
+      <section className="py-14 border-t border-foreground/10">
+        <div className="max-w-7xl mx-auto px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+          <div>
+            <p className="text-foreground/50 font-light text-sm mb-1">
+              {t("workshopDetails.premium.label")}
+            </p>
+            <p className="text-foreground font-light">
+              {t("workshopDetails.premium.title")}
+            </p>
+          </div>
+          <Link
+            href="/transformation-coaching"
+            className="flex-shrink-0 inline-flex items-center gap-3 border border-foreground px-8 py-3 text-sm font-medium tracking-wide text-foreground hover:bg-foreground hover:text-background transition-all duration-300"
+          >
+            {t("workshopDetails.premium.cta")}
+            <ArrowRight className="w-4 h-4" />
+          </Link>
         </div>
       </section>
 
