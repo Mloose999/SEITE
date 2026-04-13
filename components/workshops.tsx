@@ -1,7 +1,8 @@
 "use client"
 
 import Image from "next/image"
-import { Brain, Flame, Sparkles, Heart, Check, Video, Mail, Phone } from "lucide-react"
+import Link from "next/link"
+import { Brain, Flame, Sparkles, Heart, Check, Video, Mail, Phone, ArrowRight } from "lucide-react"
 import { useLanguage } from "@/lib/language-context"
 import { motion } from "framer-motion"
 
@@ -10,28 +11,32 @@ export function Workshops() {
 
   const workshops = [
     {
-      icon: Brain,
+      icon: Sparkles,
       title: t("workshops.workshop1.title"),
       description: t("workshops.workshop1.description"),
-      image: "/images/workshop-nervous.jpg"
+      image: "/images/workshop-mindset.jpg",
+      slug: "mindset"
     },
     {
-      icon: Flame,
+      icon: Brain,
       title: t("workshops.workshop2.title"),
       description: t("workshops.workshop2.description"),
-      image: "/images/workshop-fears.jpg"
-    },
-    {
-      icon: Sparkles,
-      title: t("workshops.workshop3.title"),
-      description: t("workshops.workshop3.description"),
-      image: "/images/workshop-energy.jpg"
+      image: "/images/workshop-patterns.jpg",
+      slug: "patterns"
     },
     {
       icon: Heart,
+      title: t("workshops.workshop3.title"),
+      description: t("workshops.workshop3.description"),
+      image: "/images/workshop-heart.jpg",
+      slug: "heart"
+    },
+    {
+      icon: Flame,
       title: t("workshops.workshop4.title"),
       description: t("workshops.workshop4.description"),
-      image: "/images/workshop-relationship.jpg"
+      image: "/images/workshop-nervous-new.jpg",
+      slug: "nervous"
     }
   ]
 
@@ -161,7 +166,9 @@ export function Workshops() {
               </h3>
               <p className="text-muted-foreground mt-3 font-light">{t("workshops.individualDescription")}</p>
             </div>
-            <p className="text-foreground font-serif text-3xl font-medium">29 € <span className="text-base font-light text-muted-foreground ml-1">{t("workshops.perWorkshop")}</span></p>
+            <div className="flex items-baseline gap-4">
+              <p className="text-foreground font-serif text-3xl font-medium">59 € <span className="text-base font-light text-muted-foreground ml-1">{t("workshops.perWorkshop")}</span></p>
+            </div>
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-10">
@@ -172,26 +179,35 @@ export function Workshops() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.15 }}
-                className="group cursor-pointer"
+                className="group flex flex-col"
               >
                 {/* Arch-shaped Image with elegant hover */}
-                <div className="relative aspect-[3/4] overflow-hidden rounded-t-full mb-6">
-                  <Image
-                    src={workshop.image}
-                    alt={workshop.title}
-                    fill
-                    className="object-cover transition-all duration-700 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/10 transition-all duration-500" />
-                </div>
+                <Link href={`/workshops/${workshop.slug}`} className="block">
+                  <div className="relative aspect-[3/4] overflow-hidden rounded-t-full mb-6">
+                    <Image
+                      src={workshop.image}
+                      alt={workshop.title}
+                      fill
+                      className="object-cover transition-all duration-700 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/10 transition-all duration-500" />
+                  </div>
+                </Link>
                 {/* Text Below */}
-                <div className="text-center">
-                  <h4 className="font-serif text-lg md:text-xl font-medium text-foreground mb-3 transition-colors duration-300 group-hover:text-foreground/70">
+                <div className="text-center flex flex-col flex-1">
+                  <h4 className="font-serif text-lg md:text-xl font-medium text-foreground mb-3">
                     {workshop.title}
                   </h4>
-                  <p className="text-muted-foreground leading-relaxed text-sm font-light">
+                  <p className="text-muted-foreground leading-relaxed text-sm font-light mb-5 flex-1">
                     {workshop.description}
                   </p>
+                  <Link
+                    href={`/workshops/${workshop.slug}`}
+                    className="inline-flex items-center justify-center gap-2 text-foreground/70 text-sm font-medium hover:text-foreground transition-colors duration-300 group/btn"
+                  >
+                    {t("workshops.learnMore")}
+                    <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-1" strokeWidth={1.5} />
+                  </Link>
                 </div>
               </motion.div>
             ))}
@@ -230,8 +246,9 @@ export function Workshops() {
             <div className="flex flex-col md:flex-row md:items-end gap-12 md:gap-20">
               {/* Price with elegant styling */}
               <div>
-                <span className="text-foreground/50 line-through text-lg block mb-2 font-light">116 €</span>
-                <span className="font-serif text-7xl md:text-8xl font-medium text-foreground tracking-tight">99 €</span>
+                <span className="text-foreground/50 line-through text-lg block mb-2 font-light">236 €</span>
+                <span className="font-serif text-7xl md:text-8xl font-medium text-foreground tracking-tight">199 €</span>
+                <span className="text-foreground/60 text-sm block mt-2 font-light">{t("workshops.savingsNote")}</span>
               </div>
               
               {/* Benefits with refined styling */}
@@ -253,7 +270,7 @@ export function Workshops() {
             <div className="h-px bg-foreground/10" />
           </div>
 
-          {/* 1:1 Coaching Section */}
+          {/* Premium Program - Personal Transformation Coaching Section */}
           <div className="max-w-7xl mx-auto px-8 py-28 md:py-36 pb-36 md:pb-48">
             <motion.div 
               initial={{ opacity: 0, y: 30 }}
@@ -264,13 +281,20 @@ export function Workshops() {
             >
               {/* Left - Content */}
               <div className="flex flex-col justify-center">
-                <p className="text-foreground/60 font-light tracking-[0.3em] uppercase text-xs mb-6">{t("workshops.personalSupport")}</p>
+                <p className="text-foreground/60 font-light tracking-[0.3em] uppercase text-xs mb-6">{t("workshops.premiumProgram")}</p>
                 <h3 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium text-foreground mb-6 leading-tight">
-                  {t("workshops.coaching")}
+                  {t("workshops.transformationCoaching")}
                 </h3>
-                <p className="text-foreground/70 leading-relaxed font-light text-lg">
-                  {t("workshops.coachingDescription")}
+                <p className="text-foreground/70 leading-relaxed font-light text-lg mb-8">
+                  {t("workshops.transformationCoachingDescription")}
                 </p>
+                <Link 
+                  href="/transformation-coaching" 
+                  className="inline-flex items-center gap-3 text-foreground font-medium group hover:gap-4 transition-all duration-300"
+                >
+                  {t("workshops.learnMore")}
+                  <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" strokeWidth={1.5} />
+                </Link>
               </div>
               
               {/* Right - Formats */}
