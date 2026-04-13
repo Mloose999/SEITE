@@ -292,29 +292,16 @@ export default function NervousPage() {
       {/* Navigation - only previous since this is the last workshop */}
       <section className="py-16 md:py-20 border-t border-foreground/10">
         <div className="max-w-5xl mx-auto px-8">
-          <div className="flex justify-start">
-            <Link
-              href="/workshops/heart"
-              className="group flex items-center gap-3 p-6 border border-foreground/10 hover:border-foreground/30 transition-all duration-300"
-            >
-              <ArrowLeft className="w-5 h-5 text-foreground/60 group-hover:text-foreground transition-colors" strokeWidth={1.5} />
-              <div className="text-left">
-                <p className="text-foreground/60 font-light text-xs uppercase tracking-[0.2em]">{t("workshopDetails.prevWorkshop")}</p>
-                <p className="font-serif font-medium text-foreground">{t("workshops.workshop3.title")}</p>
-              </div>
-            </Link>
-
-            <Link
-              href="/workshops/mindset"
-              className="group flex items-center gap-3 p-6 border border-foreground/10 hover:border-foreground/30 transition-all duration-300 justify-end text-right"
-            >
-              <div className="text-right">
-                <p className="text-foreground/60 font-light text-xs uppercase tracking-[0.2em]">{t("workshopDetails.nextWorkshop")}</p>
-                <p className="font-serif font-medium text-foreground">{t("workshops.workshop1.title")}</p>
-              </div>
-              <ArrowRight className="w-5 h-5 text-foreground/60 group-hover:text-foreground transition-colors" strokeWidth={1.5} />
-            </Link>
-          </div>
+          <Link
+            href="/workshops/heart"
+            className="group inline-flex items-center gap-3 hover:opacity-60 transition-opacity duration-300"
+          >
+            <ArrowLeft className="w-5 h-5 text-foreground/60 group-hover:text-foreground transition-colors" strokeWidth={1.5} />
+            <div className="text-left">
+              <p className="text-foreground/60 font-light text-xs uppercase tracking-[0.2em]">{t("workshopDetails.prevWorkshop")}</p>
+              <p className="font-serif font-medium text-foreground">{t("workshops.workshop3.title")}</p>
+            </div>
+          </Link>
         </div>
       </section>
     </main>
