@@ -229,13 +229,7 @@ export default function WorkshopsPage() {
                 {t("workshopDetails.pricing.individual")}
               </p>
               <p className="font-serif text-5xl font-medium text-foreground mb-4">59 €</p>
-              <p className="text-foreground/60 font-light mb-8">{t("workshopDetails.pricing.perWorkshop")}</p>
-              <Link
-                href="/#contact"
-                className="inline-block w-full text-center py-4 border border-foreground text-foreground font-medium hover:bg-foreground hover:text-background transition-all duration-300"
-              >
-                {t("workshopDetails.pricing.chooseSingle")}
-              </Link>
+              <p className="text-foreground/60 font-light">{t("workshopDetails.pricing.perWorkshop")}</p>
             </div>
 
             {/* Bundle */}

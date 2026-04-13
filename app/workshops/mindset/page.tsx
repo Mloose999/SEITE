@@ -121,12 +121,6 @@ export default function MindsetPage() {
             <div className="md:flex-shrink-0 md:pl-8">
               <p className="text-foreground/50 font-light text-sm mb-2 tracking-[0.2em] uppercase">{t("transformation.investment")}</p>
               <p className="font-serif text-5xl md:text-6xl font-medium text-foreground">59 €</p>
-              <Link
-                href="/#contact"
-                className="inline-block mt-6 px-8 py-3 border border-foreground text-foreground font-medium text-sm hover:bg-foreground hover:text-background transition-all duration-300"
-              >
-                {t("workshopDetails.pricing.chooseSingle")}
-              </Link>
             </div>
           </motion.div>
         </div>
