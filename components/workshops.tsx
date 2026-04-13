@@ -11,28 +11,28 @@ export function Workshops() {
 
   const workshops = [
     {
-      icon: Brain,
+      icon: Sparkles,
       title: t("workshops.workshop1.title"),
       description: t("workshops.workshop1.description"),
-      image: "/images/workshop-nervous.jpg"
+      image: "/images/workshop-mindset.jpg"
     },
     {
-      icon: Flame,
+      icon: Brain,
       title: t("workshops.workshop2.title"),
       description: t("workshops.workshop2.description"),
-      image: "/images/workshop-fears.jpg"
-    },
-    {
-      icon: Sparkles,
-      title: t("workshops.workshop3.title"),
-      description: t("workshops.workshop3.description"),
-      image: "/images/workshop-energy.jpg"
+      image: "/images/workshop-patterns.jpg"
     },
     {
       icon: Heart,
+      title: t("workshops.workshop3.title"),
+      description: t("workshops.workshop3.description"),
+      image: "/images/workshop-heart.jpg"
+    },
+    {
+      icon: Flame,
       title: t("workshops.workshop4.title"),
       description: t("workshops.workshop4.description"),
-      image: "/images/workshop-relationship.jpg"
+      image: "/images/workshop-nervous-new.jpg"
     }
   ]
 
