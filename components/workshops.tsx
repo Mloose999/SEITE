@@ -1,7 +1,8 @@
 "use client"
 
 import Image from "next/image"
-import { Brain, Flame, Sparkles, Heart, Check, Video, Mail, Phone } from "lucide-react"
+import Link from "next/link"
+import { Brain, Flame, Sparkles, Heart, Check, Video, Mail, Phone, ArrowRight } from "lucide-react"
 import { useLanguage } from "@/lib/language-context"
 import { motion } from "framer-motion"
 
@@ -253,7 +254,7 @@ export function Workshops() {
             <div className="h-px bg-foreground/10" />
           </div>
 
-          {/* 1:1 Coaching Section */}
+          {/* Premium Program - Personal Transformation Coaching Section */}
           <div className="max-w-7xl mx-auto px-8 py-28 md:py-36 pb-36 md:pb-48">
             <motion.div 
               initial={{ opacity: 0, y: 30 }}
@@ -264,13 +265,20 @@ export function Workshops() {
             >
               {/* Left - Content */}
               <div className="flex flex-col justify-center">
-                <p className="text-foreground/60 font-light tracking-[0.3em] uppercase text-xs mb-6">{t("workshops.personalSupport")}</p>
+                <p className="text-foreground/60 font-light tracking-[0.3em] uppercase text-xs mb-6">{t("workshops.premiumProgram")}</p>
                 <h3 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium text-foreground mb-6 leading-tight">
-                  {t("workshops.coaching")}
+                  {t("workshops.transformationCoaching")}
                 </h3>
-                <p className="text-foreground/70 leading-relaxed font-light text-lg">
-                  {t("workshops.coachingDescription")}
+                <p className="text-foreground/70 leading-relaxed font-light text-lg mb-8">
+                  {t("workshops.transformationCoachingDescription")}
                 </p>
+                <Link 
+                  href="/transformation-coaching" 
+                  className="inline-flex items-center gap-3 text-foreground font-medium group hover:gap-4 transition-all duration-300"
+                >
+                  {t("workshops.learnMore")}
+                  <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" strokeWidth={1.5} />
+                </Link>
               </div>
               
               {/* Right - Formats */}
