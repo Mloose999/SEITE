@@ -186,6 +186,56 @@ export function WorkshopDetailPage({ workshopKey, image, prevSlug, nextSlug }: W
         </div>
       </section>
 
+      {/* Premium Upsell Section */}
+      <section className="py-20 md:py-28 border-t border-foreground/5">
+        <div className="max-w-5xl mx-auto px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="grid md:grid-cols-2 gap-12 items-center"
+          >
+            {/* Text Content */}
+            <div>
+              <p className="text-foreground/50 font-light tracking-[0.3em] uppercase text-xs mb-4">
+                {t("workshopDetails.premium.label")}
+              </p>
+              <h3 className="font-serif text-2xl md:text-3xl font-medium text-foreground mb-5 leading-snug">
+                {t("workshopDetails.premium.title")}
+              </h3>
+              <p className="text-foreground/60 font-light leading-relaxed mb-8">
+                {t("workshopDetails.premium.description")}
+              </p>
+              <Link
+                href="/transformation-coaching"
+                className="inline-flex items-center gap-3 text-foreground font-medium text-sm tracking-wide hover:gap-5 transition-all duration-300 group"
+              >
+                {t("workshopDetails.premium.cta")}
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+              </Link>
+            </div>
+
+            {/* Visual Element */}
+            <div className="relative">
+              <div className="aspect-[4/3] bg-beige/40 overflow-hidden">
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="text-center p-8">
+                    <p className="text-foreground/30 font-light tracking-[0.4em] uppercase text-xs mb-3">Premium</p>
+                    <p className="font-serif text-xl md:text-2xl text-foreground/70 font-medium">
+                      Personal Transformation
+                    </p>
+                    <p className="font-serif text-xl md:text-2xl text-foreground/70 font-medium">
+                      Coaching
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Prev / Next navigation */}
       {(prevSlug || nextSlug) && (
         <section className="py-16 border-t border-foreground/10">

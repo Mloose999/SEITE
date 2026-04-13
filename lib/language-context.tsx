@@ -550,6 +550,12 @@ const translations: Record<Language, Record<string, string>> = {
     "transformation.finalNote": "You are not left alone between sessions.",
     "transformation.finalNote2": "You are guided through every phase of your transformation - step by step.",
     "transformation.cta": "Start Your Transformation",
+
+    // Premium Upsell Section
+    "workshopDetails.premium.label": "Go Deeper",
+    "workshopDetails.premium.title": "Want Personal Guidance?",
+    "workshopDetails.premium.description": "If you're ready for deeper, personalized transformation with 1:1 support, continuous guidance, and a structured process tailored to you — the Personal Transformation Coaching program might be exactly what you need.",
+    "workshopDetails.premium.cta": "Learn More About 1:1 Coaching",
   },
   de: {
     // Header
@@ -1090,6 +1096,12 @@ const translations: Record<Language, Record<string, string>> = {
     "transformation.finalNote": "Du wirst zwischen den Sessions nicht allein gelassen.",
     "transformation.finalNote2": "Du wirst durch jede Phase deiner Transformation begleitet - Schritt für Schritt.",
     "transformation.cta": "Starte deine Transformation",
+
+    // Premium Upsell Section
+    "workshopDetails.premium.label": "Geh tiefer",
+    "workshopDetails.premium.title": "Wuenschst du dir persoenliche Begleitung?",
+    "workshopDetails.premium.description": "Wenn du bereit bist fuer tiefere, personalisierte Transformation mit 1:1 Unterstuetzung, kontinuierlicher Begleitung und einem strukturierten Prozess, der auf dich zugeschnitten ist - koennte das Personal Transformation Coaching Programm genau das Richtige fuer dich sein.",
+    "workshopDetails.premium.cta": "Mehr ueber 1:1 Coaching erfahren",
   }
 }
 
