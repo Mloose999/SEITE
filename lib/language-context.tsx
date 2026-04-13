@@ -94,6 +94,10 @@ const translations: Record<Language, Record<string, string>> = {
     "workshops.phoneWhatsapp": "Phone / WhatsApp",
     "workshops.phoneWhatsappDesc": "Quick support when you need it",
     
+    // Pricing additions
+    "pricing.oneTimeInvestment": "One-time investment",
+    "workshops.contactCta": "Get in Touch",
+    
     // About
     "about.label": "My Story",
     "about.title": "About Me",
@@ -629,6 +633,10 @@ const translations: Record<Language, Record<string, string>> = {
     "workshops.emailCoachingDesc": "Schriftliche Begleitung in deinem Tempo",
     "workshops.phoneWhatsapp": "Telefon / WhatsApp",
     "workshops.phoneWhatsappDesc": "Schnelle Unterstützung, wenn du sie brauchst",
+    
+    // Pricing additions
+    "pricing.oneTimeInvestment": "Einmalige Investition",
+    "workshops.contactCta": "Kontakt aufnehmen",
     
     // About
     "about.label": "Meine Geschichte",
