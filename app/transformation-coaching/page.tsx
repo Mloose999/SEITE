@@ -119,7 +119,7 @@ export default function TransformationCoachingPage() {
       </section>
 
       {/* Investment Section */}
-      <section className="bg-[#f5f1ec]">
+      <section className="bg-beige/30">
         <div className="max-w-7xl mx-auto">
 
           {/* Top: description bar */}
@@ -128,7 +128,7 @@ export default function TransformationCoachingPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="border-b border-foreground/10 px-8 py-12 md:py-16 flex flex-col md:flex-row md:items-center md:justify-between gap-6"
+            className="border-b border-foreground/10 px-8 py-10 md:py-14 flex flex-col md:flex-row md:items-center md:justify-between gap-6"
           >
             <p className="text-foreground/50 font-light tracking-[0.3em] uppercase text-xs">
               {t("transformation.journey.title")}
@@ -144,34 +144,33 @@ export default function TransformationCoachingPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="px-8 py-16 md:py-24 flex flex-col md:flex-row md:items-end md:justify-between gap-10"
+            className="px-8 py-16 md:py-24 flex flex-col md:flex-row md:items-end md:justify-between gap-16"
           >
             <div>
               <p className="text-foreground/40 font-light text-xs tracking-[0.25em] uppercase mb-5">
                 {t("transformation.investment")}
               </p>
-              <p className="font-serif text-6xl md:text-8xl lg:text-9xl font-light text-foreground leading-none tracking-tight">
+              <p className="font-serif text-5xl md:text-7xl lg:text-8xl font-light text-foreground leading-none tracking-tight">
                 {t("transformation.price")}
               </p>
-              <p className="text-foreground/40 font-light text-sm mt-4">{t("pricing.oneTimeInvestment")}</p>
             </div>
 
             <div className="flex flex-col items-start md:items-end gap-4">
-              <ul className="space-y-2">
+              <ul className="space-y-3">
                 {[
                   t("transformation.different.point1"),
                   t("transformation.different.point2"),
                   t("transformation.different.point3"),
                 ].map((point, i) => (
-                  <li key={i} className="flex items-center gap-3 text-foreground/60 font-light text-sm">
-                    <Check className="w-4 h-4 text-foreground/30 flex-shrink-0" strokeWidth={1.5} />
+                  <li key={i} className="flex items-start gap-3 text-foreground/60 font-light text-sm">
+                    <Check className="w-4 h-4 text-foreground/30 flex-shrink-0 mt-0.5" strokeWidth={1.5} />
                     {point}
                   </li>
                 ))}
               </ul>
               <Link
                 href="/contact"
-                className="mt-4 inline-block px-8 py-4 bg-foreground text-background font-medium text-sm tracking-[0.1em] uppercase hover:bg-foreground/80 transition-all duration-300"
+                className="mt-6 inline-block px-8 py-4 bg-foreground text-background font-medium text-sm tracking-[0.1em] uppercase hover:bg-foreground/80 transition-all duration-300"
               >
                 {t("workshops.contactCta")}
               </Link>
