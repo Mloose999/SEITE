@@ -168,12 +168,6 @@ export function Workshops() {
             </div>
             <div className="flex items-baseline gap-4">
               <p className="text-foreground font-serif text-3xl font-medium">59 € <span className="text-base font-light text-muted-foreground ml-1">{t("workshops.perWorkshop")}</span></p>
-              <Link 
-                href="/workshops" 
-                className="text-foreground/70 text-sm font-medium hover:text-foreground transition-colors duration-300 underline underline-offset-4"
-              >
-                {t("workshops.viewDetails")}
-              </Link>
             </div>
           </div>
           
