@@ -233,24 +233,33 @@ export default function TransformationCoachingPage() {
       </section>
 
       {/* Support Structure */}
-      <section className="py-20 md:py-28 bg-[#f8f6f3]">
-        <div className="max-w-4xl mx-auto px-8">
+      <section className="relative py-24 md:py-32 overflow-hidden">
+        {/* Background Image */}
+        <Image
+          src="/images/support-bg.jpg"
+          alt=""
+          fill
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-background/85" />
+
+        <div className="relative z-10 max-w-6xl mx-auto px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16"
+            className="mb-20"
           >
             <p className="text-foreground/50 font-light tracking-[0.3em] uppercase text-xs mb-6">
               {t("transformation.support.title")}
             </p>
-            <p className="text-foreground/60 font-light max-w-xl mx-auto">
+            <p className="text-foreground/70 font-light max-w-2xl text-lg leading-relaxed">
               {t("transformation.support.description")}
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-4 gap-px bg-foreground/10">
             {support.map((item, index) => (
               <motion.div
                 key={index}
@@ -258,9 +267,12 @@ export default function TransformationCoachingPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-background p-8 border border-foreground/10"
+                className="bg-background/80 backdrop-blur-sm p-8 md:p-10 group hover:bg-background transition-all duration-500"
               >
-                <h4 className="font-medium text-foreground mb-3">{item.title}</h4>
+                <span className="text-foreground/20 font-serif text-4xl font-light block mb-6">
+                  0{index + 1}
+                </span>
+                <h4 className="font-medium text-foreground mb-4 text-lg">{item.title}</h4>
                 <p className="text-foreground/60 font-light text-sm leading-relaxed">{item.description}</p>
               </motion.div>
             ))}
