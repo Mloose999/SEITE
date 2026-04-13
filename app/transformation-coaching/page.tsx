@@ -274,15 +274,9 @@ export default function TransformationCoachingPage() {
             <p className="font-serif text-2xl md:text-3xl text-foreground leading-relaxed mb-8">
               {t("transformation.finalNote")}
             </p>
-            <p className="text-foreground/60 font-light mb-10">
+            <p className="text-foreground/60 font-light">
               {t("transformation.finalNote2")}
             </p>
-            
-            <Link href="/contact">
-              <Button className="bg-foreground text-background hover:bg-foreground/90 px-8 py-6 text-base rounded-none">
-                {t("transformation.cta")}
-              </Button>
-            </Link>
           </motion.div>
         </div>
       </section>
