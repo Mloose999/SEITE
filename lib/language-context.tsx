@@ -304,6 +304,64 @@ const translations: Record<Language, Record<string, string>> = {
 
     "mindset.finalNote": "This program is designed to help you finally understand yourself on a deeper level and begin creating real change — step by step, at your own pace.",
 
+    // Breaking Repeating Patterns Page
+    "patterns.label": "Self-Guided Workshop",
+    "patterns.title": "Breaking Repeating Patterns",
+    "patterns.description": "Discover why you keep attracting the same situations and relationships, and learn how to finally break free from the cycles holding you back.",
+    "patterns.journey.label": "The 5-Part Workshop",
+    "patterns.journey.title": "Understanding and Breaking Your Patterns",
+    "patterns.journey.description": "In this workshop, you'll move through five interconnected parts that help you understand your patterns deeply and give you tools to interrupt the cycle.",
+
+    "patterns.part1.title": "Understanding Patterns",
+    "patterns.part1.intro": "We start by exploring what behavioral and emotional patterns are and why we repeat them.",
+    "patterns.part1.point1": "What are behavioral and emotional patterns?",
+    "patterns.part1.point2": "Why we repeat them unconsciously",
+    "patterns.part1.point3": "The role of the subconscious mind",
+    "patterns.part1.outcome": "This is not random",
+
+    "patterns.part2.title": "Your Personal Pattern Loop",
+    "patterns.part2.intro": "You'll map out your own pattern cycle and see it clearly for the first time.",
+    "patterns.part2.point1": "Trigger → Thought → Emotion → Behavior → Result",
+    "patterns.part2.point2": "Understanding your personal cycle",
+    "patterns.part2.point3": "Exercise: Map your own pattern",
+    "patterns.part2.point4": "Seeing your loop clearly",
+    "patterns.part2.outcome": "They SEE their loop for the first time",
+
+    "patterns.part3.title": "The Root Cause",
+    "patterns.part3.intro": "We dig deeper to understand where your patterns come from.",
+    "patterns.part3.point1": "Where patterns come from (childhood, experiences)",
+    "patterns.part3.point2": "Emotional conditioning",
+    "patterns.part3.point3": "Why logic doesn't change it",
+    "patterns.part3.outcome": "Deep emotional understanding",
+
+    "patterns.part4.title": "Breaking the Cycle",
+    "patterns.part4.intro": "Now you get the tools to interrupt the pattern in real-time.",
+    "patterns.part4.point1": "Awareness in real-time",
+    "patterns.part4.point2": "The 'Pause & Choose' method",
+    "patterns.part4.point3": "Choosing a new response",
+    "patterns.part4.outcome": "I have control",
+
+    "patterns.part5.title": "Integration",
+    "patterns.part5.intro": "You learn how to apply this in your daily life and make it stick.",
+    "patterns.part5.point1": "How to apply this in daily life",
+    "patterns.part5.point2": "Why repetition is key",
+    "patterns.part5.point3": "Small steps → big change",
+    "patterns.part5.outcome": "Real-life change begins",
+
+    "patterns.included.title": "What's Included",
+    "patterns.included1": "Deep understanding of your repeating patterns",
+    "patterns.included2": "Clear mapping of your personal pattern cycle",
+    "patterns.included3": "Understanding of the root causes",
+    "patterns.included4": "A practical tool to interrupt the cycle",
+
+    "patterns.valuable.label": "What Makes This Workshop Valuable",
+    "patterns.valuable1": "Move beyond surface understanding to real change",
+    "patterns.valuable2": "Get tools you can use immediately",
+    "patterns.valuable3": "Understand your patterns on an emotional level",
+    "patterns.valuable4": "Begin your journey toward breaking the cycle",
+
+    "patterns.bridge": "Understanding your patterns is powerful — but real change comes from consistent guidance and deeper work.",
+
     // Transformation Coaching Page
     "transformation.label": "Premium Program",
     "transformation.title": "Personal Transformation Coaching",
@@ -649,13 +707,63 @@ const translations: Record<Language, Record<string, string>> = {
     "mindset.included3": "Praktische Umsetzungsaufgaben fuer den Alltag",
     "mindset.included4": "Klare Begleitung durch den gesamten Prozess",
 
-    "mindset.valuable.label": "Was dieses Programm wertvoll macht",
-    "mindset.valuable1": "Klare Struktur statt Ueberforderung",
-    "mindset.valuable2": "Fokus auf echtes Verstaendnis, nicht oberflaechliche Motivation",
-    "mindset.valuable3": "Praktische Werkzeuge, die du sofort anwenden kannst",
-    "mindset.valuable4": "Ein starkes Fundament fuer tiefere Transformation",
+    // Breaking Repeating Patterns Page
+    "patterns.label": "Selbstgefuehrter Workshop",
+    "patterns.title": "Breaking Repeating Patterns",
+    "patterns.description": "Entdecke, warum du immer wieder dieselben Situationen und Beziehungen anziehst, und lerne, wie du endlich aus den Zyklen ausbrichst, die dich zurueckhalten.",
+    "patterns.journey.label": "Der 5-teilige Workshop",
+    "patterns.journey.title": "Verstehen und Durchbrechen deiner Muster",
+    "patterns.journey.description": "In diesem Workshop bewegst du dich durch fuenf miteinander verbundene Teile, die dir helfen, deine Muster tief zu verstehen und dir Werkzeuge zum Unterbrechen des Zyklus geben.",
 
-    "mindset.finalNote": "Dieses Programm ist darauf ausgelegt, dir zu helfen, dich endlich auf einer tieferen Ebene zu verstehen und echte Veraenderung zu beginnen — Schritt fuer Schritt, in deinem eigenen Tempo.",
+    "patterns.part1.title": "Verstehen von Mustern",
+    "patterns.part1.intro": "Wir beginnen damit, zu erforschen, was emotionale und verhaltensgemaessige Muster sind und warum wir sie wiederholen.",
+    "patterns.part1.point1": "Was sind emotionale und verhaltensgemaessige Muster?",
+    "patterns.part1.point2": "Warum wir sie unbewusst wiederholen",
+    "patterns.part1.point3": "Die Rolle des Unterbewusstseins",
+    "patterns.part1.outcome": "Das ist nicht zufaellig",
+
+    "patterns.part2.title": "Deine persoenliche Musterschleife",
+    "patterns.part2.intro": "Du wirst deinen eigenen Musterzyklus abbilden und ihn zum ersten Mal klar sehen.",
+    "patterns.part2.point1": "Trigger → Gedanke → Emotion → Verhalten → Ergebnis",
+    "patterns.part2.point2": "Verstaendnis deines persoenlichen Zyklus",
+    "patterns.part2.point3": "Uebung: Karte deines Musters",
+    "patterns.part2.point4": "Sehe deine Schleife klar",
+    "patterns.part2.outcome": "Du siehst deine Schleife zum ersten Mal",
+
+    "patterns.part3.title": "Die Wurzel",
+    "patterns.part3.intro": "Wir graben tiefer, um zu verstehen, woher deine Muster kommen.",
+    "patterns.part3.point1": "Woher Muster kommen (Kindheit, Erfahrungen)",
+    "patterns.part3.point2": "Emotionale Konditionierung",
+    "patterns.part3.point3": "Warum Logik es nicht aendert",
+    "patterns.part3.outcome": "Tiefes emotionales Verstaendnis",
+
+    "patterns.part4.title": "Durchbrechen des Zyklus",
+    "patterns.part4.intro": "Jetzt bekommst du die Werkzeuge, um das Muster in Echtzeit zu unterbrechen.",
+    "patterns.part4.point1": "Bewusstsein in Echtzeit",
+    "patterns.part4.point2": "Die 'Pause & Waehle' Methode",
+    "patterns.part4.point3": "Eine neue Antwort waehlen",
+    "patterns.part4.outcome": "Ich habe Kontrolle",
+
+    "patterns.part5.title": "Integration",
+    "patterns.part5.intro": "Du lernst, wie du das in deinem Alltag anwendest und es beibehältst.",
+    "patterns.part5.point1": "Wie du das im Alltag anwendest",
+    "patterns.part5.point2": "Warum Wiederholung wichtig ist",
+    "patterns.part5.point3": "Kleine Schritte → großer Wandel",
+    "patterns.part5.outcome": "Der Wandel im echten Leben beginnt",
+
+    "patterns.included.title": "Was enthalten ist",
+    "patterns.included1": "Tiefes Verstaendnis deiner sich wiederholenden Muster",
+    "patterns.included2": "Klares Mapping deines persoenlichen Musterzyklus",
+    "patterns.included3": "Verstaendnis der Wurzeln",
+    "patterns.included4": "Ein praktisches Werkzeug zum Unterbrechen des Zyklus",
+
+    "patterns.valuable.label": "Was diesen Workshop wertvoll macht",
+    "patterns.valuable1": "Gehe ueber oberflächliches Verstaendnis zu echtem Wandel",
+    "patterns.valuable2": "Bekomme Werkzeuge, die du sofort anwenden kannst",
+    "patterns.valuable3": "Verstehe deine Muster auf emotionaler Ebene",
+    "patterns.valuable4": "Beginne deine Reise zum Durchbrechen des Zyklus",
+
+    "patterns.bridge": "Deine Muster zu verstehen ist maechtig — aber echter Wandel kommt von konsistenter Anleitung und tieferer Arbeit.",
 
     // Transformation Coaching Page
     "transformation.label": "Premium Programm",
