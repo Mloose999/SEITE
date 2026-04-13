@@ -119,64 +119,68 @@ export default function TransformationCoachingPage() {
       </section>
 
       {/* Investment Section */}
-      <section className="bg-beige/30">
-        <div className="max-w-7xl mx-auto">
-
-          {/* Top: description bar */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-            className="border-b border-foreground/10 px-8 py-10 md:py-14 flex flex-col md:flex-row md:items-center md:justify-between gap-6"
-          >
-            <p className="text-foreground/50 font-light tracking-[0.3em] uppercase text-xs">
-              {t("transformation.journey.title")}
-            </p>
-            <p className="text-foreground/60 font-light leading-relaxed max-w-xl text-sm md:text-base">
-              {t("transformation.journey.description")}
-            </p>
-          </motion.div>
-
-          {/* Bottom: big price + CTA */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.1 }}
-            className="px-8 py-16 md:py-24 flex flex-col md:flex-row md:items-end md:justify-between gap-16"
-          >
-            <div>
-              <p className="text-foreground/40 font-light text-xs tracking-[0.25em] uppercase mb-5">
-                {t("transformation.investment")}
+      <section className="bg-beige/30 py-20 md:py-28">
+        <div className="max-w-5xl mx-auto px-8">
+          <div className="grid md:grid-cols-2 gap-16 md:gap-20">
+            
+            {/* Left Column - Journey Info */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+              className="flex flex-col"
+            >
+              <p className="text-foreground/50 font-light tracking-[0.3em] uppercase text-xs mb-6">
+                {t("transformation.journey.title")}
               </p>
-              <p className="font-serif text-5xl md:text-7xl lg:text-8xl font-light text-foreground leading-none tracking-tight">
-                {t("transformation.price")}
+              <p className="text-foreground/70 font-light leading-relaxed text-base mb-10">
+                {t("transformation.journey.description")}
               </p>
-            </div>
-
-            <div className="flex flex-col items-start md:items-end gap-4">
-              <ul className="space-y-3">
+              
+              <ul className="space-y-4 mt-auto">
                 {[
                   t("transformation.different.point1"),
                   t("transformation.different.point2"),
                   t("transformation.different.point3"),
                 ].map((point, i) => (
                   <li key={i} className="flex items-start gap-3 text-foreground/60 font-light text-sm">
-                    <Check className="w-4 h-4 text-foreground/30 flex-shrink-0 mt-0.5" strokeWidth={1.5} />
+                    <Check className="w-4 h-4 text-foreground/40 flex-shrink-0 mt-0.5" strokeWidth={1.5} />
                     {point}
                   </li>
                 ))}
               </ul>
-              <Link
-                href="/contact"
-                className="mt-6 inline-block px-8 py-4 bg-foreground text-background font-medium text-sm tracking-[0.1em] uppercase hover:bg-foreground/80 transition-all duration-300"
-              >
-                {t("workshops.contactCta")}
-              </Link>
-            </div>
-          </motion.div>
+            </motion.div>
 
+            {/* Right Column - Price Card */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              className="bg-background border border-foreground/10 p-10 md:p-12 flex flex-col"
+            >
+              <p className="text-foreground/40 font-light text-xs tracking-[0.25em] uppercase mb-6">
+                {t("transformation.investment")}
+              </p>
+              <p className="font-serif text-4xl md:text-5xl font-medium text-foreground mb-8">
+                {t("transformation.price")}
+              </p>
+              
+              <div className="border-t border-foreground/10 pt-8 mt-auto">
+                <p className="text-foreground/50 font-light text-sm mb-6">
+                  {t("transformation.journey.description")}
+                </p>
+                <Link
+                  href="/contact"
+                  className="inline-block w-full text-center px-8 py-4 bg-foreground text-background font-medium text-sm tracking-[0.1em] uppercase hover:bg-foreground/80 transition-all duration-300"
+                >
+                  {t("workshops.contactCta")}
+                </Link>
+              </div>
+            </motion.div>
+
+          </div>
         </div>
       </section>
 
