@@ -138,12 +138,9 @@ export default function MindsetPage() {
               transition={{ duration: 0.7, delay: i * 0.1 }}
               className="border-t border-foreground/10 py-14 grid md:grid-cols-[120px_1fr] gap-8 md:gap-12"
             >
-              {/* Step number */}
+              {/* Step number only */}
               <div>
                 <span className="font-serif text-5xl font-medium text-foreground/15 leading-none">{step.number}</span>
-                <p className="text-foreground/50 font-light tracking-[0.2em] uppercase text-xs mt-3">
-                  {t("mindset.stepLabel")} {step.number}
-                </p>
               </div>
 
               {/* Content */}
