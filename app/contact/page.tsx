@@ -101,90 +101,99 @@ export default function ContactPage() {
   }
 
   return (
-    <main className="min-h-screen relative flex flex-col lg:flex-row">
-      {/* Left Side - Form & Content */}
-      <div className="relative w-full lg:w-1/2 min-h-screen bg-beige/30">
-        {/* Header */}
-        <header className="relative z-10 backdrop-blur-md bg-white/30 border-b border-white/30">
-          <div className="max-w-2xl mx-auto px-6 py-4 flex items-center justify-between">
-            <Link href="/" className="flex items-center gap-3 group">
-              <div className="relative overflow-hidden rounded-full shadow-md">
+    <main className="min-h-screen relative bg-beige/20">
+      {/* Header */}
+      <header className="relative z-20 bg-transparent">
+        <div className="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
+          <Link href="/" className="flex items-center gap-3 group">
+            <div className="relative overflow-hidden rounded-full shadow-md">
+              <Image
+                src="/images/logo-original.png"
+                alt="Change Your Life with Linda"
+                width={55}
+                height={55}
+                className="object-contain transition-transform duration-300 group-hover:scale-110"
+                style={{ 
+                  filter: "sepia(1) saturate(4) brightness(0.9) hue-rotate(-30deg) drop-shadow(0 0 10px rgba(128, 0, 32, 0.7)) drop-shadow(0 0 20px rgba(139, 0, 0, 0.5))" 
+                }}
+              />
+            </div>
+            <span className="font-serif text-lg font-bold text-foreground hidden sm:block">
+              Linda Holtkamp
+            </span>
+          </Link>
+          <div className="flex items-center gap-3">
+            <LanguageToggle isScrolled={true} />
+            <Link href="/">
+              <Button variant="ghost" className="text-foreground/70 hover:text-foreground">
+                <ArrowLeft className="w-4 h-4 mr-2" />
+                {t("contact.back")}
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </header>
+
+      {/* Main Content */}
+      <section className="relative z-10 py-12 md:py-20 px-6">
+        <div className="max-w-5xl mx-auto">
+          <div className="grid lg:grid-cols-5 gap-12 lg:gap-16 items-start">
+            
+            {/* Left - Image & Info (2 cols) */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              className="lg:col-span-2 space-y-8"
+            >
+              {/* Portrait Image */}
+              <div className="relative aspect-[3/4] overflow-hidden">
                 <Image
-                  src="/images/logo-original.png"
-                  alt="Change Your Life with Linda"
-                  width={55}
-                  height={55}
-                  className="object-contain transition-transform duration-300 group-hover:scale-110"
-                  style={{ 
-                    filter: "sepia(1) saturate(4) brightness(0.9) hue-rotate(-30deg) drop-shadow(0 0 10px rgba(128, 0, 32, 0.7)) drop-shadow(0 0 20px rgba(139, 0, 0, 0.5))" 
-                  }}
+                  src="/images/contact-portrait.jpg"
+                  alt="Linda"
+                  fill
+                  className="object-cover"
+                  priority
                 />
               </div>
-              <span className="font-serif text-lg font-bold text-foreground hidden sm:block">
-                Linda Holtkamp
-              </span>
-            </Link>
-            <div className="flex items-center gap-3">
-              <LanguageToggle isScrolled={true} />
-              <Link href="/">
-                <Button variant="ghost" className="text-foreground/70 hover:text-foreground hover:bg-white/30">
-                  <ArrowLeft className="w-4 h-4 mr-2" />
-                  {t("contact.back")}
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </header>
-
-        {/* Form Content */}
-        <section className="relative z-10 py-12 md:py-16 px-6 md:px-12 lg:px-16">
-          <div className="max-w-lg mx-auto lg:mx-0 lg:ml-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="mb-10"
-            >
-              <motion.span 
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.2 }}
-                className="inline-block text-sm font-medium tracking-widest text-foreground/50 uppercase mb-4"
-              >
-                Contact
-              </motion.span>
-              <h1 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-4 leading-tight">
-                {t("contact.title")}
-              </h1>
-              <p className="text-foreground/60 leading-relaxed">
-                {t("contact.description")}
-              </p>
-            </motion.div>
-
-            {/* Contact Info - Compact */}
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
-              className="flex flex-wrap gap-6 mb-10 text-sm"
-            >
-              <div className="flex items-center gap-2 text-foreground/60">
-                <Mail className="w-4 h-4" />
-                <span>info@lindaholtkamp.de</span>
-              </div>
-              <div className="flex items-center gap-2 text-foreground/60">
-                <Phone className="w-4 h-4" />
-                <span>+49 171 5812251</span>
+              
+              {/* Contact Info below image */}
+              <div className="space-y-4">
+                <div className="flex items-center gap-3 text-foreground/70">
+                  <Mail className="w-4 h-4 text-foreground/40" />
+                  <span className="text-sm">info@lindaholtkamp.de</span>
+                </div>
+                <div className="flex items-center gap-3 text-foreground/70">
+                  <Phone className="w-4 h-4 text-foreground/40" />
+                  <span className="text-sm">+49 171 5812251</span>
+                </div>
+                <div className="flex items-center gap-3 text-foreground/70">
+                  <MapPin className="w-4 h-4 text-foreground/40" />
+                  <span className="text-sm">Deutschland</span>
+                </div>
               </div>
             </motion.div>
 
-            {/* Form */}
+            {/* Right - Form (3 cols) */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
+              className="lg:col-span-3"
             >
-              <form onSubmit={handleSubmit} className="space-y-5">
+              <div className="mb-10">
+                <p className="text-foreground/50 font-light tracking-[0.3em] uppercase text-xs mb-4">
+                  Contact
+                </p>
+                <h1 className="font-serif text-3xl md:text-4xl font-medium text-foreground mb-4 leading-tight">
+                  {t("contact.title")}
+                </h1>
+                <p className="text-foreground/60 font-light leading-relaxed max-w-md">
+                  {t("contact.description")}
+                </p>
+              </div>
+
+              <form onSubmit={handleSubmit} className="space-y-6">
                 {error && (
                   <div className="p-4 bg-red-50 border border-red-200 text-red-700 text-sm">
                     {error}
@@ -192,17 +201,13 @@ export default function ContactPage() {
                 )}
                 
                 {/* Name Field */}
-                <motion.div 
-                  className="relative"
-                  animate={{ scale: focusedField === 'name' ? 1.01 : 1 }}
-                  transition={{ duration: 0.2 }}
-                >
+                <div className="relative">
                   <Label 
                     htmlFor="name" 
-                    className={`absolute left-4 transition-all duration-300 pointer-events-none z-10 ${
+                    className={`absolute left-0 transition-all duration-300 pointer-events-none ${
                       focusedField === 'name' || formData.name 
-                        ? '-top-2.5 text-xs bg-beige/50 px-2 text-foreground/70' 
-                        : 'top-4 text-foreground/50'
+                        ? '-top-5 text-xs text-foreground/50' 
+                        : 'top-3 text-foreground/40'
                     }`}
                   >
                     {t("contact.name")}
@@ -216,22 +221,18 @@ export default function ContactPage() {
                     onChange={handleChange}
                     onFocus={() => setFocusedField('name')}
                     onBlur={() => setFocusedField(null)}
-                    className="bg-white/60 border border-foreground/10 focus:border-foreground/30 focus:ring-0 py-6 px-4 transition-all duration-300"
+                    className="bg-transparent border-0 border-b border-foreground/20 rounded-none focus:border-foreground/50 focus:ring-0 py-3 px-0 transition-all duration-300"
                   />
-                </motion.div>
+                </div>
 
                 {/* Email Field */}
-                <motion.div 
-                  className="relative"
-                  animate={{ scale: focusedField === 'email' ? 1.01 : 1 }}
-                  transition={{ duration: 0.2 }}
-                >
+                <div className="relative">
                   <Label 
                     htmlFor="email" 
-                    className={`absolute left-4 transition-all duration-300 pointer-events-none z-10 ${
+                    className={`absolute left-0 transition-all duration-300 pointer-events-none ${
                       focusedField === 'email' || formData.email 
-                        ? '-top-2.5 text-xs bg-beige/50 px-2 text-foreground/70' 
-                        : 'top-4 text-foreground/50'
+                        ? '-top-5 text-xs text-foreground/50' 
+                        : 'top-3 text-foreground/40'
                     }`}
                   >
                     {t("contact.email")}
@@ -245,22 +246,18 @@ export default function ContactPage() {
                     onChange={handleChange}
                     onFocus={() => setFocusedField('email')}
                     onBlur={() => setFocusedField(null)}
-                    className="bg-white/60 border border-foreground/10 focus:border-foreground/30 focus:ring-0 py-6 px-4 transition-all duration-300"
+                    className="bg-transparent border-0 border-b border-foreground/20 rounded-none focus:border-foreground/50 focus:ring-0 py-3 px-0 transition-all duration-300"
                   />
-                </motion.div>
+                </div>
 
                 {/* Message Field */}
-                <motion.div 
-                  className="relative"
-                  animate={{ scale: focusedField === 'message' ? 1.005 : 1 }}
-                  transition={{ duration: 0.2 }}
-                >
+                <div className="relative">
                   <Label 
                     htmlFor="message" 
-                    className={`absolute left-4 transition-all duration-300 pointer-events-none z-10 ${
+                    className={`absolute left-0 transition-all duration-300 pointer-events-none ${
                       focusedField === 'message' || formData.message 
-                        ? '-top-2.5 text-xs bg-beige/50 px-2 text-foreground/70' 
-                        : 'top-4 text-foreground/50'
+                        ? '-top-5 text-xs text-foreground/50' 
+                        : 'top-3 text-foreground/40'
                     }`}
                   >
                     {t("contact.message")}
@@ -269,68 +266,44 @@ export default function ContactPage() {
                     id="message"
                     name="message"
                     required
-                    rows={5}
+                    rows={4}
                     value={formData.message}
                     onChange={handleChange}
                     onFocus={() => setFocusedField('message')}
                     onBlur={() => setFocusedField(null)}
-                    className="bg-white/60 border border-foreground/10 focus:border-foreground/30 focus:ring-0 py-4 px-4 pt-6 resize-none transition-all duration-300"
+                    className="bg-transparent border-0 border-b border-foreground/20 rounded-none focus:border-foreground/50 focus:ring-0 py-3 px-0 resize-none transition-all duration-300"
                   />
-                </motion.div>
+                </div>
 
-                <Button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full bg-foreground text-white hover:bg-foreground/90 py-6 text-sm font-medium tracking-wide transition-all duration-300 hover:shadow-lg disabled:opacity-70 mt-2"
-                >
-                  {isSubmitting ? (
-                    <span className="flex items-center justify-center gap-3">
-                      <span className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                      {t("contact.sending")}
-                    </span>
-                  ) : (
-                    <span className="flex items-center justify-center gap-3">
-                      <Send className="w-4 h-4" />
-                      {t("contact.send")}
-                    </span>
-                  )}
-                </Button>
+                <div className="pt-4">
+                  <Button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="bg-foreground text-background hover:bg-foreground/90 px-10 py-6 text-sm font-medium tracking-wide transition-all duration-300 disabled:opacity-70"
+                  >
+                    {isSubmitting ? (
+                      <span className="flex items-center gap-3">
+                        <span className="w-4 h-4 border-2 border-background/30 border-t-background rounded-full animate-spin" />
+                        {t("contact.sending")}
+                      </span>
+                    ) : (
+                      <span className="flex items-center gap-3">
+                        <Send className="w-4 h-4" />
+                        {t("contact.send")}
+                      </span>
+                    )}
+                  </Button>
+                </div>
               </form>
 
-              <div className="flex items-center gap-2 justify-center mt-6 text-foreground/40 text-xs">
+              <div className="flex items-center gap-2 mt-8 text-foreground/40 text-xs">
                 <div className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse" />
                 {t("contact.responseTime")}
               </div>
             </motion.div>
           </div>
-        </section>
-      </div>
-
-      {/* Right Side - Image */}
-      <div className="hidden lg:block relative w-1/2 min-h-screen">
-        <Image
-          src="/images/contact-portrait.jpg"
-          alt="Linda working"
-          fill
-          className="object-cover"
-          priority
-        />
-        {/* Gradient overlay for blending */}
-        <div className="absolute inset-0 bg-gradient-to-r from-beige/60 via-transparent to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-beige/30 via-transparent to-beige/20" />
-      </div>
-
-      {/* Mobile Image - shown above form on small screens */}
-      <div className="lg:hidden absolute top-0 left-0 right-0 h-48 overflow-hidden -z-10">
-        <Image
-          src="/images/contact-portrait.jpg"
-          alt="Linda working"
-          fill
-          className="object-cover object-top"
-          priority
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-beige/70 to-beige" />
-      </div>
+        </div>
+      </section>
     </main>
   )
 }
