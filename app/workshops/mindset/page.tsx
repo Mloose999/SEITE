@@ -175,6 +175,40 @@ export default function MindsetPage() {
         </div>
       </section>
 
+      {/* Personal Coaching Aside */}
+      <section className="py-16 md:py-20 bg-beige/40">
+        <div className="max-w-4xl mx-auto px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <Link
+              href="/transformation-coaching"
+              className="group block"
+            >
+              <div className="flex flex-col md:flex-row md:items-center gap-6 md:gap-10 py-10 px-10 bg-background border border-foreground/10 hover:border-foreground/20 transition-all duration-500">
+                <div className="flex-1">
+                  <p className="text-foreground/50 font-light text-xs tracking-[0.3em] uppercase mb-3">
+                    {t("workshopDetails.premium.label")}
+                  </p>
+                  <p className="font-serif text-xl md:text-2xl text-foreground group-hover:text-foreground/80 transition-colors duration-300">
+                    {t("workshopDetails.premium.title")}
+                  </p>
+                </div>
+                <div className="flex-shrink-0">
+                  <span className="inline-flex items-center gap-3 text-foreground text-sm font-medium tracking-wide group-hover:gap-4 transition-all duration-300">
+                    {t("workshopDetails.premium.hintLink")}
+                    <ArrowRight className="w-4 h-4" />
+                  </span>
+                </div>
+              </div>
+            </Link>
+          </motion.div>
+        </div>
+      </section>
+
       {/* What's included & What makes it valuable – side by side */}
       <section className="py-20 md:py-28 bg-beige/20">
         <div className="max-w-7xl mx-auto px-8 grid md:grid-cols-2 gap-16 md:gap-20">

@@ -240,29 +240,29 @@ export default function HeartPage() {
       </section>
 
       {/* Personal Coaching Aside */}
-      <section className="py-16 md:py-20">
+      <section className="py-16 md:py-20 bg-beige/40">
         <div className="max-w-4xl mx-auto px-8">
           <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.6 }}
           >
             <Link
               href="/transformation-coaching"
-              className="group block relative overflow-hidden"
+              className="group block"
             >
-              <div className="flex items-center gap-8 py-8 px-10 border-l-2 border-foreground/10 hover:border-foreground/30 transition-all duration-500 bg-gradient-to-r from-beige/20 to-transparent">
+              <div className="flex flex-col md:flex-row md:items-center gap-6 md:gap-10 py-10 px-10 bg-background border border-foreground/10 hover:border-foreground/20 transition-all duration-500">
                 <div className="flex-1">
-                  <p className="text-foreground/40 font-light text-xs tracking-[0.3em] uppercase mb-2">
+                  <p className="text-foreground/50 font-light text-xs tracking-[0.3em] uppercase mb-3">
                     {t("workshopDetails.premium.label")}
                   </p>
-                  <p className="font-serif text-lg md:text-xl text-foreground/80 group-hover:text-foreground transition-colors duration-300">
+                  <p className="font-serif text-xl md:text-2xl text-foreground group-hover:text-foreground/80 transition-colors duration-300">
                     {t("workshopDetails.premium.title")}
                   </p>
                 </div>
                 <div className="flex-shrink-0">
-                  <span className="inline-flex items-center gap-2 text-foreground/50 group-hover:text-foreground text-sm font-light transition-all duration-300 group-hover:gap-3">
+                  <span className="inline-flex items-center gap-3 text-foreground text-sm font-medium tracking-wide group-hover:gap-4 transition-all duration-300">
                     {t("workshopDetails.premium.hintLink")}
                     <ArrowRight className="w-4 h-4" />
                   </span>
