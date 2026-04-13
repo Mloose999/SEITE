@@ -119,65 +119,67 @@ export default function TransformationCoachingPage() {
       </section>
 
       {/* Investment Section */}
-      <section className="bg-[#f5f1ec]">
-        <div className="max-w-7xl mx-auto">
-
-          {/* Top: description bar */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-            className="border-b border-foreground/10 px-8 py-12 md:py-16 flex flex-col md:flex-row md:items-center md:justify-between gap-6"
-          >
-            <p className="text-foreground/50 font-light tracking-[0.3em] uppercase text-xs">
-              {t("transformation.journey.title")}
-            </p>
-            <p className="text-foreground/60 font-light leading-relaxed max-w-xl text-sm md:text-base">
-              {t("transformation.journey.description")}
-            </p>
-          </motion.div>
-
-          {/* Bottom: big price + CTA */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.1 }}
-            className="px-8 py-16 md:py-24 flex flex-col md:flex-row md:items-end md:justify-between gap-10"
-          >
-            <div>
-              <p className="text-foreground/40 font-light text-xs tracking-[0.25em] uppercase mb-5">
-                {t("transformation.investment")}
+      <section className="bg-beige/30 py-20 md:py-28">
+        <div className="max-w-5xl mx-auto px-8">
+          <div className="grid md:grid-cols-2 gap-16 md:gap-20">
+            
+            {/* Left Column - Journey Info */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+            >
+              <p className="text-foreground/50 font-light tracking-[0.3em] uppercase text-xs mb-6">
+                {t("transformation.journey.title")}
               </p>
-              <p className="font-serif text-6xl md:text-8xl lg:text-9xl font-light text-foreground leading-none tracking-tight">
-                {t("transformation.price")}
+              <p className="text-foreground/70 font-light leading-relaxed text-base mb-8">
+                {t("transformation.journey.description")}
               </p>
-              <p className="text-foreground/40 font-light text-sm mt-4">{t("pricing.oneTimeInvestment")}</p>
-            </div>
-
-            <div className="flex flex-col items-start md:items-end gap-4">
-              <ul className="space-y-2">
+              
+              <ul className="space-y-4">
                 {[
                   t("transformation.different.point1"),
                   t("transformation.different.point2"),
                   t("transformation.different.point3"),
                 ].map((point, i) => (
-                  <li key={i} className="flex items-center gap-3 text-foreground/60 font-light text-sm">
-                    <Check className="w-4 h-4 text-foreground/30 flex-shrink-0" strokeWidth={1.5} />
+                  <li key={i} className="flex items-start gap-3 text-foreground/60 font-light text-sm">
+                    <Check className="w-4 h-4 text-foreground/40 flex-shrink-0 mt-0.5" strokeWidth={1.5} />
                     {point}
                   </li>
                 ))}
               </ul>
-              <Link
-                href="/contact"
-                className="mt-4 inline-block px-8 py-4 bg-foreground text-background font-medium text-sm tracking-[0.1em] uppercase hover:bg-foreground/80 transition-all duration-300"
-              >
-                {t("workshops.contactCta")}
-              </Link>
-            </div>
-          </motion.div>
+            </motion.div>
 
+            {/* Right Column - Price Card */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              className="bg-background border border-foreground/10 p-10 md:p-12 flex flex-col"
+            >
+              <p className="text-foreground/40 font-light text-xs tracking-[0.25em] uppercase mb-6">
+                {t("transformation.investment")}
+              </p>
+              <p className="font-serif text-4xl md:text-5xl font-medium text-foreground mb-8">
+                {t("transformation.price")}
+              </p>
+              
+              <div className="border-t border-foreground/10 pt-8 mt-auto">
+                <p className="text-foreground/50 font-light text-sm mb-6">
+                  {t("transformation.journey.description")}
+                </p>
+                <Link
+                  href="/contact"
+                  className="inline-block w-full text-center px-8 py-4 bg-foreground text-background font-medium text-sm tracking-[0.1em] uppercase hover:bg-foreground/80 transition-all duration-300"
+                >
+                  {t("workshops.contactCta")}
+                </Link>
+              </div>
+            </motion.div>
+
+          </div>
         </div>
       </section>
 
@@ -234,24 +236,33 @@ export default function TransformationCoachingPage() {
       </section>
 
       {/* Support Structure */}
-      <section className="py-20 md:py-28 bg-[#f8f6f3]">
-        <div className="max-w-4xl mx-auto px-8">
+      <section className="relative py-24 md:py-32 overflow-hidden">
+        {/* Background Image */}
+        <Image
+          src="/images/support-bg.jpg"
+          alt=""
+          fill
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-background/85" />
+
+        <div className="relative z-10 max-w-6xl mx-auto px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16"
+            className="mb-20"
           >
             <p className="text-foreground/50 font-light tracking-[0.3em] uppercase text-xs mb-6">
               {t("transformation.support.title")}
             </p>
-            <p className="text-foreground/60 font-light max-w-xl mx-auto">
+            <p className="text-foreground/70 font-light max-w-2xl text-lg leading-relaxed">
               {t("transformation.support.description")}
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-4 gap-px bg-foreground/10">
             {support.map((item, index) => (
               <motion.div
                 key={index}
@@ -259,9 +270,12 @@ export default function TransformationCoachingPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-background p-8 border border-foreground/10"
+                className="bg-background/80 backdrop-blur-sm p-8 md:p-10 group hover:bg-background transition-all duration-500"
               >
-                <h4 className="font-medium text-foreground mb-3">{item.title}</h4>
+                <span className="text-foreground/20 font-serif text-4xl font-light block mb-6">
+                  0{index + 1}
+                </span>
+                <h4 className="font-medium text-foreground mb-4 text-lg">{item.title}</h4>
                 <p className="text-foreground/60 font-light text-sm leading-relaxed">{item.description}</p>
               </motion.div>
             ))}

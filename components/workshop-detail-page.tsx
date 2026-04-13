@@ -147,26 +147,42 @@ export function WorkshopDetailPage({ workshopKey, image, prevSlug, nextSlug }: W
               </motion.div>
             ))}
           </div>
+
+          {/* Subtle link to personal coaching */}
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            className="text-center mt-16 text-foreground/50 font-light text-sm"
+          >
+            {t("workshopDetails.premium.hint")}{" "}
+            <Link 
+              href="/transformation-coaching" 
+              className="underline underline-offset-4 hover:text-foreground transition-colors duration-300"
+            >
+              {t("workshopDetails.premium.hintLink")}
+            </Link>
+          </motion.p>
         </div>
       </section>
 
       {/* Pricing CTA */}
-      <section className="py-20 md:py-28 bg-beige/20">
+      <section className="py-20 md:py-28 bg-beige/30">
         <div className="max-w-4xl mx-auto px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="grid md:grid-cols-2 gap-8"
+            className="grid md:grid-cols-2 gap-12"
           >
             {/* Single */}
             <div className="p-10 border border-foreground/10 bg-background">
               <p className="text-foreground/60 font-light tracking-[0.2em] uppercase text-xs mb-4">
                 {t("workshopDetails.pricing.individual")}
               </p>
-              <p className="font-serif text-5xl font-medium text-foreground mb-2">59 €</p>
-              <p className="text-foreground/60 font-light">{t("workshopDetails.pricing.perWorkshop")}</p>
+              <p className="font-serif text-3xl font-medium text-foreground">59 €</p>
             </div>
 
             {/* Bundle */}
@@ -178,8 +194,8 @@ export function WorkshopDetailPage({ workshopKey, image, prevSlug, nextSlug }: W
                 {t("workshopDetails.pricing.fullProgram")}
               </p>
               <div className="flex items-baseline gap-3 mb-2">
-                <span className="text-background/50 line-through text-xl">236 €</span>
-                <span className="font-serif text-5xl font-medium text-background">199 €</span>
+                <span className="text-background/50 line-through text-lg">236 €</span>
+                <span className="font-serif text-3xl font-medium text-background">199 €</span>
               </div>
               <p className="text-background/60 font-light">{t("workshopDetails.pricing.allFour")}</p>
             </div>
