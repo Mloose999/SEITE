@@ -95,38 +95,39 @@ export default function MindsetPage() {
         </div>
       </section>
 
-      {/* Investment banner */}
-      <section className="bg-foreground text-background py-6">
-        <div className="max-w-7xl mx-auto px-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-          <p className="font-light tracking-[0.2em] uppercase text-xs text-background/70">{t("transformation.investment")}</p>
-          <p className="font-serif text-3xl font-medium">59 €</p>
-          <Link
-            href="/#contact"
-            className="inline-block px-8 py-3 border border-background text-background font-medium text-sm hover:bg-background hover:text-foreground transition-all duration-300"
-          >
-            {t("workshopDetails.pricing.chooseSingle")}
-          </Link>
-        </div>
-      </section>
-
-      {/* Journey intro */}
-      <section className="py-20 md:py-28">
+      {/* Price - Elegant inline with journey intro */}
+      <section className="py-20 md:py-28 border-b border-foreground/10">
         <div className="max-w-4xl mx-auto px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
+            className="flex flex-col md:flex-row md:items-center md:justify-between gap-10"
           >
-            <p className="text-foreground/60 font-light tracking-[0.3em] uppercase text-xs mb-6">
-              {t("mindset.journey.label")}
-            </p>
-            <h2 className="font-serif text-3xl md:text-4xl font-medium text-foreground mb-6 leading-tight">
-              {t("mindset.journey.title")}
-            </h2>
-            <p className="text-foreground/70 font-light text-lg leading-relaxed">
-              {t("mindset.journey.description")}
-            </p>
+            <div className="md:flex-1">
+              <p className="text-foreground/60 font-light tracking-[0.3em] uppercase text-xs mb-6">
+                {t("mindset.journey.label")}
+              </p>
+              <h2 className="font-serif text-3xl md:text-4xl font-medium text-foreground mb-6 leading-tight">
+                {t("mindset.journey.title")}
+              </h2>
+              <p className="text-foreground/70 font-light text-lg leading-relaxed">
+                {t("mindset.journey.description")}
+              </p>
+            </div>
+
+            {/* Price */}
+            <div className="md:flex-shrink-0 md:pl-8">
+              <p className="text-foreground/50 font-light text-sm mb-2 tracking-[0.2em] uppercase">{t("transformation.investment")}</p>
+              <p className="font-serif text-5xl md:text-6xl font-medium text-foreground">59 €</p>
+              <Link
+                href="/#contact"
+                className="inline-block mt-6 px-8 py-3 border border-foreground text-foreground font-medium text-sm hover:bg-foreground hover:text-background transition-all duration-300"
+              >
+                {t("workshopDetails.pricing.chooseSingle")}
+              </Link>
+            </div>
           </motion.div>
         </div>
       </section>
@@ -226,7 +227,7 @@ export default function MindsetPage() {
         </div>
       </section>
 
-      {/* Final note */}
+      {/* Final note and CTA */}
       <section className="py-20 md:py-28">
         <div className="max-w-3xl mx-auto px-8 text-center">
           <motion.div
@@ -235,15 +236,9 @@ export default function MindsetPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <p className="font-serif text-2xl md:text-3xl font-medium text-foreground leading-relaxed mb-10">
+            <p className="font-serif text-2xl md:text-3xl font-medium text-foreground leading-relaxed">
               {t("mindset.finalNote")}
             </p>
-            <Link
-              href="/#contact"
-              className="inline-block px-10 py-4 border border-foreground text-foreground font-medium text-sm hover:bg-foreground hover:text-background transition-all duration-300"
-            >
-              {t("workshopDetails.pricing.chooseSingle")}
-            </Link>
           </motion.div>
         </div>
       </section>

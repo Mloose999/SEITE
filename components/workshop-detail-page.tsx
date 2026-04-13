@@ -166,13 +166,7 @@ export function WorkshopDetailPage({ workshopKey, image, prevSlug, nextSlug }: W
                 {t("workshopDetails.pricing.individual")}
               </p>
               <p className="font-serif text-5xl font-medium text-foreground mb-2">59 €</p>
-              <p className="text-foreground/60 font-light mb-8">{t("workshopDetails.pricing.perWorkshop")}</p>
-              <Link
-                href="/#contact"
-                className="inline-block w-full text-center py-4 border border-foreground text-foreground font-medium hover:bg-foreground hover:text-background transition-all duration-300"
-              >
-                {t("workshopDetails.pricing.chooseSingle")}
-              </Link>
+              <p className="text-foreground/60 font-light">{t("workshopDetails.pricing.perWorkshop")}</p>
             </div>
 
             {/* Bundle */}
@@ -187,13 +181,7 @@ export function WorkshopDetailPage({ workshopKey, image, prevSlug, nextSlug }: W
                 <span className="text-background/50 line-through text-xl">236 €</span>
                 <span className="font-serif text-5xl font-medium text-background">199 €</span>
               </div>
-              <p className="text-background/60 font-light mb-8">{t("workshopDetails.pricing.allFour")}</p>
-              <Link
-                href="/#contact"
-                className="inline-block w-full text-center py-4 bg-background text-foreground font-medium hover:bg-background/90 transition-all duration-300"
-              >
-                {t("workshopDetails.pricing.getBundle")}
-              </Link>
+              <p className="text-background/60 font-light">{t("workshopDetails.pricing.allFour")}</p>
             </div>
           </motion.div>
         </div>
