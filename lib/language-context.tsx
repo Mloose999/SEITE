@@ -18,6 +18,7 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.workshops": "Workshops",
     "nav.booking": "Booking",
     "nav.bookNow": "Book Now",
+    "nav.premiumProgram": "Premium Program",
     "header.tagline": "My job is to see you win",
     "header.brand": "Linda Holtkamp - Mindset Coaching",
     
@@ -566,6 +567,7 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.workshops": "Workshops",
     "nav.booking": "Buchung",
     "nav.bookNow": "Jetzt buchen",
+    "nav.premiumProgram": "Premium Programm",
     "header.tagline": "My job is to see you win",
     "header.brand": "Linda Holtkamp - Mindset Coaching",
     
