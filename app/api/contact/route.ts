@@ -9,9 +9,9 @@ export async function POST(request: Request) {
   
   try {
     const body = await request.json()
-    const { name, email, message } = body
+    const { name, email, message, workshops } = body
     
-    console.log("[v0] Form data received:", { name, email, messageLength: message?.length })
+    console.log("[v0] Form data received:", { name, email, messageLength: message?.length, workshops })
 
     // Validate required fields
     if (!name || !email || !message) {
@@ -34,6 +34,13 @@ export async function POST(request: Request) {
         <h2>Neue Kontaktanfrage</h2>
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>E-Mail:</strong> ${email}</p>
+        ${workshops && workshops.length > 0 ? `
+        <hr />
+        <h3>Interesse an Workshops:</h3>
+        <ul>
+          ${workshops.map((w: string) => `<li>${w}</li>`).join("")}
+        </ul>
+        ` : ""}
         <hr />
         <h3>Nachricht:</h3>
         <p>${message.replace(/\n/g, "<br />")}</p>

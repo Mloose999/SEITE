@@ -21,6 +21,7 @@ export default function ContactPage() {
     email: "",
     message: ""
   })
+  const [selectedWorkshops, setSelectedWorkshops] = useState<string[]>([])
   const [focusedField, setFocusedField] = useState<string | null>(null)
   const { t } = useLanguage()
 
@@ -35,7 +36,7 @@ export default function ContactPage() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({ ...formData, workshops: selectedWorkshops }),
       })
 
       const data = await response.json()
@@ -58,6 +59,23 @@ export default function ContactPage() {
       [e.target.name]: e.target.value
     }))
   }
+
+  const toggleWorkshop = (workshop: string) => {
+    setSelectedWorkshops(prev => 
+      prev.includes(workshop)
+        ? prev.filter(w => w !== workshop)
+        : [...prev, workshop]
+    )
+  }
+
+  const workshops = [
+    { id: "mindset", label: t("contact.workshopMindset") },
+    { id: "patterns", label: t("contact.workshopPatterns") },
+    { id: "heart", label: t("contact.workshopHeart") },
+    { id: "nervous", label: t("contact.workshopNervous") },
+    { id: "complete", label: t("contact.workshopComplete") },
+    { id: "transformation", label: t("contact.workshopTransformation") },
+  ]
 
   if (isSubmitted) {
     return (
@@ -248,6 +266,40 @@ export default function ContactPage() {
                     onBlur={() => setFocusedField(null)}
                     className="bg-transparent border-0 border-b border-foreground/20 rounded-none focus:border-foreground/50 focus:ring-0 py-3 px-0 transition-all duration-300"
                   />
+                </div>
+
+                {/* Workshop Interest Selection */}
+                <div className="pt-4">
+                  <Label className="text-foreground/50 text-xs font-light tracking-wide block mb-4">
+                    {t("contact.workshopInterest")}
+                  </Label>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    {workshops.map((workshop) => (
+                      <button
+                        key={workshop.id}
+                        type="button"
+                        onClick={() => toggleWorkshop(workshop.id)}
+                        className={`text-left px-4 py-3 border transition-all duration-300 text-sm ${
+                          selectedWorkshops.includes(workshop.id)
+                            ? 'border-foreground bg-foreground/5 text-foreground'
+                            : 'border-foreground/20 text-foreground/60 hover:border-foreground/40 hover:text-foreground/80'
+                        }`}
+                      >
+                        <span className="flex items-center gap-3">
+                          <span className={`w-4 h-4 border flex items-center justify-center transition-all duration-300 ${
+                            selectedWorkshops.includes(workshop.id)
+                              ? 'border-foreground bg-foreground'
+                              : 'border-foreground/30'
+                          }`}>
+                            {selectedWorkshops.includes(workshop.id) && (
+                              <CheckCircle className="w-3 h-3 text-background" />
+                            )}
+                          </span>
+                          {workshop.label}
+                        </span>
+                      </button>
+                    ))}
+                  </div>
                 </div>
 
                 {/* Message Field */}
