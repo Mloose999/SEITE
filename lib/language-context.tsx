@@ -18,6 +18,7 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.workshops": "Workshops",
     "nav.booking": "Booking",
     "nav.bookNow": "Book Now",
+    "nav.premiumProgram": "Premium Program",
     "header.tagline": "My job is to see you win",
     "header.brand": "Linda Holtkamp - Mindset Coaching",
     
@@ -148,6 +149,13 @@ const translations: Record<Language, Record<string, string>> = {
     "contact.back": "Back",
     "contact.backHome": "Back to Home",
     "contact.responseTime": "Linda typically responds within 24-48 hours.",
+    "contact.workshopInterest": "Which workshops are you interested in? (optional)",
+    "contact.workshopMindset": "Mindset Mastery",
+    "contact.workshopPatterns": "Patterns & Beliefs",
+    "contact.workshopHeart": "Heart & Soul Connection",
+    "contact.workshopNervous": "Nervous System Regulation",
+    "contact.workshopComplete": "Complete Workshop Package",
+    "contact.workshopTransformation": "Personal Transformation Coaching",
     
     // Legal Pages
     "legal.backHome": "Back to Home",
@@ -566,6 +574,7 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.workshops": "Workshops",
     "nav.booking": "Buchung",
     "nav.bookNow": "Jetzt buchen",
+    "nav.premiumProgram": "Premium Programm",
     "header.tagline": "My job is to see you win",
     "header.brand": "Linda Holtkamp - Mindset Coaching",
     
@@ -695,9 +704,16 @@ const translations: Record<Language, Record<string, string>> = {
     "contact.received": "Deine Nachricht wurde empfangen. Linda wird sich so schnell wie möglich bei dir melden.",
     "contact.back": "Zurück",
     "contact.backHome": "Zur Startseite",
-    "contact.responseTime": "Linda antwortet in der Regel innerhalb von 24-48 Stunden.",
-    
-    // Legal Pages
+"contact.responseTime": "Linda antwortet in der Regel innerhalb von 24-48 Stunden.",
+    "contact.workshopInterest": "Welche Workshops interessieren dich? (optional)",
+    "contact.workshopMindset": "Mindset Mastery",
+    "contact.workshopPatterns": "Muster & Glaubenssätze",
+    "contact.workshopHeart": "Herz & Seele Verbindung",
+    "contact.workshopNervous": "Nervensystem Regulierung",
+    "contact.workshopComplete": "Komplettes Workshop-Paket",
+    "contact.workshopTransformation": "Personal Transformation Coaching",
+  
+  // Legal Pages
     "legal.backHome": "Zur Startseite",
     "footer.datenschutz": "Datenschutz",
     "footer.agb": "AGB",
