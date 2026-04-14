@@ -22,7 +22,7 @@ export function Header() {
     { name: t("nav.about"), href: "#about" },
     { name: t("nav.services"), href: "#services" },
     { name: t("nav.workshops"), href: "#workshops" },
-    { name: t("nav.premiumProgram"), href: "/premium-program" },
+    { name: t("nav.premiumProgram"), href: "/transformation-coaching" },
     { name: t("nav.booking"), href: "#booking" },
   ]
 
